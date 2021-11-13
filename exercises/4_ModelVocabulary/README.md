@@ -1,34 +1,23 @@
-# Model Businenss Rules Vocabulary 
+# Model Business Rules Vocabulary 
 
 ## Table of Contents
+- [Overview](#section1-overview)
+- [1 - Create Project](#section1-createproject)
+- [2 - Create Data Object](#section1-dataobject)
+- [Conclusion](#Summary)
 
-## Table of Contents
-- [Author, Activate and Deploy Business Rules](#section1)
-    - [Overview](#section1-overview)
-    - [Create Project](#section1-createproject)
-    - [Create Data Object](#section1-dataobject)
-    - [Summary](#Summary)
-   
-
-
-
-
-## Author and  Activate  Data Objects <a name="section1"></a>
+## Author and Activate Data Objects <a name="section1"></a>
 ### Overview <a name="section1-overview"></a>
 
 The exercise is based on authoring Data Object, using SAP Business Rules service. The Data Object is used in the next exercise to associate to a Process Template to generate start and step conditions.  
   
-### Create Project <a name="section1-createproject"></a>
+### 1 - Create Project <a name="section1-createproject"></a>
 
 1. Open *Workflow Management Launchpad* and click to open **Manage Rule Projects**.
-    - Login with trial username and passwords <p>
-    
+    - Login with trial username and passwords <p> 
     <img src="images/launchpad.png" width="600">
-  
 2. Click **+** to create a new business rules project.
-
-    <img src="images/createproject_1.png" width="600">
-
+    <img src="images/createproject_1.png" width="600"
 3. In the *New Project* screen, do the following:
     - Enter **CAPEX_00** in the **Name** box.
     - Enter **Capital Expenditure Rules** in the **Label** box.
@@ -37,29 +26,24 @@ The exercise is based on authoring Data Object, using SAP Business Rules service
     - Click **Save** 
     <p>
      <img src="images/createproject_2.png" width="600">
+Your business rules project is created with the needed configurations. 
 
-#### Your business rules project is created with the needed configurations. 
+### 2 - Create Data Objects <a name="section1-dataobject"></a>
 
-### Create Data Objects <a name="section1-dataobject"></a>
-
-1.	Click **Data Objects** tab
+1. Click **Data Objects** tab
     <p>
      <img src="images/dataobject_1.png" width="600">
-  
-2.	Click **+** in *Local Data Objects* section to create data object
+1. Click **+** in *Local Data Objects* section to create data object
     <p>
      <img src="images/dataobject_2.png" width="600">
-
-3. In the *New Data Object* screen, do the following:
+1. In the *New Data Object* screen, do the following:
     - Enter **Investment** in the **Name** box.
     - Enter **Investment** in the **Label** box.
     - Enter **Details of the investment** in the **Description** box.
-    - Click **Attributes** tab.
-    
+    - Click **Attributes** tab.  
     <p>
      <img src="images/dataobject_3.png" width="600">
-    
-4. In *Simple Attributes* section of *Attributes* tab, do the following:
+1. In *Simple Attributes* section of *Attributes* tab, do the following:
     - Click **+** to create attribute.
     - Enter **Type** in the **Name** box.
     - Enter **Type** in the **Label** box.
@@ -68,7 +52,7 @@ The exercise is based on authoring Data Object, using SAP Business Rules service
     <p>
      <img src="images/dataobject_4.png" width="600">
     
- 5. Repeat the step 4 above to create more data object attributes with following details: 
+1. Repeat the step 4 above to create more data object attributes with following details: 
     
     | Name | Label | Description | Type |
     |---|---|---| --- |
@@ -81,7 +65,8 @@ The exercise is based on authoring Data Object, using SAP Business Rules service
     
     - Click **Activate**
     - Click **Capital Expenditure Rules** to navigate back to the *Data Objects* page
-### Expose Data Object<a name="section1-ExposeDataObject"></a>
+
+### 3 - Expose Data Object<a name="section1-ExposeDataObject"></a>
 1. In Project Details do the following to expose the Data Object to consume from Process Template later.
     - Select Project Details and scroll down to  Exposed Vocabulary.
     - Click Data Object to select the modeled data obejct.
@@ -110,5 +95,6 @@ The exercise is based on authoring Data Object, using SAP Business Rules service
     <img src="images/SelectProjectId.png" width="600">
 7. Copy the Project ID field and keep it in your notepad.
 <img src="images/CopyProjectId.png" width="600">
-### Summary<a name="Summary"></a>
+
+### Conclusion<a name="Summary"></a>
 Now you have modeled a Business Rules Project with a Data Object and exposed it for consuming from Process Template Editor in the next excercise.
