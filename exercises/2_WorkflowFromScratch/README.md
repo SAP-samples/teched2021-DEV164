@@ -370,7 +370,7 @@ Take a look at the elements of BAS IDE and Workflow Editor
 ![](images/Form-9.png)
    > Re-using the same form is a simplification for this exercise. In a real project the displayed fields and whether they are editable would differ between the approver and the reworking requester.
 1. Ensure that there are no warning signs ![](images/Icon_Warning_small.png) showed in your workflow anymore.
-   > If there are warning signs left, hover over them to view a description what is missing:
+   > If there are warning signs left, hover over them to view a description what is missing:   
    > ![](images/Warning-1.png)
 
 ### 2.5 Adding Workflow Attributes (optional) <a name="attributes"></a>
@@ -387,22 +387,19 @@ Take a look at the elements of BAS IDE and Workflow Editor
 1. Optional: Drag the dividing bar between the main edit window and the Property pane to the left, to get enough space for entering the Attributes.
 1. Click on `Add`
 1. Enter the following Attributes:
-
-ID | Label | Type | Value
--|-|-|-
-RequestId | RequestId | String | `${context.RequestId}`
-Title | Title | String | `${context.Title}`
-Type | Type | String | `${context.Investment.Type}`
-TotalCost | TotalCost | String | `${context.Investment.TotalCost}`
-CAPEX | CAPEX | String | `${context.Investment.CAPEX}`
-OPEX | OPEX | String | `${context.Investment.OPEX}`
-ROI | ROI | String | `${context.Investment.ROI}`
-Currency | Currency | String | `${context.Investment.Currency}`
-approvalStatus | approvalStatus | String | `${context.internal.approvalStatus}`
-
-![](images/Properties-Workflow-3.png)
-
-  > Note: you can select an attribute row and use `Move Up` / `Move Down` buttons to change the ordering. Or you can add the attributes in reverse.
+   ID | Label | Type | Value
+   -|-|-|-
+   RequestId | RequestId | String | `${context.RequestId}`
+   Title | Title | String | `${context.Title}`
+   Type | Type | String | `${context.Investment.Type}`
+   TotalCost | TotalCost | String | `${context.Investment.TotalCost}`
+   CAPEX | CAPEX | String | `${context.Investment.CAPEX}`
+   OPEX | OPEX | String | `${context.Investment.OPEX}`
+   ROI | ROI | String | `${context.Investment.ROI}`
+   Currency | Currency | String | `${context.Investment.Currency}`
+   approvalStatus | approvalStatus | String | `${context.internal.approvalStatus}`
+   ![](images/Properties-Workflow-3.png)
+   > Note: you can select an attribute row and use `Move Up` / `Move Down` buttons to change the ordering. Or you can add the attributes in reverse.
 
 
 ## 3 - Build and Deploy <a name="deploy"></a>
@@ -423,20 +420,20 @@ approvalStatus | approvalStatus | String | `${context.internal.approvalStatus}`
 1. From the menu, select `View -> Find Command...` or press `F1`
 1. In the popup, type `mta` to filter the available commands, then select `Deploy MTA Archive`. 
 ![](images/sbas-init-3.png)
-1. Optional: if you have multiple projects open in BAS, select the `Tutorial_0.0.1.mtar` in the popup when asked for selecting the MTA Archive.
+1. Optional: if you have multiple projects open in BAS, select the `Tutorial_0.0.1.mtar` in the popup when asked for selecting the MTA Archive.   
 ![](images/Deploy-1.png)
    > Alternatively, in the File Explorer you can open the folder `mta_archives` and right-click the `Tutorial_0.0.1.mtar` file and choose `Deploy MTA Archive`
 ![](images/Deploy-2.png).  
    > For deployment, login to the Cloud Foundry backend is required. Depending on your setup, this might be a different user than the one using BAS. For the Trial account it is the same.
 1. Follow the wizard to login to Cloud Foundry:
- 1. Confirm the API which specifies your region, e.g. `https://api.cf.us10.hana.ondemand.com` for the American Trial account
- 1. Enter your Email address used for your account
- 1. Enter your password. If you have Two-Factor-Authentication (2FA) enabled for your account, append the TotP token. 
- 1. Select the account you wish to deploy into, e.g. the one ending in *trial*
- 1. Select the Cloud Foundry space to deploy into, e.g. `dev`
- 1. A console window will open in the bottom panel, showing the progress of the deployment.
- 1. Verify that there are no error messages. Note that there might be modeling errors which are only detected during deployment.
- 1. Optional: you can close the Bottom Panel with the icon ![](images/Icon_BottomPanel.png) in the lower right of the screen.
+   1. Confirm the API which specifies your region, e.g. `https://api.cf.us10.hana.ondemand.com` for the American Trial account
+   1. Enter your Email address used for your account
+   1. Enter your password. If you have Two-Factor-Authentication (2FA) enabled for your account, append the TotP token. 
+   1. Select the account you wish to deploy into, e.g. the one ending in *trial*
+   1. Select the Cloud Foundry space to deploy into, e.g. `dev`
+   1. A console window will open in the bottom panel, showing the progress of the deployment.
+   1. Verify that there are no error messages. Note that there might be modeling errors which are only detected during deployment.
+   1. Optional: you can close the Bottom Panel with the icon ![](images/Icon_BottomPanel.png) in the lower right of the screen.
 ![](images/Deploy-3.png)
 
 
