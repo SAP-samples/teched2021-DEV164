@@ -584,8 +584,4 @@ You can use Process Workspace to gain visibility on end-to-end processes for lin
 
 ## Next Steps
 
-This marks the end of the exercise. 
-
-In the next section, i.e. **Week 3 - Creating and consuming live process content packages**, you will use this scenario as an artifact for the package. 
-
 When you create process instances corresponding to the *process variants*, you will be able to get insights into the **Capital Expenditure Approvals process** in the *process workspace* created here.
