@@ -355,7 +355,8 @@ Take a look at the elements of BAS IDE and Workflow Editor
    Approve | `approve` | Positive
    Reject | `reject` | Negative
    Rework | `rework` | Neutral
-![](images/Form-6.png)
+   
+   ![](images/Form-6.png)
    > `Text` specifies the label displayed to the user, whereas `ID` is the technical value returned from `$.usertasks.usertask1.last.decision` which is then used for string comparisons. The `Type` indicates different graphic styles / colors.   
 1. Close the Workflow Form editor by clicking on the ![X](images/Icon_OpenFiles_Close.png).   
 ![](images/Form-7.png)
