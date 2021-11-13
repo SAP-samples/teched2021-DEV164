@@ -2,18 +2,18 @@
 
 ## Table of Contents
 - [Business Scenario](#scenario)
-- [SAP Business Application Studio (BAS)](#bas)
-  - [Navigate to BAS](#openBas)
-  - [Create a Dev Space](#createDevSpace)
-  - [Creating the project](#createProject)
-- [Using Workflow Editor](#workflowEditor)
-  - [Modeling Branches](#branches)
-  - [Workflow Context](#context)
-  - [Configuring the details](#details)
-  - [Adding User Interfaces with Workflow Forms](#forms)
-  - [Adding Workflow Attributes](#attributes)
-- [Build and Deploy](#deploy)
-- [Course Summary](#summary)
+- [1 - SAP Business Application Studio (BAS)](#bas)
+  - [1.1 Navigate to BAS](#openBas)
+  - [1.2 Create a Dev Space](#createDevSpace)
+  - [1.3 Creating the project](#createProject)
+- [2 - Using Workflow Editor](#workflowEditor)
+  - [2.1 Modeling Branches](#branches)
+  - [2.2 Workflow Context](#context)
+  - [2.3 Configuring the details](#details)
+  - [2.3 Adding User Interfaces with Workflow Forms](#forms)
+  - [2.4 Adding Workflow Attributes](#attributes)
+- [3 - Build and Deploy](#deploy)
+- [Conclusion](#conclusion)
 
 
 ## Business Scenario <a name="scenario"></a>
@@ -22,9 +22,9 @@ In this exercise we create a simple, one-step approval with rework capability.
 
 ![](images/final_workflow.png)
 
-## SAP Business Application Studio (BAS) <a name="bas"></a>
+## 1 - SAP Business Application Studio (BAS) <a name="bas"></a>
 
-### Navigate to BAS <a name="openBas"></a>
+### 1.1 Navigate to BAS <a name="openBas"></a>
 1. Open your SAP BTP Cockpit at https://cockpit.hanatrial.ondemand.com/
 1. Navigate to your subaccount
 1. Select `Services / Instances and Subscriptions`
@@ -35,7 +35,7 @@ In this exercise we create a simple, one-step approval with rework capability.
 
 > SAP Business Application Studio (BAS) is a feature-rich IDE running in your browser, and available as part of the Business Technology Platform (BTP). 
 
-### Create a Dev Space <a name="createDevSpace"></a>
+### 1.2 Create a Dev Space <a name="createDevSpace"></a>
 
 1. Click on `Create Dev Space`
 
@@ -67,7 +67,7 @@ In this exercise we create a simple, one-step approval with rework capability.
 > Dev Spaces are automatically stopped after some time of inactivity.
 
 
-### Creating the  project <a name="createProject"></a>
+### 1.3 Creating the  project <a name="createProject"></a>
 
 1. From the welcome screen, select `Start from Template` to start the wizard
 1. Select `Basic Multitarget Application`
@@ -113,7 +113,7 @@ In this exercise we create a simple, one-step approval with rework capability.
 > - Optional: from the menu, select `File -> Open Workspace...` and select the project you just created (`Tutorial`) to only show this project in the explorer.
  
 
-## Using Workflow Editor <a name="workflowEditor"></a>
+## 2 - Using Workflow Editor <a name="workflowEditor"></a>
 
 - Take a look at the elements of BAS IDE and Workflow Editor
 1. Menu bar
@@ -202,7 +202,7 @@ In this exercise we create a simple, one-step approval with rework capability.
 
 > This is a good time to use the `Arrange Horizontally` ![](images/Icon_Editor_Arrange_Horizontally.png) functionality.
 
-### Modeling Branches <a name="branches"></a>
+### 2.1 Modeling Branches <a name="branches"></a>
 
 1. From the palette, select `Tasks`, then `User Task`
 1. Place the task above `ScriptTask1`.
@@ -263,7 +263,7 @@ In this exercise we create a simple, one-step approval with rework capability.
 
 ![](images/Branches-13.png)
 
-### Workflow Context  <a name="context"></a>
+### 2.2 Workflow Context <a name="context"></a>
 
 > The context of a workflow is a data object which is associated with each workflow instance. It follows the form of a JSON structure and can be freely defined by the workflow modeler.
 
@@ -294,7 +294,7 @@ In this exercise we create a simple, one-step approval with rework capability.
 
 > The context can be accessed inside of Script Tasks by using the syntax `$.context.Requester.Name`. Many property fields support JUEL Expressions, for which the context can be accessed with `${context.Requester.Name}`.
 
-### Configuring the details  <a name="details"></a>
+### 2.3 Configuring the details <a name="details"></a>
 
 1. Click on the Script Task `Prepare Approval` to select it
 1. In the properties, under the heading `Script File`, click on `Create File`
@@ -399,7 +399,7 @@ In this exercise we create a simple, one-step approval with rework capability.
 
 ![](images/Overview-1.png)
 
-### Adding User Interfaces with Workflow Forms  <a name="Forms"></a>
+### 2.4 Adding User Interfaces with Workflow Forms <a name="Forms"></a>
 
 > In this section we will use Workflow Forms to create a quick and simple UI.
 
@@ -532,7 +532,7 @@ Rework | `rework` | Neutral
 
 ![](images/Warning-1.png)
 
-### Adding Workflow Attributes (optional) <a name="attributes"></a>
+### 2.5 Adding Workflow Attributes (optional) <a name="attributes"></a>
 
 > The Business Key is used to correlate workflow instances for orchestration across systems. Workflow attributes are used to measure key indicators for visualization in Workflow Visibility.
 
@@ -566,7 +566,7 @@ approvalStatus | approvalStatus | String | `${context.internal.approvalStatus}`
 > Note: you can select an attribute row and use `Move Up` / `Move Down` buttons to change the ordering. Or you can add the attributes in reverse.
 
 
-## Build and Deploy <a name="deploy"></a>
+## 3 - Build and Deploy <a name="deploy"></a>
 
 > Multi-Target Application projects in Business Application Studio are build (assembled) into *.mtar* files, which can then be deployed to the Cloud Foundry environment.
 
@@ -618,7 +618,7 @@ approvalStatus | approvalStatus | String | `${context.internal.approvalStatus}`
 ![](images/Deploy-3.png)
 
 
-# Course Summary <a name="summary"></a>
+# Conclusion <a name="conclusion"></a>
 * You can now create an MTA Workflow project in SAP Business Application Studio
 * You have learned how to use the Workflow editor to place flow elements, move them around and connect them
 * You understand the Workflow Context
