@@ -356,7 +356,7 @@ Take a look at the elements of BAS IDE and Workflow Editor
    Reject | `reject` | Negative
    Rework | `rework` | Neutral
 ![](images/Form-6.png)
-   > `Text` specifies the label displayed to the user, whereas `ID` is the technical value returned from `$.usertasks.usertask1.last.decision` which is then used for string comparisons. The `Type` indicates different graphic styles / colors.
+   > `Text` specifies the label displayed to the user, whereas `ID` is the technical value returned from `$.usertasks.usertask1.last.decision` which is then used for string comparisons. The `Type` indicates different graphic styles / colors.   
 1. Close the Workflow Form editor by clicking on the ![X](images/Icon_OpenFiles_Close.png).   
 ![](images/Form-7.png)
 3. Select the User Task `Approval Task` and note how the `ID` and `Revision` has been automatically filled in
@@ -398,8 +398,8 @@ Take a look at the elements of BAS IDE and Workflow Editor
    ROI | ROI | String | `${context.Investment.ROI}`
    Currency | Currency | String | `${context.Investment.Currency}`
    approvalStatus | approvalStatus | String | `${context.internal.approvalStatus}`
-   ![](images/Properties-Workflow-3.png)
-   > Note: you can select an attribute row and use `Move Up` / `Move Down` buttons to change the ordering. Or you can add the attributes in reverse.
+![](images/Properties-Workflow-3.png)
+> Note: you can select an attribute row and use `Move Up` / `Move Down` buttons to change the ordering. Or you can add the attributes in reverse.
 
 
 ## 3 - Build and Deploy <a name="deploy"></a>
