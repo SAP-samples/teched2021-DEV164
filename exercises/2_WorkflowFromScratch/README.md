@@ -260,18 +260,18 @@ Take a look at the elements of BAS IDE and Workflow Editor
    > The condition refers to a variable in the context which has been computed in the previous Script Task based on the result of the call to Rules.
 1. Next to the Exclusive Gateway `Approval Needed?`, select the Sequence Flow connecting to the `End Approval Step`
 1. In the properties, give the name as `No`
-1. Select the checkbox `Default`
+1. Select the checkbox `Default`.  
 ![](images/Properties-ApprovalNeeded-3.png)
    > There needs to always be exactly one default branch. This branch is taken if none of the conditions given in the other branches match (return true).
 1. Next to the Exclusive Gateway `Approval Decision`, select the Sequence Flow connecting to the `End Approval Step`
-1. In the properties, give the name as `Accepted`
-1. As `Condition`, enter `${usertasks.usertask1.last.decision == "approve"}`
-1. Select the Sequence Flow connecting to `Rework Approval Request `
-1. Give the name as `Rework`
-1. As `Condition`, enter `${usertasks.usertask1.last.decision == "rework"}`
-1. Select the Sequence Flow connecting to `Terminate Approval`
-1. Give the name as `Rejected`
-1. As `Condition`, select the checkbox `Default`
+1. In the properties, give the name as `Accepted`.  
+1. As `Condition`, enter `${usertasks.usertask1.last.decision == "approve"}`.  
+1. Select the Sequence Flow connecting to `Rework Approval Request `.  
+1. Give the name as `Rework`.  
+1. As `Condition`, enter `${usertasks.usertask1.last.decision == "rework"}`.  
+1. Select the Sequence Flow connecting to `Terminate Approval`.  
+1. Give the name as `Rejected`.  
+1. As `Condition`, select the checkbox `Default`.  
 ![](images/Properties-ApprovalDecision-1.png)
 1. Ensure your workflow looks like this:
 ![](images/Overview-1.png)
@@ -282,7 +282,7 @@ Take a look at the elements of BAS IDE and Workflow Editor
 1. Select the User Task `Approval Task`
 1. Select the properties tab `User Interface`
 1. Select `Form` as the type of UI
-1. Click on `Create File`
+1. Click on `Create File`.  
 ![](images/Form-1.png)
 1. Name the new Form `ApprovalForm`
 1. Note that the ID is automatically filled in
@@ -328,8 +328,8 @@ Take a look at the elements of BAS IDE and Workflow Editor
    Comment from Requester | String | `${context.Requester.Comment}` | yes | no
 1. Select the section `Investment Requester` and click on `Add Section`. Do not enter a title (empty field), but specify `history_` as ID in the Properties pane.
 1. Click on `Add Collection`
-1. Set the title to `History`
-1. Set the Context Path to `${context.History}`. 
+1. Set the title to `History`.  
+1. Set the Context Path to `${context.History}`.    
 ![](images/Form-4.png)
    > This defines a tables with the rows coming from an array object specified in the Context Path. Fields below the collection section can refer to the row using the expression `${item.xxx}`
 1. Select the collection `History` and click `Add Field` and add the following fields:
@@ -357,21 +357,21 @@ Take a look at the elements of BAS IDE and Workflow Editor
    Rework | `rework` | Neutral
 ![](images/Form-6.png)
    > `Text` specifies the label displayed to the user, whereas `ID` is the technical value returned from `$.usertasks.usertask1.last.decision` which is then used for string comparisons. The `Type` indicates different graphic styles / colors.
-1. Close the Workflow Form editor by clicking on the ![X](images/Icon_OpenFiles_Close.png).  
-1. ![](images/Form-7.png)
-1. Select the User Task `Approval Task` and note how the `ID` and `Revision` has been automatically filled in
+1. Close the Workflow Form editor by clicking on the ![X](images/Icon_OpenFiles_Close.png).   
+![](images/Form-7.png)
+3. Select the User Task `Approval Task` and note how the `ID` and `Revision` has been automatically filled in
 ![](images/Form-8.png)
 1. Select the User Task `Rework Approval Request `
 1. Select the properties tab `User Interface`
 1. Select `Form` as the type of UI
 1. Click on `Select` to choose an already existing Form 
 1. Using the dropdown, select the form `ApprovalForm.form` which we've just created.
-1. Click on `OK`
+1. Click on `OK`.  
 ![](images/Form-9.png)
    > Re-using the same form is a simplification for this exercise. In a real project the displayed fields and whether they are editable would differ between the approver and the reworking requester.
 1. Ensure that there are no warning signs ![](images/Icon_Warning_small.png) showed in your workflow anymore.
    > If there are warning signs left, hover over them to view a description what is missing:
-![](images/Warning-1.png)
+   > ![](images/Warning-1.png)
 
 ### 2.5 Adding Workflow Attributes (optional) <a name="attributes"></a>
 
