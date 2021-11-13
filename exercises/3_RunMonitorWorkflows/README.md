@@ -31,43 +31,26 @@
 1. Open the `Monitor Workflows - Definitions` app by clicking on the respective tile in the Fiori Launchpad.
 1. In the list of deployed Workflow definitions, select the `ApprovalStep`
 1. Note that the ID is the one we've given when creating the workflow.
-1. Note the version, which is automatically incremented with each deployment.
-
+1. Note the version, which is automatically incremented with each deployment.   
 ![](images/MWA-Definitions-1.png)
-
-> There might be multiple definitions with the same name. In this case compare the ID, which is unique.
-
-> The other two workflows (`Initialization` and `Approval`) were deployed as part of the sample Capex process imported in exercise 1.
-
+   > There might be multiple definitions with the same name. In this case compare the ID, which is unique.
+   > The other two workflows (`Initialization` and `Approval`) were deployed as part of the sample Capex process imported in exercise 1.
 1. Click on `Start New Instance`
-
 ![](images/MWA-Definitions-2.png)
-
 1. Note how the popup shows an editable text area for the start context, and that it is pre-filled with the sample start context as defined during modeling.
 1. Click on `Start New Instance`
-
 ![](images/MWA-Definitions-3.png)
-
-> This keeps the popup open, ready to start another workflow.
-
-1. Note the popup indicating the workflow has been successfully started.
-
+   > This keeps the popup open, ready to start another workflow.
+1. Note the popup indicating the workflow has been successfully started.   
 ![](images/MWA-Definitions-4.png)
-
-> This way of starting a workflow is mainly used for testing by a developer or administrator. Workflows can be started by end users using a Start Form or a custom UI5 application, or by other systems using the Workflow API.
-
+   > This way of starting a workflow is mainly used for testing by a developer or administrator. Workflows can be started by end users using a Start Form or a custom UI5 application, or by other systems using the Workflow API.
 1. In the still open popup, change the value of the field `TotalCost` from 15000 to 5 (five)
-1. Click on `Start New Instance and Close` to start a second workflow.
-
+1. Click on `Start New Instance and Close` to start a second workflow.   
 ![](images/MWA-Definitions-3b.png)
-
-> The workflow is configured to not need approval for such a small total cost and will thus be completed directly, with no manual approvers needed.
-
+   > The workflow is configured to not need approval for such a small total cost and will thus be completed directly, with no manual approvers needed.
 1. Click on `Show Instances`
-
 ![](images/MWA-Definitions-5.png)
-
-> This switches to the `Monitor Workflows - Instances` app and sets a display filter for the workflow definition. This is the quickest way to find instances of a specific workflow definition.
+   > This switches to the `Monitor Workflows - Instances` app and sets a display filter for the workflow definition. This is the quickest way to find instances of a specific workflow definition.
 
 ### Monitoring a Workflow instance <a name="monitorWorkflow"></a>
 
