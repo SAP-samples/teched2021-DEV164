@@ -61,19 +61,17 @@ Your business rules project is created with the needed configurations.
 ![](images/ConfirmDataObject.png)
 3. Click **Activate** to activate the project.   
 ![](images/ActivateProject.png)
-1. Click **Release Version** to releaes the project.   
-![](images/Release Version.png)
-1. Update the followng to release the Project.
+1. Click **Release Version** to releaes the project.
+![](images/Release Version.png)   
+1. Update the following to release the project:
     - **Version** as 1.0.0
     - **Revision** as Trial
     - **Description** "Vocabulary to create Step and Start Condition"
     - Click **Release** button
 ![](images/Release.png)
-1. Copy the **Project ID** to be used by the Process Template editor
-- Go to **Manage Projects**.
-- Click Project Settings.    
+1. Copy the **Project ID** to be used by the Process Template editor. Go to **Manage Projects** and click Project Settings.    
 ![](images/ProjectSettings.png)
-- Select the **ID** field from the list and click **OK** button.  
+1. Select the **ID** field from the list and click **OK** button.  
 ![](images/SelectProjectId.png)
 1. Copy the Project ID field and keep it in your notepad.
 ![](images/CopyProjectId.png)
