@@ -7,7 +7,7 @@
     - [Overview](#section1-overview)
     - [Create Project](#section1-createproject)
     - [Create Data Object](#section1-dataobject)
-    - [Summary](#summary)
+    - [Summary](#Summary)
    
 
 
@@ -81,3 +81,34 @@ The exercise is based on authoring Data Object, using SAP Business Rules service
     
     - Click **Activate**
     - Click **Capital Expenditure Rules** to navigate back to the *Data Objects* page
+### Expose Data Object<a name="section1-ExposeDataObject"></a>
+1. In Project Details do the following to expose the Data Object to consume from Process Template later.
+    - Select Project Details and scroll down to  Exposed Vocabulary.
+    - Click Data Object to select the modeled data obejct.
+
+ <img src="images/SelectDataObject.png" width="600">
+ 2.    In the Data Objects dialogue Select Investment dataobejct and click OK button.
+
+ <img src="images/ConfirmDataObject.png" width="600">
+
+ 3. Click **Activate** to activate the project.
+ <img src="images/ActivateProject.png" width="600">
+ 4. Click **Release Version** to releaes the project.
+    <img src="images/Release Version.png" width="600">
+ 5. Update the followng to release the Project.
+    - **Verison** as 1.0.0
+    - **Revision** as Trial
+    - **Description** "Vocabulary to create Step and Start Condition"
+    - Click **Release** button
+ <img src="images/Release.png" width="600">
+
+ 6. Copy the Project ID to use from the Process Template Editor
+    - Go to Manage Prjects
+    - Click Project Settings
+    <img src="images/ProjectSettings.png" width="600">
+    - Select the **ID** field from the list and click **OK** button
+    <img src="images/SelectProjectId.png" width="600">
+7. Copy the Project ID field and keep it in your notepad.
+<img src="images/CopyProjectId.png" width="600">
+### Summary<a name="Summary"></a>
+Now you have modeled a Business Rules Project with a Data Object and exposed it for consuming from Process Template Editor in the next excercise.

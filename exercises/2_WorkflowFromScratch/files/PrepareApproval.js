@@ -50,8 +50,7 @@ var details = {
 	"ApprovalStep": $.context.approvalstep,
 	"BusinessUnit": $.context.Investment.BusinessUnit,
 	"Country": $.context.Investment.Country,
-	"Type": $.context.Investment.Type,
-	"TotalCost": $.context.Investment.TotalCost
+	"Type": $.context.Investment.Type
 };
 
 var rulesPayload = {

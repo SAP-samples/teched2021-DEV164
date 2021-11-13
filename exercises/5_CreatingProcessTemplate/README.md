@@ -2,19 +2,22 @@
 
 ## Prerequisite
 
-You have created a workflow as explained in the exercise in week 1, unit 4 which will be the basis of the process template.
+You have created a workflow as explained in the exercise 2, which will be the basis of the process template.
 
 ## Table of Contents
-- [1. Open SAP Business Application Studio](#section1)
-- [2. Create a new process template](#section2)
-- [3. Configure some general data for process steps](#section3)
-- [4. Configure the process context](#section4)
-- [5. Create a default process variant](#section5)
-- [6. Build and deploy](#section6)
-- [7. Summary](#section7)
+- [1. Overview](#section0)
+- [2. Open SAP Business Application Studio](#section1)
+- [3. Create a new process template](#section2)
+- [4. Configure some general data for process steps](#section3)
+- [5. Configure the process context](#section4)
+- [6. Create a default process variant](#section5)
+- [7. Build and deploy](#section6)
+- [8. Summary](#section7)
 
-
+## Overview ##<a name="section0"></a>
+SAP Workflow Managment enable Process Experts to create process variants using a process template using low code / no code tooling. Developer build Process Template using process steps and related attributes and publish to line of business users. Business users can flexibily configure process templates and create new process variants , configure and deploy these variants. In this excercise you will learn how to configure a Process Template, configure Process Steps and Step conditions.
 ## 1. Open SAP Business Application Studio <a name="section1"></a>
+
 1. Open your SAP BTP Cockpit at https://cockpit.hanatrial.ondemand.com/
 
 1. Click `Go to Your Trial Account`.
@@ -54,6 +57,16 @@ You have created a workflow as explained in the exercise in week 1, unit 4 which
 
 
 ## 3. Configure some general data for process steps <a name="section3"></a>
+1. Select **Business Rules Project** under Vocabulary Configuration.
+![](images/SelectBusinessRulesProject.png)
+1. Update the Business Rules Project Details.
+- Name -> Investment
+- ID -> copied Project ID from the previous excercise.
+- Revision -> Trial
+- Click OK button.
+![](images/AssociateRulesProject.png)
+
+
 1. Select the tab `Process Steps` to start the configuration.
 ![](images/8n_SelectProcessSteps.png)
 
@@ -171,6 +184,8 @@ We have finalized all the entries for the process context for the new template.
 1. Change the name to **Group Head Approval**.
 ![](images/36n_RenameApprovalStep.png)
 
+1. Select **Details** tab and upate the approvalStep as GroupHead.
+![](images/UpdateGroupHead.png)
 1. Repeat these steps to add a second process step called **Local Manager Approval**.
 ![](images/37n_AddLocalManagerApproval.png)
 
@@ -206,6 +221,7 @@ We have finalized all the entries for the process context for the new template.
 1. Once the deployment has been successful, the MTA Archive is ready.  
 ![](images/46_MTAArchiveDeployed.png)
 
+Successful deploment also generate a Business Rules Project and it will be updated while configuring the Process Variants in the next exercise.
 ***
 ## 7. Summary <a name="section7"></a>
 

@@ -70,6 +70,28 @@ In this section you will learn how to register to a trial tenant in SAP Business
 4. Click **Navigate to Subaccount**.
 
     ![00-018](images/00-018.png)
+ Click **Services -> Instances and Subscriptions** and Select the following.
+    - Select Business Rules from the dropdown.
+    - Select wm_businessrules service instance to view the credentials.
+    - Click view credentials.
+   ![00-018](images/ViewRulesCredentials.png)
+1. Copy the endpoints element from the JSON structure.Copy the structure between the curly braces,including curly braces. This will be used in the next step.
+   ![00-018](images/CopyRulesCredentials.png)
+1. Click  **Connectivity -> Destinations**  from the left-hand navigation and search for the destination with name **BUSINESS_RULES**. Click **Clone** Button.
+
+    ![00-020](images/CloneDestination.png)
+1. Updates the Cloned Destiation.
+- Update **Name** as **WM_BUSINESSRRULES**
+- Click **New Property** and update property name as **endpoints**. 
+- Update the property value from the previous step. If you are using EU10 Data center the below JSON element can be used. If you are using US10 or AP21, replace **eu10** with us10 or ap21.
+```json
+    {
+        "rule_repository_url": "https://bpmrulerepository.rule.cfapps.eu10.hana.ondemand.com",
+        "rule_runtime_url": "https://bpmruleruntime.rule.cfapps.eu10.hana.ondemand.com"
+    }
+```
+   -  Click Save Button
+   ![00-020](images/UpdateDestination.png)
 
 5. Click  **Connectivity -> Destinations**  from the left-hand navigation and search for the destination with name **WM\_CF\_SPACE\_PROVIDER.** Click on the destination to configure its properties
 
