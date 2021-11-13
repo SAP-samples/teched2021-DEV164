@@ -75,7 +75,7 @@ In this section you will learn how to register to a trial tenant in SAP Business
 
     ![00-020](images/00-020.png)
 
-6.  In  **Destination Configuration** section, click **Edit**, then **Enter your trial user password** and click **Save**.
+6. In **Destination Configuration** section, click **Edit**, then **Enter your trial user password** and click **Save**.
 
     > Caution: Ensure that the **Two Factor Authentication** is [disabled for the user](https://help.sap.com/viewer/6d6d63354d1242d185ab4830fc04feb1/Cloud/en-US/d26427a2c503456bbdfec53d385e0433.html) whose username and password are entered in the destination configuration. If not, then register a new user with 2FA disabled.
 
@@ -87,26 +87,26 @@ In this section you will learn how to register to a trial tenant in SAP Business
 
 # 3 - Import Sample Content <a name="section1-import"></a>
 
-1.	In your sub-account, do the following:
+1. In your sub-account, do the following:
       - Click **Instances and Subscriptions**, from the left-panel.
       - In *Subscriptions* section, click on application link for SAP Workflow Management.
       
       <p>
       <img src="images/setup-import-1.png" width = "600">
 
-3.	From the Workflow Management Launchpad, click **Process Flexibility Cockpit** tile.
+3. From the Workflow Management Launchpad, click **Process Flexibility Cockpit** tile.
 
       <img src="images/setup-import-2.png" width = "600">
-
-4.  Click **Discover Packages**
+ 
+4. Click **Discover Packages**
 
       <img src="images/setup-import-3.png" width = "600">
 
-5.  Search for *sample* and click on **Sample Capital Expenditure Approval Process** to navigate into the content package.
+5. Search for *sample* and click on **Sample Capital Expenditure Approval Process** to navigate into the content package.
 
       <img src="images/setup-import-4.png" width = "600">
 
-6.  Read the content overview to get information of the content and click on **Import**. 
+6. Read the content overview to get information of the content and click on **Import**. 
 
       <img src="images/setup-import-5.png" width = "600">
       
@@ -118,7 +118,7 @@ In this section you will learn how to register to a trial tenant in SAP Business
        > <img src="images/setup-import-52.png" width = "400">
     
 
-9.	Click on **My Live Processes** link on top left to go back the to Live Processes dashboard.
+9. Click on **My Live Processes** link on top left to go back the to Live Processes dashboard.
     > Once the content is import successfully, you will see the *Import* button changes to *Configure*.
 
       <img src="images/setup-import-6.png" width = "600">
@@ -150,31 +150,31 @@ Congratulations! You have now successfully subscribed to the Business Technology
 
 1. Download [SampleCapitalExpenditureApprovalRules.zip](https://github.com/SAP-samples/teched2020-DEV163/blob/main/exercises/Exercise0/) rules project.
 
-2. From the *Workflow Management Launchpad*, click **Manage Rule Projects** tile.
+1. From the *Workflow Management Launchpad*, click **Manage Rule Projects** tile.
 
     <img src="images/setup-troubleshoot-1.png" width="600">
 
-3. Click **Import** and then click **Upload Project from File System**.
+1. Click **Import** and then click **Upload Project from File System**.
 
     <img src="images/setup-troubleshoot-2.png" width="600">
 
-4. Click **Browse** to select the downloaded zip file.
+1. Click **Browse** to select the downloaded zip file.
     - Click **Import**. 
     
     <img src="images/setup-troubleshoot-3.png" width="400">
 
 > The business rules project will be imported as REVISED CONTENT.
 
-5.  Click on the **SampleCapitalExpenditureApprovalRules** to navigate into the project to deploy the business rules.
+1. Click on the **SampleCapitalExpenditureApprovalRules** to navigate into the project to deploy the business rules.
 
     <img src="images/setup-troubleshoot-4.png" width="600">
 
-10. Switch to **Rule Services** tab.
+1. Switch to **Rule Services** tab.
     - Click **Deploy** to deploy *Determine All Approvers* rule service. 
     
     <img src="images/setup-troubleshoot-5.png" width="600">
 
-12.	Select **Cloud Runtime** as system to deploy.
+1.	Select **Cloud Runtime** as system to deploy.
 
     <img src="images/setup-troubleshoot-6.png" width="400">
 
