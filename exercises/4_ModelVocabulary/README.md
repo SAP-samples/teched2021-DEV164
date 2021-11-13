@@ -49,14 +49,15 @@ Your business rules project is created with the needed configurations.
     | Country | Country | Country | String |  
     | TotalCost | Total Cost | Total cost of investment  | Number | 
     | BusinessUnit | Business Unit | Business unit or the division that is proposing the investment  | String | 
-   ![](images/dataobject_5.png)
+   
+    ![](images/dataobject_5.png)
 1. Click **Activate**. 
 1. Click **Capital Expenditure Rules** to navigate back to the *Data Objects* page. 
     
 ### 3 - Expose Data Object<a name="section1-ExposeDataObject"></a>
 1. In Project Details do the following to expose the Data Object to be consumed by the Process Template later.
- - Select **Project Details** and scroll down to *Exposed Vocabulary*.
- - Click **Data Object** to select the modeled data object.
+- Select **Project Details** and scroll down to *Exposed Vocabulary*.
+- Click **Data Object** to select the modeled data object.   
 ![](images/SelectDataObject.png)
 1. In the **Data Objects** dialogue select **Investment data object** and click **OK** button.   
 ![](images/ConfirmDataObject.png)
@@ -71,11 +72,11 @@ Your business rules project is created with the needed configurations.
     - Click **Release** button
 ![](images/Release.png)
 1. Copy the **Project ID** to be used by the Process Template editor
-    - Go to **Manage Projects**.
-    - Click Project Settings.    
-    ![](images/ProjectSettings.png)
-    - Select the **ID** field from the list and click **OK** button.  
-    ![](images/SelectProjectId.png)
+- Go to **Manage Projects**.
+- Click Project Settings.    
+![](images/ProjectSettings.png)
+- Select the **ID** field from the list and click **OK** button.  
+![](images/SelectProjectId.png)
 1. Copy the Project ID field and keep it in your notepad.
 ![](images/CopyProjectId.png)
 
