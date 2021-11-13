@@ -56,7 +56,7 @@
 
 1. Note how the list of Workflow instances shows one running instance.  
 ![](images/MWA-Instances-1.png)
-> Note that filtering is active: by *Definition* because we opened it from the MWA Definitions view, and based on *Status* as per default only active instances are shown.
+   > Note that filtering is active: by *Definition* because we opened it from the MWA Definitions view, and based on *Status* as per default only active instances are shown.
 1. At the bottom of the list, click on the filter icon ![](images/Icon-MWA-Filter.png)
 1. Select `Status`
 1. Add `Completed` to the selected Status filtering
@@ -76,7 +76,7 @@
 1. Navigate back to the Fiori Launchpad, by clicking Back ![](images/Icon-FLP-Back.png) several times, or by directly clicking on the SAP logo ![](images/Icon-FLP-SAPLogo.png)
 1. Click on the tile for `My Inbox` to open it.   
 ![](images/MyInbox-1.png)
-> Note how it display the number of tasks available for you already in the tile overview.
+   > Note how it display the number of tasks available for you already in the tile overview.
 1. Ensure that the task for *Approval for Capital Expenditure Request "Build mobile apps" in your role as LocalManager* is selected.   
 ![](images/MyInbox-2.png)
 1. Scroll down to the field `Comment` and write `rework needed`
@@ -86,12 +86,12 @@
 1. Ensure that the task *Rework required for CapEx Request "Build mobile apps"* is shown and selected.   
 ![](images/MyInbox-4.png)
 1. Enter `unchanged, as discussed` in the `Comment` field
-1. Click on `Approve`
+1. Click on `Approve`.  
 ![](images/MyInbox-5.png)
    > Remember: to keep things simple, we have re-used the same form for the Approval and the Rework task in this exercise.
 1. In the Task list, click on the Refresh Icon ![](images/Icon-MyInbox-Refresh.png)
 1. Ensure that the task *Approval for Capital Expenditure Request "Build mobile apps" in your role as LocalManager* is shown and selected.
-1. Click on `Approve`
+1. Click on `Approve`.  
 ![](images/MyInbox-6.png)
 
 # Conclusion <a name="conclusion"></a>
