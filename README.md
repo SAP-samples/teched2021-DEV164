@@ -14,25 +14,24 @@ The requirements to follow the exercises in this repository are a trial account 
 
 ## Exercises
 
-- [Setup Guide](https://github.com/SAP-samples/teched2021-DEV164/tree/main/exercises/1_SetupTrial)
-- [Exercise 1 - Creating a Worflow from Scratch](https://github.com/SAP-samples/teched2021-DEV164/tree/main/exercises/2_WorkflowFromScratch)
-- [Exercise 2 - Executing and monitoring your Workflows](https://github.com/SAP-samples/teched2021-DEV164/tree/main/exercises/3_RunMonitorWorkflows)
-- [
-- [Exercise 1 - First Exercise Description](exercises/ex1/)
-    - [Exercise 1.1 - Exercise 1 Sub Exercise 1 Description](exercises/ex1#exercise-11-sub-exercise-1-description)
-    - [Exercise 1.2 - Exercise 1 Sub Exercise 2 Description](exercises/ex1#exercise-12-sub-exercise-2-description)
-- [Exercise 2 - Second Exercise Description](exercises/ex2/)
-    - [Exercise 2.1 - Exercise 2 Sub Exercise 1 Description](exercises/ex2#exercise-21-sub-exercise-1-description)
-    - [Exercise 2.2 - Exercise 2 Sub Exercise 2 Description](exercises/ex2#exercise-22-sub-exercise-2-description)
-
-
-**IMPORTANT**
-
-Your repo must contain the .reuse and LICENSES folder and the License section below. DO NOT REMOVE the section or folders/files. Also, remove all unused template assets(images, folders, etc) from the exercises folder. 
+- [Exercise 1 - Setup Guide](https://github.com/SAP-samples/teched2021-DEV164/tree/main/exercises/1_SetupTrial)
+- [Exercise 2 - Creating a Worflow from Scratch](https://github.com/SAP-samples/teched2021-DEV164/tree/main/exercises/2_WorkflowFromScratch)
+- [Exercise 3 - Executing and monitoring your Workflows](https://github.com/SAP-samples/teched2021-DEV164/tree/main/exercises/3_RunMonitorWorkflows)
+- [Exercise 4 - Model Business Rules Vocabulary](https://github.com/SAP-samples/teched2021-DEV164/tree/main/exercises/4_ModelVocabulary)
+- [Exercise 5 - Creating a Process Template](https://github.com/SAP-samples/teched2021-DEV164/tree/main/exercises/5_CreatingProcessTemplate)
+- [Exercise 6 - Building a Process Visibility Scenario End-to-End](https://github.com/SAP-samples/teched2021-DEV164/tree/main/exercises/6_BuildingVisibilityScenario)
+- [Exercise 7 - Creating and Consuming Process Content Packages](https://github.com/SAP-samples/teched2021-DEV164/tree/main/exercises/7_CreatingContentPackages)
 
 ## How to obtain support
 
 Support for the content in this repository is available during the actual time of the online session for which this content has been designed. Otherwise, you may request support via the [Issues](../../issues) tab.
+
+## Further Learning
+Please find some further sources to get educated on SAP Workflow Management:
+- [Join the SAP Community around SAP Workflow Management](https://community.sap.com/topics/workflow-management)
+- [Join the openSAP course "Improve business processes with SAP Workflow Management](https://open.sap.com/courses/btp2)
+- [Run the missions in SAP Discovery Center](https://discovery-center.cloud.sap/missionssearch/?showFilters=true&appType=platform&category=extensionsuite-digitalprocessautomation)
+- [Register for course from SAP Education: CLD500 - Introduction to SAP Workflow Management powered by SAP BTP](https://training.sap.com/course/cld500-introduction-to-sap-workflow-management-powered-by-sap-btp-classroom-013-g-en/?)
 
 ## License
 Copyright (c) 2021 SAP SE or an SAP affiliate company. All rights reserved. This project is licensed under the Apache Software License, version 2.0 except as noted otherwise in the [LICENSE](LICENSES/Apache-2.0.txt) file.
