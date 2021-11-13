@@ -6,12 +6,11 @@ If not, please follow all the steps below to setup SAP Workflow Management.
 ## Table of contents
 
 <!-- TOC -->
-- [Trial onboarding with SAP Workflow Management](#trial-onboarding-with-sap-workflow-management-and-sap-intelligent-rpa)
-  - [1 Onboard to SAP Business Technology Platform Trial](#onboard-to-sap-business-technology-platform-trial)
-    - [Create Trial account in BTP](#create-trial-account-in-btp)
-  - [2 Setup SAP Workflow Management](#setup-sap-workflow-management)
-  - [3 Import Sample Content](#section1-import)
-  - [Conclusion](#conclusion)
+
+- [1 - Onboard to SAP Business Technology Platform Trial](#onboard-to-sap-business-technology-platform-trial)
+- [2 - Setup SAP Workflow Management](#setup-wfm)
+- [3 - Import Sample Content](#section1-import)
+- [Conclusion](#conclusion)
 
 <!-- /TOC -->
 
@@ -20,9 +19,7 @@ If not, please follow all the steps below to setup SAP Workflow Management.
 
 In this section you will learn how to register to a trial tenant in SAP Business Technology Platform with SAP Workflow Management booster.
 
-## 1 Onboard to SAP Business Technology Platform Trial
-
-### Create Trial account in BTP
+# 1 - Onboard to SAP Business Technology Platform Trial<a name="onboard-to-sap-business-technology-platform-trial"></a>
 
 1. Click on the button **Try for free** on the Free Trials page of SAP Business Technology Platform: [https://www.sap.com/products/business-technology-platform/free-trials.html](https://www.sap.com/products/business-technology-platform/free-trials.html)
 
@@ -56,8 +53,7 @@ In this section you will learn how to register to a trial tenant in SAP Business
 
     ![00-008](images/00-008.png)
 
-## 2 Setup SAP Workflow Management
-### Setup SAP Workflow Management with Booster
+# 2 - Setup SAP Workflow Management <a name="setup-wfm"></a>
 
 1. Click **Boosters**
 
@@ -89,12 +85,7 @@ In this section you will learn how to register to a trial tenant in SAP Business
 
     ![00-021](images/00-021.png)
 
-
-## Conclusion
-
-Congratulations! You have now successfully subscribed to the Business Technology Platform Trial. You can use it to discover all functionalities provided by SAP Workflow Management.
-
-## 3 Import Sample Content <a name="section1-import"></a>
+# 3 - Import Sample Content <a name="section1-import"></a>
 
 1.	In your sub-account, do the following:
       - Click **Instances and Subscriptions**, from the left-panel.
@@ -146,8 +137,12 @@ Congratulations! You have now successfully subscribed to the Business Technology
     
     <img src="images/setup-import-9.png" width = "600">
 
+  
+## Conclusion <a name="conclusion"></a>
 
-## Troubleshooting <a name="section1-troubleshooting"></a>
+Congratulations! You have now successfully subscribed to the Business Technology Platform Trial and imported the sample content. You can use it to discover all functionalities provided by SAP Workflow Management.
+
+# Troubleshooting <a name="section1-troubleshooting"></a>
 
 ##### Symptom: Import of the sample package fails with this error as the user has 2FA enabled
 
