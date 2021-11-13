@@ -1,56 +1,24 @@
-# Introduction and Setup Guide
+# Setup Guide
 
-If not already done before, please follow
+If you have already followed successfully the setup guide sent to you upfront, you can move to the chapter **[Import Sample Content](#section1-import)**.
+If not, please follow all the steps below to setup SAP Workflow Management.
 
 ## Table of contents
 
 <!-- TOC -->
-
-- [Introduction and Setup Guide](#introduction-and-setup-guide)
-  - [Table of contents](#table-of-contents)
-  - [Introduction](#introduction)
-    - [Highlights](#highlights)
-    - [Prerequisites](#prerequisites)
 - [Trial onboarding with SAP Workflow Management and SAP Intelligent RPA](#trial-onboarding-with-sap-workflow-management-and-sap-intelligent-rpa)
   - [Onboard to SAP Business Technology Platform Trial](#onboard-to-sap-business-technology-platform-trial)
     - [Create Trial account in BTP](#create-trial-account-in-btp)
   - [Setup SAP Workflow Management](#setup-sap-workflow-management)
-    - [Setup SAP Workflow Management with Booster](#setup-sap-workflow-management-with-booster)
-    - [Create Workflow Service Instance and Key](#create-workflow-service-instance-and-key)
-    - [Create Role Collection for Workflow Management](#create-role-collection-for-workflow-management)
-  - [Setup SAP Intelligent Robotic Process Automation](#setup-sap-intelligent-robotic-process-automation)
-    - [Setup SAP Intelligent Robotic Process Automation with Booster](#setup-sap-intelligent-robotic-process-automation-with-booster)
-    - [SAP Intelligent Robotic Process Automation Factory access](#sap-intelligent-robotic-process-automation-factory-access)
-    - [SAP Intelligent RPA On-premise Installation](#sap-intelligent-rpa-on-premise-installation)
+  - [Import Sample Content](#section1-import)
   - [Conclusion](#conclusion)
 
 <!-- /TOC -->
 
-## Introduction
 
-### Highlights
+# Trial onboarding with SAP Workflow Management
 
-We are welcoming you to this 2.5 hrs hands-on workshop on the combination of Workflow Management tools: workflows, business rules, process visibility, pre-defined process content and SAP Intelligent RPA bots. 
-After the session you would be able to run it with your customers.
-
-During this session you will learn how to:
-
-- Import CAPEX sample process content
-- Create new process variant (with workflow, business rules)
-- Create RPA bot to extract input data for CAPEX process
-- Trigger new process variant (workflow) thanks to RPA bot
-- Execute workflow steps in My Inbox
-
-Learn how a business process can be created based on pre-defined content and easily adapted, how a bot can be built with SAP Intelligent RPA and how the services can be combined for maximizing the value.
-
-### Prerequisites
-
-- Your Session-User, provided via mail or by your instructor
-- Access to the landing page of your Session-Account via link, provided via mail or by your instructor
-
-# Trial onboarding with SAP Workflow Management and SAP Intelligent RPA
-
-In this section you will learn how to register to a trial tenant in SAP Business Technology Platform with SAP Workflow Management Booster and SAP Intelligent Robotic Process Automation Subscription.
+In this section you will learn how to register to a trial tenant in SAP Business Technology Platform with SAP Workflow Management booster.
 
 ## Onboard to SAP Business Technology Platform Trial
 
@@ -123,7 +91,7 @@ In this section you will learn how to register to a trial tenant in SAP Business
 
 ## Conclusion
 
-Congratulations! You have now successfully subscribed to the Business Technology Platform Trial. You can use it to discover all functionalities provided by SAP Workflow Management and SAP Intelligent Robotic Process Automation!
+Congratulations! You have now successfully subscribed to the Business Technology Platform Trial. You can use it to discover all functionalities provided by SAP Workflow Management.
 
 ## Import Sample Content <a name="section1-import"></a>
 
