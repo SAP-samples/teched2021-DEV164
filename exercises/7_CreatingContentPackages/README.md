@@ -61,14 +61,15 @@ Repeat the same for Business Rules and Process Visibility scenario.
 3.Select **Add Business Rules Project**.
 ![](images/AddBusinessRules.png)
 
-The dialogue shows all deplyoed Business Rules Projects.Select **Capital Expenditure Rules** and click **Select** button.
+The dialogue shows all deplyoed Business Rules Projects.Select **Sample policies for capital expenditure approval** and click **Select** button.
 ![](images/SelectBusinessRules.png)
+
 1.Click tab **Artifacts**.  
 2. Click the **+** button.  
 3. Select **Add Process Visiblity Scenario**.  
 ![](images/AddVisibilityscenario.png)
 
-The dialogue shows all deplyoed Business Rules Projects.Select **Capital Expenditure Rules** and click **Select** button.
+The dialogue shows all Activated Process Visibility Scenarios.Select **Capital Expenditure Approvals** and click **Select** button.
 ![](images/SelectVisibilityScenario.png)
 1. Enter Revision as **2021**
 2. Enter Version as **1.0.0**
@@ -106,63 +107,47 @@ A process variant has default steps configured while creating the process templa
 Click the Process Variant **capitalexpenditureapproval** to navigate to process variant editor.
 ![](images/SelectProcessVariant.png)
 *The Process Variant Editor is available now to configure a new variant. It shows the default variant and steps in the process template*.
-![](images/ProcessVariantEditor.png)
-You can add new approval steps and configure. The **Available Steps**  Palette shows the available steps. The default variant has two steps. The step details shows possilbe configurations you can do while configuring a step.
+
+*You can add new approval steps and configure. The **Available Steps**  Palette shows the available steps to consume in a process variant. The default variant has two steps. The step details shows possilbe configurations you can do while configuring a step*.
+
+- Select **Step Conditions** tab to configure a step condition.
+- Select **Investment.Total Cost** from the drop down.
+- Select **>=**as the operator.
+- Enter **10000** as the Total Cost value. 
+
+*This configuration will enable you to execute this Process Variant if the Total Cost of investment is greater than or equal to 10000*.
+![](images/ProcessVariantStartCondition.png)
+Select **Group Head Approval** Step to configure step conditions.
+- Select **Step Conditions** tab.
+- Select **Investment.Total Cost** from the drop down.
+- Select **>=**as the operator.
+- Enter **30000** as the Total Cost value.
+![](images/GroupHeadStepCondition.png)
+**Drag and Drop** Approval Step from palette to Process Variant. The newly added Approval Step part of the Process Variant now.
 ![](images/DragAndDropProcessStep.png)
  *It is possilbe to execute multiple step parallelly. You need to drag and drop the process step on an exisiting step so that two steps execute parallely*.
 
  Select the newly added step and change the Step **Name** to CFO.
  ![](images/StepRenameCFO.png)
 
- Click the **Details** tab. Enter the **approvalstep** as "CFO".
+ Select the **Details** tab.
+ Enter the **approvalstep** as "CFO".
  ![](images/StepPropertyCFO.png)
 
- *This is a step attribute you have configured while creating the 
- process template .It is used while determining the approver using a business rule*.
+ *This is a step attribute you have configured while creating the  process template .It is used while determining the approver using a business rule*.
 
-Select **Group Head Approval** Step and select **Details** tab.
-Update **approvalstep** as **GroupHead**.
-![](images/StepRenameGroupHead.png)
-Select **Local Manager Approval** Step and make sure the **approvalstep** property is LocalManager.
-Now Save and Activate your process varaint.
-Click **Activate** button.
-![](images/ActivateVariant.png)
+ 
+ Select the **Step Conditions** tab.
+ Select **Investment.Total Cost** from the drop down.
+- Select **>=**as the operator.
+- Enter **50000** as the Total Cost value.
+- Click **Activate** button.
+![](images/CFOStepCondition.png)
 
-Successful activation of the process variant will display a toast message. A new workflow definition is deployed in to your subaccount.
+
+Successful activation of the process variant will display a toast message. A new workflow definition is deployed in to your subaccount. The Start and Step conditions are part of a generated Business Rules Project in your sub account.
 
 ![](images/ActivationMessage.png)
-
-### Configure Decision <a name="configuredecision"></a>
-Navigate to Process Flexibility cockpit and choose Decisions Tile.
-![](images/SelectDecision.png)
-
-Click Copy to Draft Button to modify the Business Rules.
-![](images/DecisionCopytoDraft.png)
-
-The copied draft version is now available.
-1. Select the draft version.
-2. Select the decision **Determine Approvers**.
-3. click **Edit** button.
-4. Click the button to enter the full screen mode.
-![](images/DecisionEditDraft.png)
-
-Select the row with Step Name value as **GroupHead**.
-Change the **Total Cost** to >=15000. This will include all three approval steps while executing the Process variant.
-![](images/DecisionChangeTotalAmount.png)
-Make sure the **User ID** column has your BTP user id.
-Click **Save** button.
-![](images/SaveDecision.png)
-Click **Release Version** to release the changes.
-![](images/ReleaseDecision.png)
-Update **Description** and click **Release** button.
-![](images/Releaseversion.png)
-
-Select the new version and click **Activate** button.
-![](images/ActivateDecision.png)
-
-Now you have modified the decision, activate and deployed it. 
-Click **Home** button and navigate to the main page.
-![](images/MainPageFromDecisions.png)
 
 ### Execute and Montior Process Variant <a name="monitorvariant"></a>
 In this section you will create an instance of the process variant you have activated. The process variant has three approval steps and approvers are determined using the decision which you have modified in the previous section. 
@@ -171,17 +156,16 @@ Click **Monitor Workflow - Workflow Definition** Tile to view the newly deployed
 
 ![](images/MonitorWorkflowsDefinitions.png)
 
-You can see the newly activated Process Variant **capitalexpenditureapproval** deployed to your account. You can also see the approval steps you have build and deployed to your account.
+You can see the newly activated Process Variant **capitalexpenditureapproval** deployed to your account. You can also see the approval steps you have developed and deployed to your account. One more wokflow with name **CapexApproval_Leading Workflow** got generated. This Workflow is managign the Start and Step conditions you have modled in the previous steps.
 
-![](images/WorkflowDefinition.png)
-
-Select the workflow definition **capitalexpenditureapproval**   and click **Start New Instance**.
-![](images/StartNewInstance.png)
+Select the workflow definition **CapexApproval_Leading Workflow**   and click **Start New Instance**.
+![](images/LeadingWorkflow.png)
+Delete the sample JSON from the dialogue.
 
 **Copy  and Paste** the below JSON  content.
 
 ```json
-{
+
    {
     "RequestId": "CAPEX_REQ_001",
     "Title": "Build mobile apps",
@@ -201,10 +185,11 @@ Select the workflow definition **capitalexpenditureapproval**   and click **Star
         "BusinessUnit": "Purchasing",
         "Country": "Germany"
     }
-}
+
 ```
 Change your **Name** and **UserId** under Requester.
-UserId should be your BTP trila user id.
+UserId should be your BTP trial accont user id.
+The Total Cost determine the process variant to be used and the number of approval steps to be used in the workflow instance.
 Click **Start New Instance and Close**.
 ![](images/startNewInstanceAndClose.png)
 A new workflow instance of your newly deployed process variant got created.
@@ -213,12 +198,15 @@ Click **Show Instances** button to see the newly created workflow instance.
 ![](images/ShowInstances.png)
 The Monitor Workflow Instnaces Application will show the root workflow instnace. 
 Click **EXECUTION LOG** to see the detials of the activites executed so far.
-The activity Reference subflow **"Group Head Approval"** is started shows the instnace Id of the workflow approval step.
+The activity Reference subflow **"Call Variant"** is started shows the instnace Id of the workflow approval step.
 
-Click on the link **Instance Id** to navigate to the Group Head Approval step.
+Click on the link **Instance Id** to navigate to the Process Variant.
 
-![](images/WorkflowRootInstance.png)
+![](images/LeadingWorkflowInstance.png)
+The child workflow instance **"Two Step Approval"** is displayed now. This is the Process Variant you have configured and deployed.
 
+Click on the link **Instance Id** to navigate to the Approval Step.
+![](images/ProcessVariantInstance.png)
 The child workflow instance **"ApprovalStep"** is displayed now.
 Click tab **EXECUTION LOG**. It shows the Group Head approval task is ready and assigned to your BTP trial user id.
 ![](images/GroupHeadApprovalInstance.png)

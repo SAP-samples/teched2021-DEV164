@@ -70,7 +70,40 @@ In this section you will learn how to register to a trial tenant in SAP Business
 4. Click **Navigate to Subaccount**.
 
     ![00-018](images/00-018.png)
- Click **Services -> Instances and Subscriptions** and Select the following.
+## Create Role Collection for Workflow Management##
+1. Once in your trial account Click on the tile **trial** to enter the Trial subaccount.
+
+    ![00-031](images/00-031.png)
+
+2. Open **Security** and select **Role Collections**. Click on **(+)** to create a new Role Collection with a name.
+
+    ![00-032](images/00-032.png)
+
+3. Assign the name **LocalManager** and click **Create.**
+
+    ![00-033](images/00-033.png)
+
+4. Click on the newly created role collection to edit it.
+
+    ![00-034](images/00-034.png)
+
+5. Click **Edit.**
+
+    ![00-035](images/00-035.png)
+
+6. Assign your SAP BTP trial user to this role collection
+
+    ![00-036](images/00-036.png)
+
+7. Click **Save.**
+
+    ![00-037](images/00-037.png)
+
+8. Repeat these steps for the role collection **GroupHead** and  **CFO**.
+
+    ![00-038](images/00-038.png)
+## Configure Destinations ##
+1. Click **Services -> Instances and Subscriptions** and Select the following.
     - Select Business Rules from the dropdown.
     - Select wm_businessrules service instance to view the credentials.
     - Click view credentials.

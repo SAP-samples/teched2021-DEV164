@@ -1,6 +1,6 @@
-// Change this value:
+
 var ruleServiceId = "a37df8246b2048dfba6f07c46e6ed25f";
-$.context.selfApproval = true;
+$.context.selfApproval = false;
 
 // -----------------------------------------------------------------------------------------
 // no modifications needed below this line

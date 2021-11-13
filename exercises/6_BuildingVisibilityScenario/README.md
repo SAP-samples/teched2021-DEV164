@@ -1,8 +1,26 @@
 # Building a Process Visibility Scenario End-to-End
 
-## Overview
+## Table of Contents
+- [Overview](#overview)
+- [Objective](#objective)
+ - [Exercise Description](#description)
+- [Access the Fiori Launchpad for SAP Workflow Management](#access)
+- [Create a Visibility Scenario](#createscenario)
+- [Add Process Participant](#processparticipant)
+- [Modify Context](#context)
+- [Change Instances and Instance Labels](#instances)
+- [Configuring a Threshold](#threshold)
+- [Creating Custom Attributes](#customattributes)
+- [Modify autoconfigured Process Performance Indicators](#performanceindicators)
+- [Create Process Performance Indicators](#createppi)
+- [Adding Actions](#actions)
+- [Activating the Visibility Scenario](#activate)
+- [Monitoring the Visibility Scenario](#monitor)
+- [Gain Visibility Using Process Workspace](#processworkspace)
+
+## Overview <a name="overview"></a>
 In this exercise, you will configure a ***Visibility Scenario*** to gain insights on the process template created for ***Capital Expenditure Approvals*** by using the **Process Visibility Capability** within **SAP Workflow Management**. As a pre-requisite ensure that you have completed the prior exercises that guide you to create the process template for Capital Expenditure Approvals
-## Objective
+## Objective <a name="objective"></a>
 In this exercise you will learn the following.
 1.	Configure a business scenario by importing the process template modeled using SAP Business Application Studio
 1.	Configure performance indicators that help gain visibility on your end to end process
@@ -10,7 +28,7 @@ In this exercise you will learn the following.
 1.	Process acquired events
 1.	Access process workspace to track end to end process
 
-### Exercise Description
+### Exercise Description <a name="description"></a>
 
 You will do the following as part of the exercises:
 1.	Create a new **business scenario** and add the **Process Template** as a **process participant**.
@@ -20,7 +38,7 @@ You will do the following as part of the exercises:
 1.  Use **Monitor Scenarios** application to view and schedule processing of events for the activated scenarios.
 1.	Access **Process Visibility Workspace** to track and gain visibility on your end to end process
 
-## Access the Fiori Launchpad for SAP Workflow Management
+## Access the Fiori Launchpad for SAP Workflow Management <a name="access"></a>
 1. Access your trial account
 
 	https://account.hanatrial.ondemand.com/trial
@@ -41,7 +59,7 @@ You will do the following as part of the exercises:
 ![](images/0002.png)
 
 
-## Create a Visibility Scenario
+## Create a Visibility Scenario <a name="createscenario"></a>
 
 **Prerequisite**: You’re assigned to the **PVDeveloper** role.
 
@@ -75,7 +93,7 @@ You will do the following as part of the exercises:
 	![](images/005.png)
 
 
-## Add Process Participant
+## Add Process Participant<a name="processparticipant"></a>
 
 1. Click on the `+` button 
 1. Select `Add Process Template`
@@ -91,7 +109,7 @@ You will do the following as part of the exercises:
 
 ![](images/008.png)
 
-## Modify Context
+## Modify Context<a name="context"></a>
 
 ### Change Data Type
 
@@ -142,7 +160,7 @@ You can rename the context to suit business requirements. In this case, we renam
 
 ![](images/071.png)
 
-## Change Instances and Instance Labels
+## Change Instances and Instance Labels<a name="instances"></a>
 
 The ***Instances Label*** and ***Instance Label*** are used to represent the process instances in the **Process Workspace**. 
 > Instances label represents a group of instances in the Process Workspace. 
@@ -160,7 +178,7 @@ In our exercise, we are working with **Capital Expenditure *Requests***. So let'
 
 You will notice this in your **Process Workspace** when you view the process instances table, and when you drill down into one of the process instances.
 
-## Configuring a Threshold
+## Configuring a Threshold<a name="threshold"></a>
 
 The scenario target defines the expected time by when a scenario instance must be completed. The status depicts how a scenario instance is progressing based on the scenario target or the defined custom sub-statuses.
 
@@ -180,7 +198,7 @@ The scenario target defines the expected time by when a scenario instance must b
 
 	![](images/021.png)
 	
-## Creating Custom Attributes
+## Creating Custom Attributes<a name="customattributes"></a>
 
 A business scenario will create a set of **Attributes** based on the _context of the **Process Participants**_. Additionally, attributes based on *certain aggregations and conditions* can be created. 
 The Attributes are used to either display more information, or act as a **Measure for Performance Indicators**
@@ -224,7 +242,7 @@ Week| Week of Attribute |Start Time
 
 ![](images/017.png)
 
-## Modify autoconfigured Process Performance Indicators
+## Modify autoconfigured Process Performance Indicators<a name="performanceindicators"></a>
 Performance indicators represent aggregated information of a measure, grouped by dimensions, and applied filters. A group of performance indicators gives the business users a holistic view of the process and enables them to understand process performance at a glance.
 
 > You will see that there already are preconfigured Process Performance Indicators.
@@ -261,7 +279,7 @@ Let's now alter the autogenerated **Performance Indicators** to better suit our 
 
 > However, this might not capture everything that a **Business Process Expert** or relevant ***persona*** would desire as ***insights to the business process***. In the next steps, we'll further enhance the **Visibility Scenario** with new **performance indicators**.
 
-## Create Process Performance Indicators
+## Create Process Performance Indicators<a name="createppi"></a>
 
 ### Value of Capital Expenditure with Approval Overdue
 
@@ -418,7 +436,7 @@ Let's now alter the autogenerated **Performance Indicators** to better suit our 
 		
 			![](images/037.png)
 			
-## Adding Actions [Optional]
+## Adding Actions [Optional]<a name="actions"></a>
 Actions help business users to act on situations in a process. Actions are defined at the **visibility scenario level**, and are therefore **available for all instances** of the visibility scenario **provided the configured conditions are satisfied**.
 
 You can define two types of action: 
@@ -479,7 +497,7 @@ Refer to the following workflow content package to learn and incorporate workflo
 
 The package contains workflows to notify relevant personas when some conditions are satisfied, and also restart any existing workflows relevant to the process.
 
-## Activating the Visibility Scenario
+## Activating the Visibility Scenario<a name="activate"></a>
 Once all the modifications are done, the visibility scenario can be activated. 
 - Ensure that you resolve all the validation errors before activating your visibility scenario. Any existing *validation errors* will be displayed when you attempt **Save** and/or **Activate** the scenario.
 - The scenario Status changes to **ACTIVE** upon successful activation.
@@ -490,7 +508,7 @@ Once all the modifications are done, the visibility scenario can be activated.
 
 	![](images/060.png)
 
-## Monitoring the Visibility Scenario 
+## Monitoring the Visibility Scenario<a name="monitor"></a>
 
 The process visibility capability within the SAP Workflow Management service offers the following set of monitoring tools for administrators.
 - **Monitor Visibility Scenarios:** You can manage the activated visibility scenarios using Monitor Visibility Scenarios tile.
@@ -541,7 +559,7 @@ The process visibility capability within the SAP Workflow Management service off
 	![](images/068.png)
 
 
-## Gain Visibility Using Process Workspace
+## Gain Visibility Using Process Workspace<a name="processworkspace"></a>
 
 You can use Process Workspace to gain visibility on end-to-end processes for line-of-business users and it enables you to understand the performance of the process.
 
