@@ -4,6 +4,7 @@
 - [Overview](#section1-overview)
 - [1 - Create Project](#section1-createproject)
 - [2 - Create Data Object](#section1-dataobject)
+- [3 - Expose Data Object](#section1-ExposeDataObject)
 - [Conclusion](#Summary)
 
 ## Author and Activate Data Objects <a name="section1"></a>
@@ -67,33 +68,29 @@ Your business rules project is created with the needed configurations.
     - Click **Capital Expenditure Rules** to navigate back to the *Data Objects* page
 
 ### 3 - Expose Data Object<a name="section1-ExposeDataObject"></a>
-1. In Project Details do the following to expose the Data Object to consume from Process Template later.
-    - Select Project Details and scroll down to  Exposed Vocabulary.
-    - Click Data Object to select the modeled data obejct.
-
+1. In Project Details do the following to expose the Data Object to be consumed by the Process Template later.
+    - Select **Project Details** and scroll down to *Exposed Vocabulary*.
+    - Click **Data Object** to select the modeled data object.
  <img src="images/SelectDataObject.png" width="600">
- 2.    In the Data Objects dialogue Select Investment dataobejct and click OK button.
-
+1. In the **Data Objects** dialogue select **Investment data object** and click **OK** button.
  <img src="images/ConfirmDataObject.png" width="600">
-
- 3. Click **Activate** to activate the project.
+1. Click **Activate** to activate the project.
  <img src="images/ActivateProject.png" width="600">
- 4. Click **Release Version** to releaes the project.
+1. Click **Release Version** to releaes the project.
     <img src="images/Release Version.png" width="600">
- 5. Update the followng to release the Project.
-    - **Verison** as 1.0.0
+1. Update the followng to release the Project.
+    - **Version** as 1.0.0
     - **Revision** as Trial
     - **Description** "Vocabulary to create Step and Start Condition"
     - Click **Release** button
  <img src="images/Release.png" width="600">
-
- 6. Copy the Project ID to use from the Process Template Editor
-    - Go to Manage Prjects
-    - Click Project Settings
+1. Copy the **Project ID** to be used by the Process Template editor
+    - Go to **Manage Projects**.
+    - Click Project Settings.    
     <img src="images/ProjectSettings.png" width="600">
-    - Select the **ID** field from the list and click **OK** button
+    - Select the **ID** field from the list and click **OK** button.  
     <img src="images/SelectProjectId.png" width="600">
-7. Copy the Project ID field and keep it in your notepad.
+1. Copy the Project ID field and keep it in your notepad.
 <img src="images/CopyProjectId.png" width="600">
 
 ### Conclusion<a name="Summary"></a>
