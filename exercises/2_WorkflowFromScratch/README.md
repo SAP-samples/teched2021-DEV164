@@ -62,13 +62,13 @@ In this exercise we create a simple, one-step approval with rework capability.
    > This will open the file Explorer inside the newly created project. You can open a different project from the menu with `File -> Open Workspace...` and selecting either a specific project or the parent folder `projects` itself.
 1. From the menu, select `View -> Find Command...` or press `F1`
 ![](images/sbas-init-2.png)
-3. In the popup, type `mta` to filter the available commands, then select `Create MTA Module from Template`. 
+1. In the popup, type `mta` to filter the available commands, then select `Create MTA Module from Template`. 
 ![](images/sbas-init-3.png)
-3. Select `Workflow Module`
-4. Click on `Start`
-5. Keep the defaults for `mta.yaml` file path and target folder
-6. Choose a name for the module, e.g. `Capex`.   
-8. Click on `Next`.  
+1. Select `Workflow Module`
+1. Click on `Start`
+1. Keep the defaults for `mta.yaml` file path and target folder
+1. Choose a name for the module, e.g. `Capex`.   
+1. Click on `Next`.  
 ![](images/sbas-init-4.png)
    > This creates a workflow module inside the MTA and directly let's you create the first workflow inside it.
 1. Enter `ApprovalStep` as name for the workflow
@@ -110,9 +110,9 @@ Take a look at the elements of BAS IDE and Workflow Editor
 1. Note how when moving the mouse over the editor area, the new task sticks to the mouse pointer, ready for placement.
 1. Note the yellow dotted lines which help align elements with other, close-by elements for a nicer arrangement.
 1. Click on the existing Sequence Connector between `Prepare Approval` and `EndEvent1` (it will be displayed bold when hovering over it), to place the symbol 'on it'.
-![](images/Modeling-4.png)
+![](images/Modeling-4.png)   
    > Placing an element from the palette on an existing Sequence Connector will split the connector and place the new element inbetween, similar on when using the Speed Buttons.
-![](images/Modeling-5.png)
+![](images/Modeling-5.png)   
    > Inserting elements does not change the position of existing elements. When there is not enough space available, the connectors will form a loop. 
 1. Click on the `ServiceTask1` to select it
 1. Drag'n'Drop the service task a bit lower, by clicking and holding, dragging it with the mouse, then releasing it at the new position.
