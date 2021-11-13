@@ -57,12 +57,11 @@ Your business rules project is created with the needed configurations.
 ### 3 - Expose Data Object<a name="section1-ExposeDataObject"></a>
 1. In Project Details do the following to expose the Data Object to be consumed by the Process Template later. Select **Project Details** and scroll down to *Exposed Vocabulary*. Click **Data Object** to select the modeled data object.   
 ![](images/SelectDataObject.png)
-1. In the **Data Objects** dialogue select **Investment data object** and click **OK** button.   
+1. In the **Data Objects** dialogue select **Investment** data object and click **OK** button.   
 ![](images/ConfirmDataObject.png)
 3. Click **Activate** to activate the project.   
 ![](images/ActivateProject.png)
-1. Click **Release Version** to releaes the project.
-![](images/Release Version.png)   
+1. Click **Release Version** to release the project.   
 1. Update the following to release the project:
     - **Version** as 1.0.0
     - **Revision** as Trial
@@ -77,4 +76,4 @@ Your business rules project is created with the needed configurations.
 ![](images/CopyProjectId.png)
 
 ### Conclusion<a name="Summary"></a>
-Now you have modeled a Business Rules Project with a Data Object and exposed it for consuming from Process Template Editor in the next excercise.
+Now you have modeled a Business Rules Project with a Data Object and exposed it for consumption in the Process Template Editor in the next excercise.
