@@ -96,36 +96,35 @@ Take a look at the elements of BAS IDE and Workflow Editor
 1. Inside Workflow Editor: Properties pane for the currently selected Flow element (or the workflow itself). Contains a tab 'General' with the technical ID, the displayed name and an optional documentation of this element, as well as additional fields or tabs depending on the selected element type.
 ![](images/sbas-overview.png)
 1. Click on the `StartEvent1` to select it
-1. This opens the Speed Buttons. Select `Tasks` (rectangular icon ![](images/Icon_Speed_Tasks_small.png)), then click on the `Script Task`
+1. This opens the Speed Buttons. Select `Tasks` (rectangular icon ![](images/Icon_Speed_Tasks_small.png)), then click on the `Script Task`   
 ![](images/Modeling-1.png)
    > Using the Speed Buttons, the new element is automatically placed directly next to the selected element, and connected to it. If another element is already connected, it is connected inbetween.   
 ![](images/Modeling-2.png)   
-1. In the Properties pane, enter `Prepare Approval` as name.
-1. Press Tab or click anywhere else to leave this field.
+1. In the Properties pane, enter `Prepare Approval` as name. Press Tab or click anywhere else to leave this field.
 ![](images/Properties-PrepareApproval-1.png)    
 ![](images/Modeling-2a.png)   
    > Note the orange warning icon, indicating that additional, mandatory configuration is missing. We will fill them in later.
-1. From the palette, select `Tasks` (rectangular icon ![](images/Icon_Palette_Tasks.png)), then `Service Task`
+1. From the palette, select `Tasks` (rectangular icon ![](images/Icon_Palette_Tasks.png)), then `Service Task`. 
 ![](images/Modeling-3.png)   
-1. Note how when moving the mouse over the editor area, the new task sticks to the mouse pointer, ready for placement.
-1. Note the yellow dotted lines which help align elements with other, close-by elements for a nicer arrangement.
-1. Click on the existing Sequence Connector between `Prepare Approval` and `EndEvent1` (it will be displayed bold when hovering over it), to place the symbol 'on it'.
+3. Note how when moving the mouse over the editor area, the new task sticks to the mouse pointer, ready for placement.
+4. Note the yellow dotted lines which help align elements with other, close-by elements for a nicer arrangement.
+5. Click on the existing Sequence Connector between `Prepare Approval` and `EndEvent1` (it will be displayed bold when hovering over it), to place the symbol 'on it'.   
 ![](images/Modeling-4.png)   
-   > Placing an element from the palette on an existing Sequence Connector will split the connector and place the new element inbetween, similar on when using the Speed Buttons.
+   > Placing an element from the palette on an existing Sequence Connector will split the connector and place the new element inbetween, similar on when using the Speed Buttons.   
 ![](images/Modeling-5.png)   
    > Inserting elements does not change the position of existing elements. When there is not enough space available, the connectors will form a loop. 
 1. Click on the `ServiceTask1` to select it
-1. Drag'n'Drop the service task a bit lower, by clicking and holding, dragging it with the mouse, then releasing it at the new position.
+1. Drag'n'Drop the service task a bit lower, by clicking and holding, dragging it with the mouse, then releasing it at the new position.   
 ![](images/Modeling-6.png)
-1. Select the `ServiceTask1` and name it `Get Approvers` using the properties pane.
-1. In the top right corner of the editing area, use the `+` / `-` icons to change the zoom level of the workflow. Alternatively, the mouse wheel can be used.
-1. Use the windrose to pan the workflow editing area. Click the middle circle to zoom and center the whole workflow into view. Alternatively, dragging with the mouse is supported: click and hold on an empty area in the editor, then drag.
-1. For simple (non-branching) workflows, the automatic layouter can be helpful. Click on first `Arrange Vertically` and then `Arrange Horizontally` to see the difference.
-1. Select the event (circle) named "EndEvent1", then click on the trash bin icon (or press 'delete') to remove it. Note how also the connecting arrow (called `Sequence Flow`) is removed.
+3. Select the `ServiceTask1` and name it `Get Approvers` using the properties pane.
+4. In the top right corner of the editing area, use the `+` / `-` icons to change the zoom level of the workflow. Alternatively, the mouse wheel can be used.
+5. Use the windrose to pan the workflow editing area. Click the middle circle to zoom and center the whole workflow into view. Alternatively, dragging with the mouse is supported: click and hold on an empty area in the editor, then drag.
+6. For simple (non-branching) workflows, the automatic layouter can be helpful. Click on first `Arrange Vertically` and then `Arrange Horizontally` to see the difference.
+7. Select the event (circle) named "EndEvent1", then click on the trash bin icon (or press 'delete') to remove it. Note how also the connecting arrow (called `Sequence Flow`) is removed.    
 ![](images/editor-overview-2.png)
 ![](images/Modeling-7.png)
 1. Select `Get Approvers` and from the Speed Buttons, select `Tasks`, then `Script Task`. Note how the new task is selected and the Speed Buttons are directly available.
-1. From the Speed Buttons of the `ScriptTask2`, select 'Gateways' (diamond-shaped symbol ![](images/Icon_Speed_Gateways_small.png)), then `Exclusive Gateway`
+1. From the Speed Buttons of the `ScriptTask2`, select 'Gateways' (diamond-shaped symbol ![](images/Icon_Speed_Gateways_small.png)), then `Exclusive Gateway`.  
 ![](images/Modeling-8.png)
    > Gateways branch the flow into several outgoing connectors. The exclusive gateway indicated that exactly one branch is followed, based on a condition. We will add the second branch and condition later.
 1. Select `ScriptTask2` and name it `Process Approver Details`
@@ -135,7 +134,7 @@ Take a look at the elements of BAS IDE and Workflow Editor
 1. In the same way, add another Script Task and name it `Process Approval Result`
 1. Then add a second Exclusive Gateway named `Approval Decision`
 1. From the Speed Buttons of the gateway `Approval Decision`, select `Events` (circle icon ![](images/Icon_Speed_Events_small.png)), then `Terminate End Event`
-1. Name it `Terminate Approval`
+1. Name it `Terminate Approval`. 
 ![](images/Modeling-9.png)
    > The `End Event` and `Terminating End Event` both end execution of this branch. If parallel branches are still running, the `End Event` will keep those running, while the `Terminating End Event` will stop the whole processing of this workflow. If the workflow was referenced from another workflow, execution will continue in this one.
 1. Ensure your workflow looks like this:
