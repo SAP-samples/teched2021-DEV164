@@ -2,7 +2,7 @@
 
 ## Description
 
-This repository contains the material for the SAP TechEd 2021 session called *DEV164 - Develop, Configure, and Provision Application Workflows and Content*.  
+This repository contains the material for the SAP TechEd 2021 session called [*DEV164 - Develop, Configure, and Provision Application Workflows and Content*](https://reg.sapevents.sap.com/flow/sap/sapteched2021/portal/page/sessions/session/16303673693580013Vw7).  
 
 ## Overview
 
