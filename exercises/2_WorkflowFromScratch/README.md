@@ -104,7 +104,7 @@ Take a look at the elements of BAS IDE and Workflow Editor
 ![](images/Properties-PrepareApproval-1.png)    
 ![](images/Modeling-2a.png)   
    > Note the orange warning icon, indicating that additional, mandatory configuration is missing. We will fill them in later.
-1. From the palette, select `Tasks` (rectangular icon ![](images/Icon_Palette_Tasks.png)), then `Service Task`. 
+1. From the palette, select `Tasks` (rectangular icon ![](images/Icon_Palette_Tasks.png)), then `Service Task`.   
 ![](images/Modeling-3.png)   
 3. Note how when moving the mouse over the editor area, the new task sticks to the mouse pointer, ready for placement.
 4. Note the yellow dotted lines which help align elements with other, close-by elements for a nicer arrangement.
