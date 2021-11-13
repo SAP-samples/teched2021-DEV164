@@ -121,7 +121,7 @@ Take a look at the elements of BAS IDE and Workflow Editor
 5. Use the windrose to pan the workflow editing area. Click the middle circle to zoom and center the whole workflow into view. Alternatively, dragging with the mouse is supported: click and hold on an empty area in the editor, then drag.
 6. For simple (non-branching) workflows, the automatic layouter can be helpful. Click on first `Arrange Vertically` and then `Arrange Horizontally` to see the difference.
 7. Select the event (circle) named "EndEvent1", then click on the trash bin icon (or press 'delete') to remove it. Note how also the connecting arrow (called `Sequence Flow`) is removed.    
-![](images/editor-overview-2.png)
+![](images/editor-overview-2.png)   
 ![](images/Modeling-7.png)
 1. Select `Get Approvers` and from the Speed Buttons, select `Tasks`, then `Script Task`. Note how the new task is selected and the Speed Buttons are directly available.
 1. From the Speed Buttons of the `ScriptTask2`, select 'Gateways' (diamond-shaped symbol ![](images/Icon_Speed_Gateways_small.png)), then `Exclusive Gateway`.  
@@ -238,7 +238,7 @@ Take a look at the elements of BAS IDE and Workflow Editor
 1. For Recipients Users, enter `${context.internal.step.approver.UserId}`
 1. For Recipients Groups, enter `${context.internal.step.approver.GroupId}`
 1. For this task we do not define a `Due Date`
-1. `Show in workflow log` and `Allow forward` can be kept as the defaults. 
+1. `Show in workflow log` and `Allow forward` can be kept as the defaults.    
 ![](images/Properties-ApprovalTask-1.png)
    > Note how JUEL expression are used to access the context inside the properties fields.
 1. Select the Script Task `Process Approval Result`
