@@ -15,11 +15,9 @@
 - [3 - Build and Deploy](#deploy)
 - [Conclusion](#conclusion)
 
-
 ## Business Scenario <a name="scenario"></a>
 
 In this exercise we create a simple, one-step approval with rework capability.
-
 ![](images/final_workflow.png)
 
 ## 1 - SAP Business Application Studio (BAS) <a name="bas"></a>
@@ -37,10 +35,9 @@ In this exercise we create a simple, one-step approval with rework capability.
 
 1. Click on `Create Dev Space`
 ![](images/SBAS_CreateDevSpace.png)
-> If you already have a dev space, it will look like this:
-![](images/sbas-devspace-1.png)
-> A 'Development Space' is a separate area to store all your files while using BAS. It's bound to your personal user.
-> Note that Dev Spaces are not intended for safe, long-term storage of files. Use a source code management system like git for this.
+   > If you already have a dev space, it will look like this:![](images/sbas-devspace-1.png)
+   > A 'Development Space' is a separate area to store all your files while using BAS. It's bound to your personal user.
+   > Note that Dev Spaces are not intended for safe, long-term storage of files. Use a source code management system like git for this.
 1. Give your Dev Space a name, e.g. `workflow`
 1. Keep the default template selection `SAP Fiori`
 1. Select `Workflow Management` from the list of  additional extension
@@ -62,34 +59,34 @@ In this exercise we create a simple, one-step approval with rework capability.
 1. Choose a project name, e.g. `Tutorial`
 1. Click on `Finish`
 ![](images/sbas-init-1.png)
-> This will open the file Explorer inside the newly created project. You can open a different project from the menu with `File -> Open Workspace...` and selecting either a specific project or the parent folder `projects` itself.
+   > This will open the file Explorer inside the newly created project. You can open a different project from the menu with `File -> Open Workspace...` and selecting either a specific project or the parent folder `projects` itself.
 1. From the menu, select `View -> Find Command...` or press `F1`
 ![](images/sbas-init-2.png)
-1. In the popup, type `mta` to filter the available commands, then select `Create MTA Module from Template`. 
+3. In the popup, type `mta` to filter the available commands, then select `Create MTA Module from Template`. 
 ![](images/sbas-init-3.png)
-1. Select `Workflow Module`
-1. Click on `Start`
-1. Keep the defaults for `mta.yaml` file path and target folder
-1. Choose a name for the module, e.g. `Capex`
-1. Click on `Next`
+3. Select `Workflow Module`
+4. Click on `Start`
+5. Keep the defaults for `mta.yaml` file path and target folder
+6. Choose a name for the module, e.g. `Capex`.   
+8. Click on `Next`.  
 ![](images/sbas-init-4.png)
-> This creates a workflow module inside the MTA and directly let's you create the first workflow inside it.
+   > This creates a workflow module inside the MTA and directly let's you create the first workflow inside it.
 1. Enter `ApprovalStep` as name for the workflow
-1. Click `Finish`
+1. Click `Finish`.   
 ![](images/sbas-init-5.png)
-> The technical workflow definition Id, as used in Monitor Workflows and API calls, is derived from the namespace and workflow name. It needs to be unique per BTP tenant, otherwise workflow deployments would overwrite each other.
-> Note: If the wizard does not work correctly for you, you can either try a different browser, or use the Yeoman commandline version:
-> - Menu: `Terminal -> new Terminal`
-> - type `yo`, press enter, select `Basic Multitarget Application` with cursor up/down, select with enter, enter project name `Tutorial` and confirm with enter
-> - switch into that directory by typing `cd Tutorial` and press enter
-> - type `yo`, press enter, select `@workflow/workflow Module` with cursor up/down, select with enter, confirm the mta path with enter, confirm the module folder with enter, enter the module name `Capex` and confirm with enter, press enter to leave the namespace blank, enter `ApprovalStep` as workflow name and press enter, press enter again to skip the description and complete the wizard
-> - you can hide the terminal by clicking on the (little rectangular) `Toggle Bottom Panel` icon in the very bottom right of the screen
-> - Optional: from the menu, select `File -> Open Workspace...` and select the project you just created (`Tutorial`) to only show this project in the explorer.
+   > The technical workflow definition Id, as used in Monitor Workflows and API calls, is derived from the namespace and workflow name. It needs to be unique per BTP tenant, otherwise workflow deployments would overwrite each other.
+   > Note: If the wizard does not work correctly for you, you can either try a different browser, or use the Yeoman commandline version:
+   > - Menu: `Terminal -> new Terminal`
+   > - type `yo`, press enter, select `Basic Multitarget Application` with cursor up/down, select with enter, enter project name `Tutorial` and confirm with enter
+   > - switch into that directory by typing `cd Tutorial` and press enter
+   > - type `yo`, press enter, select `@workflow/workflow Module` with cursor up/down, select with enter, confirm the mta path with enter, confirm the module folder with enter, enter the module name `Capex` and confirm with enter, press enter to leave the namespace blank, enter `ApprovalStep` as workflow name and press enter, press enter again to skip the description and complete the wizard
+   > - you can hide the terminal by clicking on the (little rectangular) `Toggle Bottom Panel` icon in the very bottom right of the screen
+   > - Optional: from the menu, select `File -> Open Workspace...` and select the project you just created (`Tutorial`) to only show this project in the explorer.
  
 
 ## 2 - Using Workflow Editor <a name="workflowEditor"></a>
 
-- Take a look at the elements of BAS IDE and Workflow Editor
+Take a look at the elements of BAS IDE and Workflow Editor
 1. Menu bar
 1. File Explorer, showing project 'Tutorial' in this screenshot
 1. List of open editors
@@ -101,22 +98,22 @@ In this exercise we create a simple, one-step approval with rework capability.
 1. Click on the `StartEvent1` to select it
 1. This opens the Speed Buttons. Select `Tasks` (rectangular icon ![](images/Icon_Speed_Tasks_small.png)), then click on the `Script Task`
 ![](images/Modeling-1.png)
-> Using the Speed Buttons, the new element is automatically placed directly next to the selected element, and connected to it. If another element is already connected, it is connected inbetween.
-![](images/Modeling-2.png)
+   > Using the Speed Buttons, the new element is automatically placed directly next to the selected element, and connected to it. If another element is already connected, it is connected inbetween.   
+![](images/Modeling-2.png)   
 1. In the Properties pane, enter `Prepare Approval` as name.
-1. Press Tab or click anywhere else to leave this field
-![](images/Properties-PrepareApproval-1.png)
-![](images/Modeling-2a.png)
-> Note the orange warning icon, indicating that additional, mandatory configuration is missing. We will fill them in later.
+1. Press Tab or click anywhere else to leave this field.
+![](images/Properties-PrepareApproval-1.png)    
+![](images/Modeling-2a.png)   
+   > Note the orange warning icon, indicating that additional, mandatory configuration is missing. We will fill them in later.
 1. From the palette, select `Tasks` (rectangular icon ![](images/Icon_Palette_Tasks.png)), then `Service Task`
-![](images/Modeling-3.png)
+![](images/Modeling-3.png)   
 1. Note how when moving the mouse over the editor area, the new task sticks to the mouse pointer, ready for placement.
 1. Note the yellow dotted lines which help align elements with other, close-by elements for a nicer arrangement.
 1. Click on the existing Sequence Connector between `Prepare Approval` and `EndEvent1` (it will be displayed bold when hovering over it), to place the symbol 'on it'.
 ![](images/Modeling-4.png)
-> Placing an element from the palette on an existing Sequence Connector will split the connector and place the new element inbetween, similar on when using the Speed Buttons.
+   > Placing an element from the palette on an existing Sequence Connector will split the connector and place the new element inbetween, similar on when using the Speed Buttons.
 ![](images/Modeling-5.png)
-> Inserting elements does not change the position of existing elements. When there is not enough space available, the connectors will form a loop. 
+   > Inserting elements does not change the position of existing elements. When there is not enough space available, the connectors will form a loop. 
 1. Click on the `ServiceTask1` to select it
 1. Drag'n'Drop the service task a bit lower, by clicking and holding, dragging it with the mouse, then releasing it at the new position.
 ![](images/Modeling-6.png)
@@ -130,7 +127,7 @@ In this exercise we create a simple, one-step approval with rework capability.
 1. Select `Get Approvers` and from the Speed Buttons, select `Tasks`, then `Script Task`. Note how the new task is selected and the Speed Buttons are directly available.
 1. From the Speed Buttons of the `ScriptTask2`, select 'Gateways' (diamond-shaped symbol ![](images/Icon_Speed_Gateways_small.png)), then `Exclusive Gateway`
 ![](images/Modeling-8.png)
-> Gateways branch the flow into several outgoing connectors. The exclusive gateway indicated that exactly one branch is followed, based on a condition. We will add the second branch and condition later.
+   > Gateways branch the flow into several outgoing connectors. The exclusive gateway indicated that exactly one branch is followed, based on a condition. We will add the second branch and condition later.
 1. Select `ScriptTask2` and name it `Process Approver Details`
 1. Select `ExclusiveGateway1` and name it `Approval Needed?`
 1. Add a User Task: select the gateway `Approval Needed?`, from the Speed Buttons select `Tasks`, then `User Task`
@@ -140,101 +137,67 @@ In this exercise we create a simple, one-step approval with rework capability.
 1. From the Speed Buttons of the gateway `Approval Decision`, select `Events` (circle icon ![](images/Icon_Speed_Events_small.png)), then `Terminate End Event`
 1. Name it `Terminate Approval`
 ![](images/Modeling-9.png)
-> The `End Event` and `Terminating End Event` both end execution of this branch. If parallel branches are still running, the `End Event` will keep those running, while the `Terminating End Event` will stop the whole processing of this workflow. If the workflow was referenced from another workflow, execution will continue in this one.
+   > The `End Event` and `Terminating End Event` both end execution of this branch. If parallel branches are still running, the `End Event` will keep those running, while the `Terminating End Event` will stop the whole processing of this workflow. If the workflow was referenced from another workflow, execution will continue in this one.
 1. Ensure your workflow looks like this:
 ![](images/Modeling-10.png)
-> This is a good time to use the `Arrange Horizontally` ![](images/Icon_Editor_Arrange_Horizontally.png) functionality.
+   > This is a good time to use the `Arrange Horizontally` ![](images/Icon_Editor_Arrange_Horizontally.png) functionality.
 
 ### 2.1 Modeling Branches <a name="branches"></a>
 
 1. From the palette, select `Tasks`, then `User Task`
 1. Place the task above `ScriptTask1`.
-
 ![](images/Branches-1.png)
-
-1. Name it `Rework Approval Request `
+1. Name it `Rework Approval Request`
 1. From the Speed Buttons, click-and-hold on the `Sequence Flow Connector` (Arrow ![](images/Icon_Speed_Connector_small.png)) and....
-
 ![](images/Branches-2.png)
-
 1. ...drop it onto the `Prepare Approval` task.
-
 ![](images/Branches-3.png)
-
->  Notice the small dots appearing around and in the center of the shape. Dragging a Connector on them influences the way the connector is displayed.
-
+   > Notice the small dots appearing around and in the center of the shape. Dragging a Connector on them influences the way the connector is displayed.
 1. Select the second gateway, `Approval Decision`, and from the Speed Buttons, click-and-hold the `Sequence Flow Connector` and...
-
 ![](images/Branches-4.png)
-
 1. ...drop it onto the `Rework Approval Request`, on the dot on the right edge of the task.
-
 ![](images/Branches-5.png)
-
-> By default the connector is placed on the middle of an element. This leads to this S-shape of the connector.
-
+   > By default the connector is placed on the middle of an element. This leads to this S-shape of the connector.
 ![](images/Branches-6.png)
-
 1. Select the last placed connector by clicking on it
 1. Note that both endpoints are now displayed (white circle)
-
 ![](images/Branches-7.png)
-
 1. Click-and-hold the endpoint inside the gateway `Approval Decision` and drag it upwards onto the dot at the top of the shape
-
 ![](images/Branches-8.png)
 ![](images/Branches-9.png)
-
-> Note how the Sequence Connectors now have labels attached to them. This indicated that more than one connector leaves a Gateway and is used to name them.
-
+   > Note how the Sequence Connectors now have labels attached to them. This indicated that more than one connector leaves a Gateway and is used to name them.
 1. From the palette, select `Events`, then `End Event`
 1. Place the end event below the second gateway `Approval Decision`
 1. Name it `End Approval Step`
-
 ![](images/Branches-10.png)
-
 1. From the Speed Buttons of the second gateway `Approval Decision`, drag a Connector downwards onto the `End Approval Step`
-
 ![](images/Branches-11.png)
-
 1. From the Speed Buttons of the first gateway `Approval Needed?`, drag a Connector downwards onto the `End Approval Step`, placing the end on the dot on the left side of the shape
 1. Select this last Connector again and move the starting point to the dot at the bottom of the shape of the gateway.
-
 ![](images/Branches-12.png)
-
 1. Verify your workflow looks like this:
-
 ![](images/Branches-13.png)
 
 ### 2.2 Workflow Context <a name="context"></a>
 
 > The context of a workflow is a data object which is associated with each workflow instance. It follows the form of a JSON structure and can be freely defined by the workflow modeler.
-
 1. Select the Start Event `StartEvent1`
 1. Rename it to `Start Approval Step`
 1. With the Start Event still selected, open the tab `Details` from the properties pane
 1. Check `Configure Sample Context`
-1. Click on `Create File`
-
+1. Click on `Create File`   
 ![](images/Context-1.png)
-
-> When starting a workflow instance, an initial context is passed. Here we can define an example context, so show the expected basic structure of the context for this specific workflow. This allows for easy starting of workflows in *Manage Workflows* during development.
-
+   > When starting a workflow instance, an initial context is passed. Here we can define an example context, so show the expected basic structure of the context for this specific workflow. This allows for easy starting of workflows in *Manage Workflows* during development.
 1. Give the filename as `CapexSampleStartPayload`
 1. Click on `Create`
-
 ![](images/Context-2.png)
-
-> This creates a new file with the given name and suffix *.json* inside your project folder.
-
+  > This creates a new file with the given name and suffix *.json* inside your project folder.
 1. Select and delete the example content of this new file, e.g. by pressing `CTRL+A` followed by `DELETE`
 1. Open the provided file [CapexSampleStartPayload.json](files/CapexSampleStartPayload.json) and copy the content into the open editor window.
 1. Replace the placeholder for `Name` with your name
 1. Replace the placeholder for `UserId` with the technical user id on BTP, i.e. the username used for login
 1. Close the file by clicking on the ![X](images/Icon_OpenFiles_Close.png)
-
 ![](images/Context-3b.png)
-
 > The context can be accessed inside of Script Tasks by using the syntax `$.context.Requester.Name`. Many property fields support JUEL Expressions, for which the context can be accessed with `${context.Requester.Name}`.
 
 ### 2.3 Configuring the details <a name="details"></a>
@@ -243,21 +206,15 @@ In this exercise we create a simple, one-step approval with rework capability.
 1. In the properties, under the heading `Script File`, click on `Create File`
 1. give the name as `PrepareApproval`
 1. Click on `Create`
-
 ![](images/Properties-PrepareApproval-2.png)
-
-> This creates a new file with the given name and suffix *.js* inside your project folder.
-> During runtime, the contents of this *.js* file will be executed as Javascript to work on the context.
-
+   > This creates a new file with the given name and suffix *.js* inside your project folder.
+   > During runtime, the contents of this *.js* file will be executed as Javascript to work on the context.
 1. Select and delete the example content of this new file, e.g. by pressing `CTRL+A` followed by `DELETE`
 1. Open the provided file [PrepareApproval.js](files/PrepareApproval.js) and copy the content into the open editor window.
 1. Do not make any changes to the file at this time.
 1. Close the file by clicking on the ![X](images/Icon_OpenFiles_Close.png)
-
 ![](images/Properties-PrepareApproval-3.png)
-
 > The `ruleServiceId` refers to a provided rule already imported during setup of this tutorial. The `selfApproval` instructs this example workflow to sent approvals to the workflow initiator instead of the actual approver as specified by the rule. In a later exercise, a custom rule to determine the approver will be created and these two lines be changed.
-
 1. Select the Service Task `Get Approvers`
 1. Select the properties tab `Details`
 1. As destination, enter `BUSINESS_RULES`. This destination has been automatically created for you by the booster.
@@ -268,18 +225,13 @@ In this exercise we create a simple, one-step approval with rework capability.
 1. For the request variable, set `${context.internal.rulesPayload}`
 1. For the response variable, set `${context.internal.ruleresult}`
 1. Since we are using the technical user as configured in the destination, leave the `Principal Propagation` box unchecked.
-
 ![](images/Properties-GetApprovers-1.png)
-
 > The request variable specifies the part of the workflow context which is sent as JSON body to the remote system. The response returned is then placed in the context at the place specified by the response variable.
-
 1. Select the Script Task `Process Approver Details`
 1. In the properties, click on `Create File` and give the name `ProcessApproverDetails`
 1. Replace the default content of the new file with the one of the provided file [ProcessApproverDetails.js](files/ProcessApproverDetails.js)
 1. Close the file by clicking on the ![X](images/Icon_OpenFiles_Close.png)
-
 > File names and locations inside the project can be freely chosen. We recommend to keep the names similar to the flow elements they are associated with. If you later need to rename or move a file, you can re-associate it using the button `Select` and selecting it from the list.
-
 1. Select the User Task `Approval Task`
 1. Select the properties tab `Details`
 1. Keep the priority as `Medium`
@@ -288,44 +240,30 @@ In this exercise we create a simple, one-step approval with rework capability.
 1. For Recipients Groups, enter `${context.internal.step.approver.GroupId}`
 1. For this task we do not define a `Due Date`
 1. `Show in workflow log` and `Allow forward` can be kept as the defaults
-
 ![](images/Properties-ApprovalTask-1.png)
-
 > Note how JUEL expression are used to access the context inside the properties fields.
-
-
 1. Select the Script Task `Process Approval Result`
 1. In the properties, click on `Create File` and give the name `ProcessApprovalResult`
 1. Replace the default content of the new file with the one of the provided file [ProcessApprovalResult.js](files/ProcessApprovalResult.js)
 1. Close the file by clicking on the ![X](images/Icon_OpenFiles_Close.png)
-
-> Actions taken by the user in Workflow Form UIs can be accessed through `$.usertasks.usertask1.last.decision`, where `usertask1` is the technical identifier of the respective user task. See also [Access the Decision](https://help.sap.com/viewer/e157c391253b4ecd93647bf232d18a83/Cloud/en-US/9fd9395339e94143ac9ce9e693b06bd1.html) in the Help Portal.
-
+   > Actions taken by the user in Workflow Form UIs can be accessed through `$.usertasks.usertask1.last.decision`, where `usertask1` is the technical identifier of the respective user task. See also [Access the Decision](https://help.sap.com/viewer/e157c391253b4ecd93647bf232d18a83/Cloud/en-US/9fd9395339e94143ac9ce9e693b06bd1.html) in the Help Portal.
 1. Select the User Task `Rework Approval Request `
 1. Select the properties tab `Details`
 1. Keep the priority as `Medium`
 1. As Subject, enter `Rework required for CapEx Request "${context.Title}"`.
 1. For Recipients Users, enter `${context.Requester.UserId}, ${info.startedBy}`
-
 ![](images/Properties-ReworkApprovalRequest-1.png)
-
 1. Next to the Exclusive Gateway `Approval Needed?`, select the Sequence Flow connecting to the `Approval Task`
 1. In the properties, give the name as `Yes`
 1. As `Condition`, enter `${context.internal.step.isRequired}`
-
 ![](images/Properties-ApprovalNeeded-1.png)
 ![](images/Properties-ApprovalNeeded-2.png)
-
-> The condition refers to a variable in the context which has been computed in the previous Script Task based on the result of the call to Rules.
-
+   > The condition refers to a variable in the context which has been computed in the previous Script Task based on the result of the call to Rules.
 1. Next to the Exclusive Gateway `Approval Needed?`, select the Sequence Flow connecting to the `End Approval Step`
 1. In the properties, give the name as `No`
 1. Select the checkbox `Default`
-
 ![](images/Properties-ApprovalNeeded-3.png)
-
-> There needs to always be exactly one default branch. This branch is taken if none of the conditions given in the other branches match (return true).
-
+   > There needs to always be exactly one default branch. This branch is taken if none of the conditions given in the other branches match (return true).
 1. Next to the Exclusive Gateway `Approval Decision`, select the Sequence Flow connecting to the `End Approval Step`
 1. In the properties, give the name as `Accepted`
 1. As `Condition`, enter `${usertasks.usertask1.last.decision == "approve"}`
@@ -335,11 +273,8 @@ In this exercise we create a simple, one-step approval with rework capability.
 1. Select the Sequence Flow connecting to `Terminate Approval`
 1. Give the name as `Rejected`
 1. As `Condition`, select the checkbox `Default`
-
 ![](images/Properties-ApprovalDecision-1.png)
-
 1. Ensure your workflow looks like this:
-
 ![](images/Overview-1.png)
 
 ### 2.4 Adding User Interfaces with Workflow Forms <a name="Forms"></a>
