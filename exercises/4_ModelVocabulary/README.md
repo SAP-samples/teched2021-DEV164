@@ -13,49 +13,43 @@
 The exercise is based on authoring Data Object, using SAP Business Rules service. The Data Object is used in the next exercise to associate to a Process Template to generate start and step conditions.  
   
 ### 1 - Create Project <a name="section1-createproject"></a>
-![](images/btp-cockpit-2.jpg)
-
-
 1. Open *Workflow Management Launchpad* and click to open **Manage Rule Projects**.
-    - Login with trial username and passwords.
-    ![]<img src="images/launchpad.png" width="600">
+![](images/launchpad.png)
 1. Click **+** to create a new business rules project.
- ![](images/createproject_1.png)
+![](images/createproject_1.png)
 1. In the *New Project* screen, do the following:
  - Enter **CAPEX_00** in the **Name** box.
  - Enter **Capital Expenditure Rules** in the **Label** box.
  - Enter **Business rules to determine approvers for new investments in capital expenditure process** in **Description** box.
  - Select **2.0** as the **Expression Language**.
  - Click **Save** 
-![]<img src="images/createproject_2.png" width="600">
+![](images/createproject_2.png)
 Your business rules project is created with the needed configurations. 
 
 ### 2 - Create Data Objects <a name="section1-dataobject"></a>
-
 1. Click **Data Objects** tab
-   ![]<img src="images/dataobject_1.png" width="600">
+![](images/dataobject_1.png)
 1. Click **+** in *Local Data Objects* section to create data object
-   ![]<img src="images/dataobject_2.png" width="600">
+![](images/dataobject_2.png)
 1. In the *New Data Object* screen, do the following:
     - Enter **Investment** in the **Name** box.
     - Enter **Investment** in the **Label** box.
     - Enter **Details of the investment** in the **Description** box.
     - Click **Attributes** tab.  
-     ![]<img src="images/dataobject_3.png" width="600">
+     ![](images/dataobject_3.png)
 1. In *Simple Attributes* section of *Attributes* tab, do the following:
     - Click **+** to create attribute.
     - Enter **Type** in the **Name** box.
     - Enter **Type** in the **Label** box.
     - Enter **Type of investment** in the **Description** box.
-     ![]<img src="images/dataobject_4.png" width="600">
-    
+     ![](images/dataobject_4.png) 
 1. Repeat the step 4 above to create more data object attributes with following details: 
     | Name | Label | Description | Type |
     |---|---|---| --- |
     | Country | Country | Country | String |  
     | TotalCost | Total Cost | Total cost of investment  | Number | 
     | BusinessUnit | Business Unit | Business unit or the division that is proposing the investment  | String | 
-   ![]<img src="images/dataobject_5.png" width="600">
+   ![](images/dataobject_5.png)
 1. Click **Activate**. 
 1. Click **Capital Expenditure Rules** to navigate back to the *Data Objects* page. 
     
@@ -63,27 +57,27 @@ Your business rules project is created with the needed configurations.
 1. In Project Details do the following to expose the Data Object to be consumed by the Process Template later.
  - Select **Project Details** and scroll down to *Exposed Vocabulary*.
  - Click **Data Object** to select the modeled data object.
- ![]<img src="images/SelectDataObject.png" width="600">
+![](images/SelectDataObject.png)
 1. In the **Data Objects** dialogue select **Investment data object** and click **OK** button.   
-![]<img src="images/ConfirmDataObject.png" width="600">
+![](images/ConfirmDataObject.png)
 1. Click **Activate** to activate the project.   
-![] <img src="images/ActivateProject.png" width="600">
+![](images/ActivateProject.png)
 1. Click **Release Version** to releaes the project.   
-![]<img src="images/Release Version.png" width="600">
+![](images/Release Version.png)
 1. Update the followng to release the Project.
     - **Version** as 1.0.0
     - **Revision** as Trial
     - **Description** "Vocabulary to create Step and Start Condition"
     - Click **Release** button
-![]<img src="images/Release.png" width="600">
+![](images/Release.png)
 1. Copy the **Project ID** to be used by the Process Template editor
     - Go to **Manage Projects**.
     - Click Project Settings.    
-    ![]<img src="images/ProjectSettings.png" width="600">
+    ![](images/ProjectSettings.png)
     - Select the **ID** field from the list and click **OK** button.  
-   ![]<img src="images/SelectProjectId.png" width="600">
+    ![](images/SelectProjectId.png)
 1. Copy the Project ID field and keep it in your notepad.
-![]<img src="images/CopyProjectId.png" width="600">
+![](images/CopyProjectId.png)
 
 ### Conclusion<a name="Summary"></a>
 Now you have modeled a Business Rules Project with a Data Object and exposed it for consuming from Process Template Editor in the next excercise.
