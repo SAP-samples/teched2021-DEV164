@@ -67,7 +67,7 @@ Your business rules project is created with the needed configurations.
     - **Version** as 1.0.0
     - **Revision** as Trial
     - **Description** "Vocabulary to create Step and Start Condition"
-    - Click **Release** button
+    - Click **Release** button.   
 ![](images/Release.png)
 1. Copy the **Project ID** to be used by the Process Template editor. Go to **Manage Projects** and click Project Settings.    
 ![](images/ProjectSettings.png)
