@@ -184,20 +184,20 @@ Take a look at the elements of BAS IDE and Workflow Editor
 1. Rename it to `Start Approval Step`
 1. With the Start Event still selected, open the tab `Details` from the properties pane
 1. Check `Configure Sample Context`
-1. Click on `Create File`   
-![](images/Context-1.png)
+1. Click on `Create File`  
+[](images/Context-1.png)
    > When starting a workflow instance, an initial context is passed. Here we can define an example context, so show the expected basic structure of the context for this specific workflow. This allows for easy starting of workflows in *Manage Workflows* during development.
 1. Give the filename as `CapexSampleStartPayload`
-1. Click on `Create`
+1. Click on `Create`.  
 ![](images/Context-2.png)
-  > This creates a new file with the given name and suffix *.json* inside your project folder.
+   > This creates a new file with the given name and suffix *.json* inside your project folder.
 1. Select and delete the example content of this new file, e.g. by pressing `CTRL+A` followed by `DELETE`
 1. Open the provided file [CapexSampleStartPayload.json](files/CapexSampleStartPayload.json) and copy the content into the open editor window.
 1. Replace the placeholder for `Name` with your name
 1. Replace the placeholder for `UserId` with the technical user id on BTP, i.e. the username used for login
 1. Close the file by clicking on the ![X](images/Icon_OpenFiles_Close.png)
 ![](images/Context-3b.png)
-> The context can be accessed inside of Script Tasks by using the syntax `$.context.Requester.Name`. Many property fields support JUEL Expressions, for which the context can be accessed with `${context.Requester.Name}`.
+   > The context can be accessed inside of Script Tasks by using the syntax `$.context.Requester.Name`. Many property fields support JUEL Expressions, for which the context can be accessed with `${context.Requester.Name}`.
 
 ### 2.3 Configuring the details <a name="details"></a>
 
@@ -211,9 +211,9 @@ Take a look at the elements of BAS IDE and Workflow Editor
 1. Select and delete the example content of this new file, e.g. by pressing `CTRL+A` followed by `DELETE`
 1. Open the provided file [PrepareApproval.js](files/PrepareApproval.js) and copy the content into the open editor window.
 1. Do not make any changes to the file at this time.
-1. Close the file by clicking on the ![X](images/Icon_OpenFiles_Close.png)
+1. Close the file by clicking on the ![X](images/Icon_OpenFiles_Close.png).  
 ![](images/Properties-PrepareApproval-3.png)
-> The `ruleServiceId` refers to a provided rule already imported during setup of this tutorial. The `selfApproval` instructs this example workflow to sent approvals to the workflow initiator instead of the actual approver as specified by the rule. In a later exercise, a custom rule to determine the approver will be created and these two lines be changed.
+   > The `ruleServiceId` refers to a provided rule already imported during setup of this tutorial. The `selfApproval` instructs this example workflow to sent approvals to the workflow initiator instead of the actual approver as specified by the rule. In a later exercise, a custom rule to determine the approver will be created and these two lines be changed.
 1. Select the Service Task `Get Approvers`
 1. Select the properties tab `Details`
 1. As destination, enter `BUSINESS_RULES`. This destination has been automatically created for you by the booster.
@@ -225,12 +225,12 @@ Take a look at the elements of BAS IDE and Workflow Editor
 1. For the response variable, set `${context.internal.ruleresult}`
 1. Since we are using the technical user as configured in the destination, leave the `Principal Propagation` box unchecked.
 ![](images/Properties-GetApprovers-1.png)
-> The request variable specifies the part of the workflow context which is sent as JSON body to the remote system. The response returned is then placed in the context at the place specified by the response variable.
+   > The request variable specifies the part of the workflow context which is sent as JSON body to the remote system. The response returned is then placed in the context at the place specified by the response variable.
 1. Select the Script Task `Process Approver Details`
 1. In the properties, click on `Create File` and give the name `ProcessApproverDetails`
 1. Replace the default content of the new file with the one of the provided file [ProcessApproverDetails.js](files/ProcessApproverDetails.js)
-1. Close the file by clicking on the ![X](images/Icon_OpenFiles_Close.png)
-> File names and locations inside the project can be freely chosen. We recommend to keep the names similar to the flow elements they are associated with. If you later need to rename or move a file, you can re-associate it using the button `Select` and selecting it from the list.
+1. Close the file by clicking on the ![X](images/Icon_OpenFiles_Close.png). 
+   > File names and locations inside the project can be freely chosen. We recommend to keep the names similar to the flow elements they are associated with. If you later need to rename or move a file, you can re-associate it using the button `Select` and selecting it from the list.
 1. Select the User Task `Approval Task`
 1. Select the properties tab `Details`
 1. Keep the priority as `Medium`
@@ -238,9 +238,9 @@ Take a look at the elements of BAS IDE and Workflow Editor
 1. For Recipients Users, enter `${context.internal.step.approver.UserId}`
 1. For Recipients Groups, enter `${context.internal.step.approver.GroupId}`
 1. For this task we do not define a `Due Date`
-1. `Show in workflow log` and `Allow forward` can be kept as the defaults
+1. `Show in workflow log` and `Allow forward` can be kept as the defaults. 
 ![](images/Properties-ApprovalTask-1.png)
-> Note how JUEL expression are used to access the context inside the properties fields.
+   > Note how JUEL expression are used to access the context inside the properties fields.
 1. Select the Script Task `Process Approval Result`
 1. In the properties, click on `Create File` and give the name `ProcessApprovalResult`
 1. Replace the default content of the new file with the one of the provided file [ProcessApprovalResult.js](files/ProcessApprovalResult.js)
@@ -279,42 +279,32 @@ Take a look at the elements of BAS IDE and Workflow Editor
 ### 2.4 Adding User Interfaces with Workflow Forms <a name="Forms"></a>
 
 > In this section we will use Workflow Forms to create a quick and simple UI.
-
 1. Select the User Task `Approval Task`
 1. Select the properties tab `User Interface`
 1. Select `Form` as the type of UI
 1. Click on `Create File`
-
 ![](images/Form-1.png)
-
 1. Name the new Form `ApprovalForm`
 1. Note that the ID is automatically filled in
 1. Specify the `Revision` as `1.0`
-1. Click on `Create`
-
+1. Click on `Create`   
 ![](images/Form-2.png)
-
 > This creates a new file with the given name and suffix *.form* inside your project folder. Forms will be deployed alongside workflows, but are independently revisioned.
-
 1. In the Form editor, click on `Add Section` 
-2. Enter a section name of `Investment Details` 
-3. Click on `Add Field`
-4. Enter a field label of `Title`
-5. Note that you can also enter or change the label of the field in the properties pane.
-6. Keep the type of the field as `String`
-7. Specify the context path as `${context.Title}`
-8. Change the mode to `Display Only`
-9. Add another field named `Request Id`, type `String`, Context Path `${context.RequestId}` and `Display Only`
-10. Add another field named `Type`, type `String`, Context Path `${context.Investment.Type}` and with mode `Editable`.
-11. Select the `Required` constraint for this field
-
+1. Enter a section name of `Investment Details` 
+1. Click on `Add Field`
+1. Enter a field label of `Title`
+1. Note that you can also enter or change the label of the field in the properties pane.
+1. Keep the type of the field as `String`
+1. Specify the context path as `${context.Title}`
+1. Change the mode to `Display Only`
+1. Add another field named `Request Id`, type `String`, Context Path `${context.RequestId}` and `Display Only`
+1. Add another field named `Type`, type `String`, Context Path `${context.Investment.Type}` and with mode `Editable`.
+1. Select the `Required` constraint for this field
 ![](images/Form-3.png)
-
-> Note how the ID is automatically derived from the label if not given explicitely.
-> `Add Section` and `Add Field` depend on your current selection, which is shown as a slight blue background.
-
+   > Note how the ID is automatically derived from the label if not given explicitely.
+   > `Add Section` and `Add Field` depend on your current selection, which is shown as a slight blue background.
 1. In the same way, add all of those fields:
-
 Label | Type | Context Path | Editable | Required
 -|-|-|-|-
 Title | String | `${context.Title}` | no | 
@@ -328,85 +318,59 @@ OPEX | Float | `${context.Investment.OPEX}` | yes | yes
 Total Cost | Float | `${context.Investment.TotalCost}` | yes | yes
 ROI | Float | `${context.Investment.ROI}` | yes | no
 Currency | String | `${context.Investment.Currency}` | yes | yes
-
 1. Select the section `Investment Details` by clicking on it
 1. Click on `Add Section` and give it a title of `Investment Requester`
 1. In this section, add the following fields `Name` and `Comment from Requester`
 1. For the `Comment from Requester` field, specify `Text Area` as `Control`, with a `Medium` height
-
 Label | Type | Context Path | Editable | Required
 -|-|-|-|-
 Name | String | `${context.Requester.Name}` | no | 
 Comment from Requester | String | `${context.Requester.Comment}` | yes | no
-
 1. Select the section `Investment Requester` and click on `Add Section`. Do not enter a title (empty field), but specify `history_` as ID in the Properties pane.
 1. Click on `Add Collection`
 1. Set the title to `History`
-1. Set the Context Path to `${context.History}`
-
+1. Set the Context Path to `${context.History}`. 
 ![](images/Form-4.png)
-
-> This defines a tables with the rows coming from an array object specified in the Context Path. Fields below the collection section can refer to the row using the expression `${item.xxx}`
-
+   > This defines a tables with the rows coming from an array object specified in the Context Path. Fields below the collection section can refer to the row using the expression `${item.xxx}`
 1. Select the collection `History` and click `Add Field` and add the following fields:
-
 Label | Type | Context Path | Editable | Required
 -|-|-|-|-
 User | String | `${item.User}` | no | 
 Role | String | `${item.Role}` | no | 
 Decision | String | `${item.Decision}` | no | 
 Comment | String | `${item.Comment}` | no | 
-
 1. Select the section `Investment Requester` and click on `Add Section`. Do not enter a title (empty field), but specify `decision` as ID in the Properties pane.
 1. Add a single field:
-
 Label | Type | Context Path | Editable | Required | Control
 -|-|-|-|-|-
 Comment | String | `${context.comment}` | yes | no | Text Area (large)
-
 1. Verify that your Form definition looks like this:
-
 ![](images/Form-5.png)
-
-> Note that you can re-arrange the ordering of fields by using drag'n'drop
-
+   > Note that you can re-arrange the ordering of fields by using drag'n'drop
 1. Select the tab `Decisions`
 1. Click `Add`
 1. Enter `Text`, `ID` and `Type` of these three decisions:
-
 Text | ID | Type
 -|-|-
 Approve | `approve` | Positive
 Reject | `reject` | Negative
 Rework | `rework` | Neutral
-
 ![](images/Form-6.png)
-
-> `Text` specifies the label displayed to the user, whereas `ID` is the technical value returned from `$.usertasks.usertask1.last.decision` which is then used for string comparisons. The `Type` indicates different graphic styles / colors.
-
-1. Close the Workflow Form editor by clicking on the ![X](images/Icon_OpenFiles_Close.png)
-
-![](images/Form-7.png)
-
+   > `Text` specifies the label displayed to the user, whereas `ID` is the technical value returned from `$.usertasks.usertask1.last.decision` which is then used for string comparisons. The `Type` indicates different graphic styles / colors.
+1. Close the Workflow Form editor by clicking on the ![X](images/Icon_OpenFiles_Close.png).  
+1. ![](images/Form-7.png)
 1. Select the User Task `Approval Task` and note how the `ID` and `Revision` has been automatically filled in
-
 ![](images/Form-8.png)
-
 1. Select the User Task `Rework Approval Request `
 1. Select the properties tab `User Interface`
 1. Select `Form` as the type of UI
 1. Click on `Select` to choose an already existing Form 
 1. Using the dropdown, select the form `ApprovalForm.form` which we've just created.
 1. Click on `OK`
-
 ![](images/Form-9.png)
-
-> Re-using the same form is a simplification for this exercise. In a real project the displayed fields and whether they are editable would differ between the approver and the reworking requester.
-
+   > Re-using the same form is a simplification for this exercise. In a real project the displayed fields and whether they are editable would differ between the approver and the reworking requester.
 1. Ensure that there are no warning signs ![](images/Icon_Warning_small.png) showed in your workflow anymore.
-
-> If there are warning signs left, hover over them to view a description what is missing:
-
+   > If there are warning signs left, hover over them to view a description what is missing:
 ![](images/Warning-1.png)
 
 ### 2.5 Adding Workflow Attributes (optional) <a name="attributes"></a>
