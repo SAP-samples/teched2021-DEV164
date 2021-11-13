@@ -15,7 +15,7 @@ The requirements to follow the exercises in this repository are a trial account 
 ## Exercises
 
 - [Exercise 1 - Setup Guide](https://github.com/SAP-samples/teched2021-DEV164/tree/main/exercises/1_SetupTrial)
-- [Exercise 2 - Creating a Worflow from Scratch](https://github.com/SAP-samples/teched2021-DEV164/tree/main/exercises/2_WorkflowFromScratch)
+- [Exercise 2 - Creating a Workflow from Scratch](https://github.com/SAP-samples/teched2021-DEV164/tree/main/exercises/2_WorkflowFromScratch)
 - [Exercise 3 - Executing and monitoring your Workflows](https://github.com/SAP-samples/teched2021-DEV164/tree/main/exercises/3_RunMonitorWorkflows)
 - [Exercise 4 - Model Business Rules Vocabulary](https://github.com/SAP-samples/teched2021-DEV164/tree/main/exercises/4_ModelVocabulary)
 - [Exercise 5 - Creating a Process Template](https://github.com/SAP-samples/teched2021-DEV164/tree/main/exercises/5_CreatingProcessTemplate)
