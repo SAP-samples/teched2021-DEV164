@@ -10,7 +10,8 @@ This session introduces attendees to create workflows and prepare process templa
 
 ## Requirements
 
-The requirements to follow the exercises in this repository are a trial account (in data center US10 or AP21) in SAP Business Technology Platform and subscription to SAP Workflow Management, as described here in the [Setup Guide](https://github.com/SAP-samples/teched2021-DEV164/tree/main/exercises/1_SetupTrial).
+The requirements to follow the exercises in this repository are a trial account (in data center US10 or AP21) in SAP Business Technology Platform and subscription to SAP Workflow Management and SAP Intelligent RPA, as described here in the [Setup Guide](https://github.com/SAP-samples/teched2021-DEV164/tree/main/exercises/1_SetupTrial).
+A **Windows machine** (to execute the bot created with SAP Intelligent RPA) is required to run the entire workshop. The requirements to follow the exercises in this repository are described in the Setup PDF document.
 
 ## Exercises
 
