@@ -10,14 +10,14 @@ This session introduces attendees to create workflows and prepare process templa
 
 ## Requirements
 
-The requirements to follow the exercises in this repository are a trial account (in data center US10 or AP21) in SAP Business Technology Platform and subscription to SAP Workflow Management, as described here (LINK to setup to be included)
+The requirements to follow the exercises in this repository are a trial account (in data center US10 or AP21) in SAP Business Technology Platform and subscription to SAP Workflow Management, as described here in the [Setup Guide](https://github.com/SAP-samples/teched2021-DEV164/tree/main/exercises/1_SetupTrial).
 
 ## Exercises
 
-/[TBD]
-Provide the exercise content here directly in README.md using [markdown](https://guides.github.com/features/mastering-markdown/) and linking to the specific exercise pages, below is an example.
-
-- [Getting Started](exercises/ex0/)
+- [Setup Guide](https://github.com/SAP-samples/teched2021-DEV164/tree/main/exercises/1_SetupTrial)
+- [Exercise 1 - Creating a Worflow from Scratch](https://github.com/SAP-samples/teched2021-DEV164/tree/main/exercises/2_WorkflowFromScratch)
+- [Exercise 2 - Executing and monitoring your Workflows](https://github.com/SAP-samples/teched2021-DEV164/tree/main/exercises/3_RunMonitorWorkflows)
+- [
 - [Exercise 1 - First Exercise Description](exercises/ex1/)
     - [Exercise 1.1 - Exercise 1 Sub Exercise 1 Description](exercises/ex1#exercise-11-sub-exercise-1-description)
     - [Exercise 1.2 - Exercise 1 Sub Exercise 2 Description](exercises/ex1#exercise-12-sub-exercise-2-description)
