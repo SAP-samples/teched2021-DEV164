@@ -10,7 +10,7 @@
   - [2.1 Modeling Branches](#branches)
   - [2.2 Workflow Context](#context)
   - [2.3 Configuring the details](#details)
-  - [2.3 Adding User Interfaces with Workflow Forms](#forms)
+  - [2.3 Adding User Interfaces with Workflow Forms](#Forms)
   - [2.4 Adding Workflow Attributes](#attributes)
 - [3 - Build and Deploy](#deploy)
 - [Conclusion](#conclusion)
@@ -305,27 +305,27 @@ Take a look at the elements of BAS IDE and Workflow Editor
    > Note how the ID is automatically derived from the label if not given explicitely.
    > `Add Section` and `Add Field` depend on your current selection, which is shown as a slight blue background.
 1. In the same way, add all of those fields:
-Label | Type | Context Path | Editable | Required
--|-|-|-|-
-Title | String | `${context.Title}` | no | 
-Request Id | String | `${context.RequestId}` | no | 
-Type | String | `${context.Investment.Type}` | yes | yes
-Country/Region | String | `${context.Investment.Country}` | yes | yes
-Business Unit | String | `${context.Investment.BusinessUnit}` | yes | yes
-Description | String | `${context.Investment.Description}` | yes | no
-CAPEX | Float | `${context.Investment.CAPEX}` | yes | yes
-OPEX | Float | `${context.Investment.OPEX}` | yes | yes
-Total Cost | Float | `${context.Investment.TotalCost}` | yes | yes
-ROI | Float | `${context.Investment.ROI}` | yes | no
-Currency | String | `${context.Investment.Currency}` | yes | yes
+   Label | Type | Context Path | Editable | Required
+   -|-|-|-|-
+   Title | String | `${context.Title}` | no | 
+   Request Id | String | `${context.RequestId}` | no | 
+   Type | String | `${context.Investment.Type}` | yes | yes
+   Country/Region | String | `${context.Investment.Country}` | yes | yes
+   Business Unit | String | `${context.Investment.BusinessUnit}` | yes | yes
+   Description | String | `${context.Investment.Description}` | yes | no
+   CAPEX | Float | `${context.Investment.CAPEX}` | yes | yes
+   OPEX | Float | `${context.Investment.OPEX}` | yes | yes
+   Total Cost | Float | `${context.Investment.TotalCost}` | yes | yes
+   ROI | Float | `${context.Investment.ROI}` | yes | no
+   Currency | String | `${context.Investment.Currency}` | yes | yes
 1. Select the section `Investment Details` by clicking on it
 1. Click on `Add Section` and give it a title of `Investment Requester`
 1. In this section, add the following fields `Name` and `Comment from Requester`
 1. For the `Comment from Requester` field, specify `Text Area` as `Control`, with a `Medium` height
-Label | Type | Context Path | Editable | Required
--|-|-|-|-
-Name | String | `${context.Requester.Name}` | no | 
-Comment from Requester | String | `${context.Requester.Comment}` | yes | no
+   Label | Type | Context Path | Editable | Required
+   -|-|-|-|-
+   Name | String | `${context.Requester.Name}` | no | 
+   Comment from Requester | String | `${context.Requester.Comment}` | yes | no
 1. Select the section `Investment Requester` and click on `Add Section`. Do not enter a title (empty field), but specify `history_` as ID in the Properties pane.
 1. Click on `Add Collection`
 1. Set the title to `History`
@@ -333,28 +333,28 @@ Comment from Requester | String | `${context.Requester.Comment}` | yes | no
 ![](images/Form-4.png)
    > This defines a tables with the rows coming from an array object specified in the Context Path. Fields below the collection section can refer to the row using the expression `${item.xxx}`
 1. Select the collection `History` and click `Add Field` and add the following fields:
-Label | Type | Context Path | Editable | Required
--|-|-|-|-
-User | String | `${item.User}` | no | 
-Role | String | `${item.Role}` | no | 
-Decision | String | `${item.Decision}` | no | 
-Comment | String | `${item.Comment}` | no | 
+   Label | Type | Context Path | Editable | Required
+   -|-|-|-|-
+   User | String | `${item.User}` | no | 
+   Role | String | `${item.Role}` | no | 
+   Decision | String | `${item.Decision}` | no | 
+   Comment | String | `${item.Comment}` | no | 
 1. Select the section `Investment Requester` and click on `Add Section`. Do not enter a title (empty field), but specify `decision` as ID in the Properties pane.
 1. Add a single field:
-Label | Type | Context Path | Editable | Required | Control
--|-|-|-|-|-
-Comment | String | `${context.comment}` | yes | no | Text Area (large)
+   Label | Type | Context Path | Editable | Required | Control
+   -|-|-|-|-|-
+   Comment | String | `${context.comment}` | yes | no | Text Area (large)
 1. Verify that your Form definition looks like this:
 ![](images/Form-5.png)
    > Note that you can re-arrange the ordering of fields by using drag'n'drop
 1. Select the tab `Decisions`
 1. Click `Add`
 1. Enter `Text`, `ID` and `Type` of these three decisions:
-Text | ID | Type
--|-|-
-Approve | `approve` | Positive
-Reject | `reject` | Negative
-Rework | `rework` | Neutral
+   Text | ID | Type
+   -|-|-
+   Approve | `approve` | Positive
+   Reject | `reject` | Negative
+   Rework | `rework` | Neutral
 ![](images/Form-6.png)
    > `Text` specifies the label displayed to the user, whereas `ID` is the technical value returned from `$.usertasks.usertask1.last.decision` which is then used for string comparisons. The `Type` indicates different graphic styles / colors.
 1. Close the Workflow Form editor by clicking on the ![X](images/Icon_OpenFiles_Close.png).  
@@ -382,9 +382,7 @@ Rework | `rework` | Neutral
 1. Click on an empty area on the Workflow Editor to clear any active selection
 1. In the Properties pane, enter the `Busineyy Key` as `${context.RequestId}`
 1. Change both the `Subject` and the `Description` to `Approval Step` (with a space)
-
 ![](images/Properties-Workflow-1.png)
-
 1. Select the properties tab `Attributes`
 1. Optional: Drag the dividing bar between the main edit window and the Property pane to the left, to get enough space for entering the Attributes.
 1. Click on `Add`
@@ -404,7 +402,7 @@ approvalStatus | approvalStatus | String | `${context.internal.approvalStatus}`
 
 ![](images/Properties-Workflow-3.png)
 
-> Note: you can select an attribute row and use `Move Up` / `Move Down` buttons to change the ordering. Or you can add the attributes in reverse.
+  > Note: you can select an attribute row and use `Move Up` / `Move Down` buttons to change the ordering. Or you can add the attributes in reverse.
 
 
 ## 3 - Build and Deploy <a name="deploy"></a>
@@ -413,39 +411,23 @@ approvalStatus | approvalStatus | String | `${context.internal.approvalStatus}`
 
 1. From the menu, select `View -> Find Command...` or press `F1`
 1. In the popup, type `mta` to filter the available commands, then select `Build MTA Project`. 
-
 ![](images/sbas-init-3.png)
-
 1. Optional: if you have multiple projects open in BAS, select the `Tutorial/mta.yaml` in the popup when asked for selecting the project descriptor file.
-
 ![](images/Build-1.png)
-
-> Alternatively, in the File Explorer you can right-click the *mta.yaml* file and choose `Build MTA Project`
-
+   > Alternatively, in the File Explorer you can right-click the *mta.yaml* file and choose `Build MTA Project`
 ![](images/Build-3.png)
-
 1. A console window will open in the bottom panel, showing the progress of the build.
 1. Verify that there are no error messages.
-
 ![](images/Build-2.png)
-
-> This will create a folder `mta_archives` with the file `Tutorial_0.0.1.mtar` inside. The name and version is taken from the *mta.yaml* description.
-
+   > This will create a folder `mta_archives` with the file `Tutorial_0.0.1.mtar` inside. The name and version is taken from the *mta.yaml* description.
 1. From the menu, select `View -> Find Command...` or press `F1`
 1. In the popup, type `mta` to filter the available commands, then select `Deploy MTA Archive`. 
-
 ![](images/sbas-init-3.png)
-
 1. Optional: if you have multiple projects open in BAS, select the `Tutorial_0.0.1.mtar` in the popup when asked for selecting the MTA Archive.
-
 ![](images/Deploy-1.png)
-
-> Alternatively, in the File Explorer you can open the folder `mta_archives` and right-click the `Tutorial_0.0.1.mtar` file and choose `Deploy MTA Archive`
-
+   > Alternatively, in the File Explorer you can open the folder `mta_archives` and right-click the `Tutorial_0.0.1.mtar` file and choose `Deploy MTA Archive`
 ![](images/Deploy-2.png)
-
-> For deployment, login to the Cloud Foundry backend is required. Depending on your setup, this might be a different user than the one using BAS. For the Trial account it is the same.
-
+   > For deployment, login to the Cloud Foundry backend is required. Depending on your setup, this might be a different user than the one using BAS. For the Trial account it is the same.
 1. Follow the wizard to login to Cloud Foundry:
 1. Confirm the API which specifies your region, e.g. `https://api.cf.us10.hana.ondemand.com` for the American Trial account
 1. Enter your Email address used for your account
@@ -455,7 +437,6 @@ approvalStatus | approvalStatus | String | `${context.internal.approvalStatus}`
 1. A console window will open in the bottom panel, showing the progress of the deployment.
 1. Verify that there are no error messages. Note that there might be modeling errors which are only detected during deployment.
 1. Optional: you can close the Bottom Panel with the icon ![](images/Icon_BottomPanel.png) in the lower right of the screen.
-
 ![](images/Deploy-3.png)
 
 
