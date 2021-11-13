@@ -1,8 +1,6 @@
 # Introduction and Setup Guide
 
-Go to [Exercise 2: Workflow Management](../2_WorkflowManagement/README.md) >
-
-Go to [Exercise 3: Intelligent Robotic Process Automation](../3_IntelligentRPA/README.md) >
+If not already done before, please follow
 
 ## Table of contents
 
