@@ -55,10 +55,8 @@ Your business rules project is created with the needed configurations.
 1. Click **Capital Expenditure Rules** to navigate back to the *Data Objects* page. 
     
 ### 3 - Expose Data Object<a name="section1-ExposeDataObject"></a>
-1. In Project Details do the following to expose the Data Object to be consumed by the Process Template later.
-  - Select **Project Details** and scroll down to *Exposed Vocabulary*.
-  - Click **Data Object** to select the modeled data object.   
-  ![](images/SelectDataObject.png)
+1. In Project Details do the following to expose the Data Object to be consumed by the Process Template later. Select **Project Details** and scroll down to *Exposed Vocabulary*. Click **Data Object** to select the modeled data object.   
+![](images/SelectDataObject.png)
 1. In the **Data Objects** dialogue select **Investment data object** and click **OK** button.   
 ![](images/ConfirmDataObject.png)
 3. Click **Activate** to activate the project.   
