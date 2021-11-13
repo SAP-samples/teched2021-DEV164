@@ -30,40 +30,27 @@ In this exercise we create a simple, one-step approval with rework capability.
 1. Select `Services / Instances and Subscriptions`
 1. For the application `SAP Business Application Studio`, click on the icon to `Go To Application` ![](images/Icon_BTP_GoToApplication.png)
 1. Optional: set a Bookmark for quick access
-
 ![](images/btp-cockpit-1.png)
-
 > SAP Business Application Studio (BAS) is a feature-rich IDE running in your browser, and available as part of the Business Technology Platform (BTP). 
 
 ### 1.2 Create a Dev Space <a name="createDevSpace"></a>
 
 1. Click on `Create Dev Space`
-
 ![](images/SBAS_CreateDevSpace.png)
-
 > If you already have a dev space, it will look like this:
-
 ![](images/sbas-devspace-1.png)
-
 > A 'Development Space' is a separate area to store all your files while using BAS. It's bound to your personal user.
-
 > Note that Dev Spaces are not intended for safe, long-term storage of files. Use a source code management system like git for this.
-
 1. Give your Dev Space a name, e.g. `workflow`
 1. Keep the default template selection `SAP Fiori`
 1. Select `Workflow Management` from the list of  additional extension
 1. Click on `Create Dev Space`
-
 ![](images/sbas-devspace-2.png)
-
 1. Optional: if the status of your Dev Space is `Stopped`, click on the play button to start it
 1. Wait until the Dev Space is in status `Running`
 1. Click on the name of your Dev Space to open BAS
-
 ![](images/sbas-devspace-3.png)
-
 > BAS loads many components in the background upon start and may react slowly for the first 1-2 minutes.
-
 > Dev Spaces are automatically stopped after some time of inactivity.
 
 
@@ -74,36 +61,23 @@ In this exercise we create a simple, one-step approval with rework capability.
 1. Click on `Start`
 1. Choose a project name, e.g. `Tutorial`
 1. Click on `Finish`
-
 ![](images/sbas-init-1.png)
-
 > This will open the file Explorer inside the newly created project. You can open a different project from the menu with `File -> Open Workspace...` and selecting either a specific project or the parent folder `projects` itself.
-
 1. From the menu, select `View -> Find Command...` or press `F1`
-
 ![](images/sbas-init-2.png)
-
 1. In the popup, type `mta` to filter the available commands, then select `Create MTA Module from Template`. 
-
 ![](images/sbas-init-3.png)
-
 1. Select `Workflow Module`
 1. Click on `Start`
 1. Keep the defaults for `mta.yaml` file path and target folder
 1. Choose a name for the module, e.g. `Capex`
 1. Click on `Next`
-
 ![](images/sbas-init-4.png)
-
 > This creates a workflow module inside the MTA and directly let's you create the first workflow inside it.
-
 1. Enter `ApprovalStep` as name for the workflow
-2. Click `Finish`
-
+1. Click `Finish`
 ![](images/sbas-init-5.png)
-
 > The technical workflow definition Id, as used in Monitor Workflows and API calls, is derived from the namespace and workflow name. It needs to be unique per BTP tenant, otherwise workflow deployments would overwrite each other.
-
 > Note: If the wizard does not work correctly for you, you can either try a different browser, or use the Yeoman commandline version:
 > - Menu: `Terminal -> new Terminal`
 > - type `yo`, press enter, select `Basic Multitarget Application` with cursor up/down, select with enter, enter project name `Tutorial` and confirm with enter
@@ -117,72 +91,46 @@ In this exercise we create a simple, one-step approval with rework capability.
 
 - Take a look at the elements of BAS IDE and Workflow Editor
 1. Menu bar
-2. File Explorer, showing project 'Tutorial' in this screenshot
-3. List of open editors
-4. Editor area, showing the Workflow Editor with the new workflow `ApprovalStep`
-5. Inside Workflow Editor: Palette, with available Flow elements
-6. Inside Workflow Editor: main edit window with graphical workflow display
-7. Inside Workflow Editor: Properties pane for the currently selected Flow element (or the workflow itself). Contains a tab 'General' with the technical ID, the displayed name and an optional documentation of this element, as well as additional fields or tabs depending on the selected element type.
-
+1. File Explorer, showing project 'Tutorial' in this screenshot
+1. List of open editors
+1. Editor area, showing the Workflow Editor with the new workflow `ApprovalStep`
+1. Inside Workflow Editor: Palette, with available Flow elements
+1. Inside Workflow Editor: main edit window with graphical workflow display
+1. Inside Workflow Editor: Properties pane for the currently selected Flow element (or the workflow itself). Contains a tab 'General' with the technical ID, the displayed name and an optional documentation of this element, as well as additional fields or tabs depending on the selected element type.
 ![](images/sbas-overview.png)
-
 1. Click on the `StartEvent1` to select it
 1. This opens the Speed Buttons. Select `Tasks` (rectangular icon ![](images/Icon_Speed_Tasks_small.png)), then click on the `Script Task`
-
 ![](images/Modeling-1.png)
-
 > Using the Speed Buttons, the new element is automatically placed directly next to the selected element, and connected to it. If another element is already connected, it is connected inbetween.
-
 ![](images/Modeling-2.png)
-
 1. In the Properties pane, enter `Prepare Approval` as name.
 1. Press Tab or click anywhere else to leave this field
-
 ![](images/Properties-PrepareApproval-1.png)
 ![](images/Modeling-2a.png)
-
-
 > Note the orange warning icon, indicating that additional, mandatory configuration is missing. We will fill them in later.
-
 1. From the palette, select `Tasks` (rectangular icon ![](images/Icon_Palette_Tasks.png)), then `Service Task`
-
 ![](images/Modeling-3.png)
-
 1. Note how when moving the mouse over the editor area, the new task sticks to the mouse pointer, ready for placement.
 1. Note the yellow dotted lines which help align elements with other, close-by elements for a nicer arrangement.
 1. Click on the existing Sequence Connector between `Prepare Approval` and `EndEvent1` (it will be displayed bold when hovering over it), to place the symbol 'on it'.
-
 ![](images/Modeling-4.png)
-
 > Placing an element from the palette on an existing Sequence Connector will split the connector and place the new element inbetween, similar on when using the Speed Buttons.
-
 ![](images/Modeling-5.png)
-
 > Inserting elements does not change the position of existing elements. When there is not enough space available, the connectors will form a loop. 
-
 1. Click on the `ServiceTask1` to select it
 1. Drag'n'Drop the service task a bit lower, by clicking and holding, dragging it with the mouse, then releasing it at the new position.
-
 ![](images/Modeling-6.png)
-
 1. Select the `ServiceTask1` and name it `Get Approvers` using the properties pane.
-
 1. In the top right corner of the editing area, use the `+` / `-` icons to change the zoom level of the workflow. Alternatively, the mouse wheel can be used.
 1. Use the windrose to pan the workflow editing area. Click the middle circle to zoom and center the whole workflow into view. Alternatively, dragging with the mouse is supported: click and hold on an empty area in the editor, then drag.
 1. For simple (non-branching) workflows, the automatic layouter can be helpful. Click on first `Arrange Vertically` and then `Arrange Horizontally` to see the difference.
 1. Select the event (circle) named "EndEvent1", then click on the trash bin icon (or press 'delete') to remove it. Note how also the connecting arrow (called `Sequence Flow`) is removed.
-
 ![](images/editor-overview-2.png)
-
 ![](images/Modeling-7.png)
-
 1. Select `Get Approvers` and from the Speed Buttons, select `Tasks`, then `Script Task`. Note how the new task is selected and the Speed Buttons are directly available.
 1. From the Speed Buttons of the `ScriptTask2`, select 'Gateways' (diamond-shaped symbol ![](images/Icon_Speed_Gateways_small.png)), then `Exclusive Gateway`
-
 ![](images/Modeling-8.png)
-
 > Gateways branch the flow into several outgoing connectors. The exclusive gateway indicated that exactly one branch is followed, based on a condition. We will add the second branch and condition later.
-
 1. Select `ScriptTask2` and name it `Process Approver Details`
 1. Select `ExclusiveGateway1` and name it `Approval Needed?`
 1. Add a User Task: select the gateway `Approval Needed?`, from the Speed Buttons select `Tasks`, then `User Task`
@@ -191,15 +139,10 @@ In this exercise we create a simple, one-step approval with rework capability.
 1. Then add a second Exclusive Gateway named `Approval Decision`
 1. From the Speed Buttons of the gateway `Approval Decision`, select `Events` (circle icon ![](images/Icon_Speed_Events_small.png)), then `Terminate End Event`
 1. Name it `Terminate Approval`
-
 ![](images/Modeling-9.png)
-
 > The `End Event` and `Terminating End Event` both end execution of this branch. If parallel branches are still running, the `End Event` will keep those running, while the `Terminating End Event` will stop the whole processing of this workflow. If the workflow was referenced from another workflow, execution will continue in this one.
-
 1. Ensure your workflow looks like this:
-
 ![](images/Modeling-10.png)
-
 > This is a good time to use the `Arrange Horizontally` ![](images/Icon_Editor_Arrange_Horizontally.png) functionality.
 
 ### 2.1 Modeling Branches <a name="branches"></a>
