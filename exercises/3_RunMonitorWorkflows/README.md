@@ -15,18 +15,13 @@
 1. Select `Services / Instances and Subscriptions`
 1. For the application `Workflow Management`, click on the icon `Go To Application` ![](images/Icon-BTP-GoToApplication.png)
 1. Optional: set a Bookmark for quick access
-
 ![](images/btp-cockpit-2.png)
-
 1. In the Fiori Launchpad, find the tiles which we will be using in this exercise:
 * My Inbox
 * Monitor Workflows - Definitions
 * Monitor Workflows - Instances
-
 ![](images/FLP-1.png)
-
 > You can have multiple browser tabs open for working in different apps at the same time.
-
 > Clicking on "back" multiple times, or clicking on the SAP Logo in the header row, brings you back to the tile overview.
 
 ## Working with workflows as a process administrator <a name="mwa"></a>
