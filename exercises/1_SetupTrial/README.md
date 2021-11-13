@@ -6,11 +6,11 @@ If not, please follow all the steps below to setup SAP Workflow Management.
 ## Table of contents
 
 <!-- TOC -->
-- [Trial onboarding with SAP Workflow Management and SAP Intelligent RPA](#trial-onboarding-with-sap-workflow-management-and-sap-intelligent-rpa)
-  - [Onboard to SAP Business Technology Platform Trial](#onboard-to-sap-business-technology-platform-trial)
+- [Trial onboarding with SAP Workflow Management](#trial-onboarding-with-sap-workflow-management-and-sap-intelligent-rpa)
+  - [1 Onboard to SAP Business Technology Platform Trial](#onboard-to-sap-business-technology-platform-trial)
     - [Create Trial account in BTP](#create-trial-account-in-btp)
-  - [Setup SAP Workflow Management](#setup-sap-workflow-management)
-  - [Import Sample Content](#section1-import)
+  - [2 Setup SAP Workflow Management](#setup-sap-workflow-management)
+  - [3 Import Sample Content](#section1-import)
   - [Conclusion](#conclusion)
 
 <!-- /TOC -->
@@ -20,7 +20,7 @@ If not, please follow all the steps below to setup SAP Workflow Management.
 
 In this section you will learn how to register to a trial tenant in SAP Business Technology Platform with SAP Workflow Management booster.
 
-## Onboard to SAP Business Technology Platform Trial
+## 1 Onboard to SAP Business Technology Platform Trial
 
 ### Create Trial account in BTP
 
@@ -55,7 +55,8 @@ In this section you will learn how to register to a trial tenant in SAP Business
 8. Once done click **Continue**
 
     ![00-008](images/00-008.png)
-## Setup SAP Workflow Management
+
+## 2 Setup SAP Workflow Management
 ### Setup SAP Workflow Management with Booster
 
 1. Click **Boosters**
@@ -93,7 +94,7 @@ In this section you will learn how to register to a trial tenant in SAP Business
 
 Congratulations! You have now successfully subscribed to the Business Technology Platform Trial. You can use it to discover all functionalities provided by SAP Workflow Management.
 
-## Import Sample Content <a name="section1-import"></a>
+## 3 Import Sample Content <a name="section1-import"></a>
 
 1.	In your sub-account, do the following:
       - Click **Instances and Subscriptions**, from the left-panel.
