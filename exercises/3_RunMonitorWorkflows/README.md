@@ -1,14 +1,14 @@
 # Executing and monitoring your workflows 
 
 ## Table of Contents
-- [Overview of Workflow tiles in Fiori Launchpad](#flp)
-- [Working with workflows as a process administrator](#mwa)
-  - [Starting a Workflow](#startWorkflow)
-  - [Monitoring a Workflow instance](#monitorWorkflow)
-- [Participating in a Workflow](#MyInbox)
+- [1 - Overview of Workflow tiles in Fiori Launchpad](#flp)
+- [2 - Working with workflows as a process administrator](#mwa)
+  - [2.1 Starting a Workflow](#startWorkflow)
+  - [2.2 Monitoring a Workflow instance](#monitorWorkflow)
+- [3 - Participating in a Workflow](#MyInbox)
 - [Course Summary](#conclusion)
 
-## Overview of Workflow tiles in Fiori Launchpad <a name="flp"></a>
+## 1 - Overview of Workflow tiles in Fiori Launchpad <a name="flp"></a>
 
 1. Open your SAP BTP Cockpit at https://cockpit.hanatrial.ondemand.com/
 1. Navigate to your subaccount
@@ -24,9 +24,9 @@
 > You can have multiple browser tabs open for working in different apps at the same time.
 > Clicking on "back" multiple times, or clicking on the SAP Logo in the header row, brings you back to the tile overview.
 
-## Working with workflows as a process administrator <a name="mwa"></a>
+## 2 - Working with workflows as a process administrator <a name="mwa"></a>
 
-### Starting a Workflow <a name="startWorkflow"></a>
+### 2.1 Starting a Workflow <a name="startWorkflow"></a>
 
 1. Open the `Monitor Workflows - Definitions` app by clicking on the respective tile in the Fiori Launchpad.
 1. In the list of deployed Workflow definitions, select the `ApprovalStep`
@@ -52,7 +52,7 @@
 ![](images/MWA-Definitions-5.png)
    > This switches to the `Monitor Workflows - Instances` app and sets a display filter for the workflow definition. This is the quickest way to find instances of a specific workflow definition.
 
-### Monitoring a Workflow instance <a name="monitorWorkflow"></a>
+### 2.2 Monitoring a Workflow instance <a name="monitorWorkflow"></a>
 
 1. Note how the list of Workflow instances shows one running instance.  
 ![](images/MWA-Instances-1.png)
@@ -71,7 +71,7 @@
 1. Click on `Execution Log` and see all the steps already executed in this workflow instance.
 ![](images/MWA-Instances-4.png)
 
-## Participating in a Workflow <a name="MyInbox"></a>
+## 3 - Participating in a Workflow <a name="MyInbox"></a>
 
 1. Navigate back to the Fiori Launchpad, by clicking Back ![](images/Icon-FLP-Back.png) several times, or by directly clicking on the SAP logo ![](images/Icon-FLP-SAPLogo.png)
 1. Click on the tile for `My Inbox` to open it.   
@@ -98,4 +98,7 @@
 * You can now start a workflow from MWA
 * You can Monitor both running and completed workflows
 * You can now open Tasks in My Inbox as process participant
+
+
+Now move on with [Exercise 4 - Model Business Rules Vocabulary](https://github.com/SAP-samples/teched2021-DEV164/tree/main/exercises/4_ModelVocabulary).
 
