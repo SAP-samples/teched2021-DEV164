@@ -587,5 +587,3 @@ You can use Process Workspace to gain visibility on end-to-end processes for lin
 When you create process instances corresponding to the *process variants*, you will be able to get insights into the **Capital Expenditure Approvals process** in the *process workspace* created here.
 
 Now move on with [Exercise 7 - Creating and Consuming Process Content Packages](https://github.com/SAP-samples/teched2021-DEV164/tree/main/exercises/7_CreatingContentPackages).
-
-https://github.com/SAP-samples/teched2021-DEV164/tree/main/exercises/6_BuildingVisibilityScenario
