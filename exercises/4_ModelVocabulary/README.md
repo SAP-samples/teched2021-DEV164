@@ -77,3 +77,5 @@ Your business rules project is created with the needed configurations.
 
 ### Conclusion<a name="Summary"></a>
 Now you have modeled a Business Rules Project with a Data Object and exposed it for consumption in the Process Template Editor in the next excercise.
+
+Now move on with [Exercise 5 - Creating a Process Template](https://github.com/SAP-samples/teched2021-DEV164/tree/main/exercises/5_CreatingProcessTemplate).
