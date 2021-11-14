@@ -223,6 +223,8 @@ We have finalized all the entries for the process context for the new template.
 
 Successful deploment also generate a Business Rules Project and it will be updated while configuring the Process Variants in the next exercise.
 ***
-## 7. Summary <a name="section7"></a>
+## 7. Conclusion <a name="section7"></a>
 
 Congratulations, you have now created your first process template, including a process variant. Once it has been included in a package and made available, this will be the basis for any configuration in the Process Flexibility Cockpit. This you will learn in upcoming units.
+
+Now move on with [Exercise 6 - Building a Process Visibility Scenario End-to-End](https://github.com/SAP-samples/teched2021-DEV164/tree/main/exercises/6_BuildingVisibilityScenario).
