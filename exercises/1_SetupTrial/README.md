@@ -196,6 +196,8 @@ In this section you will learn how to register to a trial tenant in SAP Business
 ## Conclusion <a name="conclusion"></a>
 
 Congratulations! You have now successfully subscribed to the Business Technology Platform Trial and imported the sample content. You can use it to discover all functionalities provided by SAP Workflow Management.
+    
+Now move on with [Exercise 2 - Creating a Workflow from Scratch](https://github.com/SAP-samples/teched2021-DEV164/tree/main/exercises/2_WorkflowFromScratch).
 
 # Troubleshooting <a name="section1-troubleshooting"></a>
 
