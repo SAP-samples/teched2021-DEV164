@@ -94,9 +94,9 @@ A process variant has default steps configured while creating the process templa
 *The Process Variant Editor is available now to configure a new variant. It shows the default variant and steps in the process template.*
 *You can add new approval steps and configure. The **Available Steps**  Palette shows the available steps to consume in a process variant. The default variant has two steps. The step details shows possilbe configurations you can do while configuring a step*.
 
-- Select **Step Conditions** tab to configure a step condition.
+- Select **Start Conditions** tab to configure a start condition.
 - Select **Investment.Total Cost** from the drop down.
-- Select **>=**as the operator.
+- Select >= as the operator.
 - Enter **10000** as the Total Cost value. 
 
 *This configuration will enable you to execute this Process Variant if the Total Cost of investment is greater than or equal to 10000*.
@@ -104,7 +104,7 @@ A process variant has default steps configured while creating the process templa
 Select **Group Head Approval** Step to configure step conditions.
 - Select **Step Conditions** tab.
 - Select **Investment.Total Cost** from the drop down.
-- Select **>=**as the operator.
+- Select >= as the operator.
 - Enter **30000** as the Total Cost value.
 ![](images/GroupHeadStepCondition.png)
 1. Add a new step while moving **Approval Step** from the palette to the canvas between **Local Manager approval** and the **end event**. The default variant has two steps. The step details shows possible configurations you can do while configuring a step.
@@ -118,7 +118,7 @@ Select **Group Head Approval** Step to configure step conditions.
 
  Select the **Step Conditions** tab.
  Select **Investment.Total Cost** from the drop down.
-- Select **>=**as the operator.
+- Select >= as the operator.
 - Enter **50000** as the Total Cost value.
 - Click **Activate** button.
 ![](images/CFOStepCondition.png)
@@ -166,7 +166,7 @@ Delete the sample JSON from the dialogue.
 UserId needs to be your BTP trial user id.
 1. Click **Start New Instance and Close**.
 ![](images/startNewInstanceAndClose.png)
-A new workflow instance of your activated process variant has been created.
+A new workflow instance of your activated process variant has been created. The number of approval steps is determined based on the Total Cost. the above JSON example using 60000 and the newly created workflow instance will have three approval steps.
 1. Click **Show Instances** button to see the newly created workflow instance.
 ![](images/ShowInstances.png)
 The Monitor Workflow Instances Application will show the root workflow instance. 
