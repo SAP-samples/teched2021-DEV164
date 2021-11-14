@@ -99,3 +99,6 @@
 * You can Monitor both running and completed workflows
 * You can now open Tasks in My Inbox as process participant
 
+
+Now move on with [Exercise 4 - Model Business Rules Vocabulary](https://github.com/SAP-samples/teched2021-DEV164/tree/main/exercises/4_ModelVocabulary).
+
