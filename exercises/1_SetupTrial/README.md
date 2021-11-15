@@ -1,6 +1,6 @@
 # Setup Guide
 
-If you have already followed successfully the setup guide sent to you upfront, you can move to the chapter **[Import Sample Content](#section1-import)**.
+If you have already followed successfully the setup guide sent to you upfront, you can move to the chapter **[2.1 Create Role Collection for Workflow Management](#createrolecollection)**.
 If not, please follow all the steps below to setup SAP Workflow Management.
 
 ## Table of contents
@@ -70,7 +70,7 @@ In this section you will learn how to register to a trial tenant in SAP Business
 4. Click **Navigate to Subaccount**.
 
     ![00-018](images/00-018.png)
-## Create Role Collection for Workflow Management##
+## 2.1 Create Role Collection for Workflow Management <a name="createrolecollection"></a>
 1. Once in your trial account Click on the tile **trial** to enter the Trial subaccount.
 
     ![00-031](images/00-031.png)
@@ -102,7 +102,7 @@ In this section you will learn how to register to a trial tenant in SAP Business
 8. Repeat these steps for the role collection **GroupHead** and  **CFO**.
 
     ![00-038](images/00-038.png)
-## Configure Destinations ##
+## 2.2 Configure Destinations
 1. Click **Services -> Instances and Subscriptions** and Select the following.
     - Select Business Rules from the dropdown.
     - Select wm_businessrules service instance to view the credentials.
