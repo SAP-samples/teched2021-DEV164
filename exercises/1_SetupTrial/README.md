@@ -71,7 +71,7 @@ In this section you will learn how to register to a trial tenant in SAP Business
 
     ![00-018](images/00-018.png)
 ## 2.1 Create Role Collection for Workflow Management <a name="createrolecollection"></a>
-1. Once in your trial account Click on the tile **trial** to enter the Trial subaccount.
+1. Once in your trial account, click on the tile **trial** to enter the Trial subaccount.
 
     ![00-031](images/00-031.png)
 
@@ -103,12 +103,12 @@ In this section you will learn how to register to a trial tenant in SAP Business
 
     ![00-038](images/00-038.png)
 ## 2.2 Configure Destinations
-1. Click **Services -> Instances and Subscriptions** and Select the following.
+1. Click **Services -> Instances and Subscriptions** and select the following.
     - Select Business Rules from the dropdown.
     - Select wm_businessrules service instance to view the credentials.
     - Click view credentials.
    ![00-018](images/ViewRulesCredentials.png)
-1. Copy the endpoints element from the JSON structure.Copy the structure between the curly braces,including curly braces. This will be used in the next step.
+1. Copy the endpoints element from the JSON structure (between line 3 and 6). Copy the structure between the curly braces, and also the curly braces itself. This will be used in the next step.
    ![00-018](images/CopyRulesCredentials.png)
 1. Click  **Connectivity -> Destinations**  from the left-hand navigation and search for the destination with name **BUSINESS_RULES**. Click **Clone** Button.
 
@@ -139,6 +139,9 @@ In this section you will learn how to register to a trial tenant in SAP Business
     > ### Important Note: You need to change your password in any case since the one that seems to be there is not valid.
 
     ![00-021](images/00-021.png)
+    
+7. You might want to select **Check Connection**. You should receive a green checkmark. The message *Response returned: "404: Not Found* you can ignore.
+![00-22](images/404.png)
 
 # 3 - Import Sample Content <a name="section1-import"></a>
 
