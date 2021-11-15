@@ -18,7 +18,7 @@ The exercise is based on authoring Data Object, using SAP Business Rules service
 1. Click **+** to create a new business rules project.
 ![](images/createproject_1.png)
 1. In the *New Project* screen, do the following:
- - Enter **CAPEX_00** in the **Name** box.
+ - Enter **CAPEX_00** in the **Name** box (or any other project name).
  - Enter **Capital Expenditure Rules** in the **Label** box.
  - Enter **Business rules to determine approvers for new investments in capital expenditure process** in **Description** box.
  - Select **2.0** as the **Expression Language**.
