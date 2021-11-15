@@ -59,11 +59,11 @@ SAP Workflow Managment enable Process Experts to create process variants using a
 ## 3. Configure some general data for process steps <a name="section3"></a>
 1. Select **Business Rules Project** under Vocabulary Configuration.
 ![](images/SelectBusinessRulesProject.png)
-1. Update the Business Rules Project Details.
-- Name -> Investment
-- ID -> copied Project ID from the previous excercise.
-- Revision -> Trial
-- Click OK button.
+1. Update the **Business Rules Project Details**.
+- Name: **Investment**
+- ID: *copied Project ID from the previous excercise*
+- Revision: **Trial**
+- Click 'OK' button.
 ![](images/AssociateRulesProject.png)
 
 
