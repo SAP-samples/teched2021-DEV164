@@ -162,7 +162,7 @@ Delete the sample JSON from the dialogue.
     }
 }
 ```
-1. Change your **Name** and **UserId** under Requester.
+1. Change your **Name** and **UserId** under Requestor.
 UserId needs to be your BTP trial user id.
 1. Click **Start New Instance and Close**.
 ![](images/startNewInstanceAndClose.png)
