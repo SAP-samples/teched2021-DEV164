@@ -105,17 +105,19 @@ Source Context Path | Target Context Path
    `${context.History}` |`${context.ApprovalHistory[loop.counter]}`
 
    26. Build your MTA Project.
+
    ![](images/BuildMTA.png) 
+   
    27. Deploy your MTA Archive. 
-    ![](images/deploymta.png)
+
+   ![](images/deploymta.png)
 
    ## Execute Workflow<a name="execute"></a>
    28.Click **Monitor Workflows - Workflow Definitions** tile to view the newly deployed workflow definition.
    ![](images/MonitorWorkflowDefinition.png)
    29. Select the newly deployed Workflow Definition.   
    30. Click **Start New Instance** action in the footer.
-
- ![](images/SelectWorkflowDefinition.png)
+     ![](images/SelectWorkflowDefinition.png)
    31. Click **Start New Instance and Close**.
     ![](images/ParallelWorkflowStartPayload.png)
 
