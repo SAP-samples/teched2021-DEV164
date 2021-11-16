@@ -91,7 +91,7 @@ Update the Source Context Path and Target Context Path as given below.
 
 *Source Context Path is the Main workflow context and Target Context Path is the Referenced Subflow context path.**loop.counter** is a standard variable to access the index of the collection attached to the reference subflow*.
 Source Context Path | Target Context Path
-   -|-------|-
+   --- | ---
    `${context.RequestId}` |`${context.RequestId}`
    `${context.Title}` |`${context.Title}`
    `${context.Requester}` |`${context.Requester}}`
@@ -101,7 +101,7 @@ Source Context Path | Target Context Path
 25. Under **Output Mapping** and click **Add** button.
 
 Source Context Path | Target Context Path
-   -|-------|-
+   --- | ---
    `${context.History}` |`${context.ApprovalHistory[loop.counter]}`
 
    26. Build your MTA Project.
