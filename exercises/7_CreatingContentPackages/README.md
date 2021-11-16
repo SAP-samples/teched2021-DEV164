@@ -117,18 +117,18 @@ A process variant has default steps configured while creating the process templa
 1. Enter **50000** as the Total Cost value.
 1. Click **Activate** button.   
 ![](images/CFOStepCondition.png)
-Successful activation of the process variant will display a toast message. A new workflow definition is deployed into your subaccount. The Start and Step conditions are part of a generated Business Rules Project in your sub account.
+Successful activation of the process variant will display a toast message. A new workflow definition is deployed into your subaccount. The Start and Step conditions are part of a generated Business Rules Project in your sub account.   
 ![](images/ActivationMessage.png)
 
 ## Execute and Monitor Process Variant <a name="monitorvariant"></a>
 In this section you will create an instance of the process variant you have activated. The process variant has now three approval steps and approvers are determined using the decision which you have modified in the previous section. 
 1. Click **Monitor Workflows - Workflow Definitions** tile to view the newly deployed workflow definition.
-![](images/MonitorWorkflowsDefinitions.png)
-*You can see the newly activated Process Variant **capitalexpenditureapproval** deployed to your account. You can also see the approval steps you have developed and deployed to your account. One more wokflow with name **CapexApproval_Leading Workflow** got generated. This Workflow is managign the Start and Step conditions you have modled in the previous steps.
-1. Select the workflow definition **CapexApproval_Leading Workflow**   and click **Start New Instance**.
+![](images/MonitorWorkflowsDefinitions.png)    
+*You can see the newly activated Process Variant **capitalexpenditureapproval** deployed to your account. You can also see the approval steps you have developed and deployed to your account. One more wokflow with name **CapexApproval_Leading Workflow** got generated. This Workflow is managign the Start and Step conditions you have modled in the previous steps.*
+1. Select the workflow definition **CapexApproval_Leading Workflow** and click **Start New Instance**.
 ![](images/LeadingWorkflow.png)
 1. Delete the sample JSON from the dialogue.
-1. **Copy  and Paste** the below JSON  content.
+1. **Copy and Paste** the below JSON content.
 ```json
 {
     "RequestId": "CAPEX_REQ_001",
@@ -150,19 +150,19 @@ In this section you will create an instance of the process variant you have acti
         "Country": "Germany"
     }
 }
-```
-1. Change your **Name** and **UserId** under Requestor. UserId needs to be your BTP trial user id.
-1. Click **Start New Instance and Close**.
-![](images/startNewInstanceAndClose.png)
-*A new workflow instance of your activated process variant has been created. The number of approval steps is determined based on the Total Cost. The above JSON example using 60.000 and the newly created workflow instance will have three approval steps now.
+```   
+1. Change your **Name** and **UserId** under Requester. UserId needs to be your BTP trial user id, e.g. your email address.
+1. Click **Start New Instance and Close**.   
+![](images/startNewInstanceAndClose.png)    
+*A new workflow instance of your activated process variant has been created. The number of approval steps is determined based on the Total Cost. The above JSON example using 60.000 and the newly created workflow instance will have three approval steps now.*
 1. Click **Show Instances** button to see the newly created workflow instance.
 ![](images/ShowInstances.png)
-*The Monitor Workflow Instances Application will show the root workflow instance. 
+*The Monitor Workflow Instances Application will show the root workflow instance.* 
 1. Click **EXECUTION LOG** to see the detials of the activites executed so far.
-*The activity Reference subflow **"Call Variant"** is started shows the instnace Id of the workflow approval step.
+*The activity Reference subflow **"Call Variant"** is started shows the instnace Id of the workflow approval step.*
 1. Click on the link **Instance Id** to navigate to the Process Variant.   
 ![](images/LeadingWorkflowInstance.png)
-*The child workflow instance **"Two Step Approval"** is displayed now. This is the Process Variant you have configured and deployed.
+*The child workflow instance **"Two Step Approval"** is displayed now. This is the Process Variant you have configured and deployed.*
 1. Click on the link **Instance Id** to navigate to the Approval Step.   
 ![](images/ProcessVariantInstance.png)
 1. Click **EXECUTION LOG**. It shows the Group Head approval task is ready and assigned to your BTP trial user id.
@@ -174,7 +174,7 @@ In this section you will create an instance of the process variant you have acti
 1. Click **REFRESH** button to get the next approval task. This will update "My Inbox" with the next approval task.
 ![](images/refresh.png)
 1. Select the approval task **"...in your role as LocalManager**" and click **Approve** button. You may add comments in the comments section.
-![](images/ApproveLocalManager.png)
+![](images/ApproveLocalManger.png)   
 1. Click **REFRESH** button to get the next approval task. This will update "My Inbox" with the next approval task.
 ![](images/refresh.png)
 1. Select the approval task **"...in your role as CFO"** and click **Approve** button. You may add comments in the Comments section.
@@ -184,7 +184,7 @@ In this section you will create an instance of the process variant you have acti
 SAP Workflow Management provides real time visibility into processes and deployed workflows. Process owners and process operators can get insights into their process variants. 
 1. Navigate to **Process Flexiblity Cockpit** and click on **Live Process Insights**.
 ![](images/LiveProcessInsightsTile.png)
-*You will see status of your Workflow Instance including some key performance indicators you have modeled in the previous exercise. 
+*You will see status of your Workflow Instance including some key performance indicators you have modeled in the previous exercise.* 
 > Remember: in the last exercise the default frequency for scheduling interval has been defined with 5 minutes for this process visibility scenario. So it might take some time until you see the running instances there.
 ![](images/processvisibilityworkspace.png)
 
