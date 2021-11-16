@@ -70,7 +70,6 @@ The dialogue shows all deployed Business Rules projects.
 ## Configure and Deploy Process Variants <a name="configureanddeploy"></a>
 1. Click **Process Flexibility Cockpit** tile to configure and deploy a process variant.
 ![](images/ProcessFlexiblityCockpitTile.png)
-
 *The Process Flexibility Cockpit enables business process experts to configure process variants, manage decisions and visibility scenarios. A single page to manage their process variants and monitor the performance*.
 ### Create New Process Variant<a name="createvariant"></a>
 *You can see the content package **capitalexpenditureapproval** which you have created in the Manage Packages application before.*
@@ -84,7 +83,7 @@ The dialogue shows all deployed Business Rules projects.
 1. Select the process **CapexApproval**  from the dropdown, your process template.
 1. Click **Create** button.   
 ![](images/NewProcessVariant.png)   
-*The new process variant is available in the Process Variants tile with **Draft** state.*
+*The new process variant is available in the Process Variants tile with **Draft** state.*   
 ![](images/SelectProcessVariants.png)
 1. Click the header area of **Process Variants** tile.
 
@@ -97,30 +96,29 @@ A process variant has default steps configured while creating the process templa
  - Select **Investment.Total Cost** from the drop down.
  - Select >= as the operator.
  - Enter **10000** as the Total Cost value. 
-*This configuration will enable you to execute this Process Variant if the Total Cost of Investment is greater than or equal to 10000*.
+*This configuration will enable you to execute this Process Variant if the Total Cost of Investment is greater than or equal to 10.000.*   
 ![](images/ProcessVariantStartCondition.png)
 1. Select **Group Head Approval** Step to configure step conditions.
  - Select **Step Conditions** tab.
  - Select **Investment.Total Cost** from the drop down.
  - Select >= as the operator.
- - Enter **30000** as the Total Cost value.
+ - Enter **30000** as the Total Cost value.   
 ![](images/GroupHeadStepCondition.png)
-1. Add a new step while moving **Approval Step** from the palette to the canvas between **Local Manager approval** and the **end event**. The default variant has two steps. The step details shows possible configurations you can do while configuring a step.
+1. Add a new step while moving **Approval Step** from the palette to the canvas between **Local Manager approval** and the **end event**. The default variant has two steps. The step details shows possible configurations you can do while configuring a step.   
 ![](images/DragAndDropProcessStep.png)
 *It is possible to execute multiple step in parallel. You need to drag and drop the process step on an existing steps so that two steps execute in parallel.*
-1. Select the newly added step and change the step **Name** to **CFO**.
+1. Select the newly added step and change the step **Name** to **CFO**.   
 ![](images/StepRenameCFO.png)
-1. Open the **Details** tab. In **approvalstep** maintain **CFO**.
+1. Open the **Details** tab. In **approvalstep** maintain **CFO**.   
 ![](images/StepPropertyCFO.png)
 *This is a step attribute you have configured while creating the process template. It is used while determining the approver using a business rule.*
-1- Select the **Step Conditions** tab.
- Select **Investment.Total Cost** from the drop down.
-  - Select >= as the operator.
+1. Select the **Step Conditions** tab.
+1. Select **Investment.Total Cost** from the drop down.
+ - Select >= as the operator.
  - Enter **50000** as the Total Cost value.
- - Click **Activate** button.
+ - Click **Activate** button.   
 ![](images/CFOStepCondition.png)
 Successful activation of the process variant will display a toast message. A new workflow definition is deployed into your subaccount. The Start and Step conditions are part of a generated Business Rules Project in your sub account.
-
 ![](images/ActivationMessage.png)
 
 ### Execute and Monitor Process Variant <a name="monitorvariant"></a>
