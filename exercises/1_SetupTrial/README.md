@@ -208,7 +208,7 @@ Now move on with [Exercise 2 - Creating a Workflow from Scratch](https://github.
 
 <img src="images/setup-troubleshoot-7.png" width="600">
 
-1. Download [SampleCapitalExpenditureApprovalRules.zip](https://github.com/SAP-samples/teched2020-DEV163/blob/main/exercises/Exercise0/) rules project.
+1. Download [SampleCapitalExpenditureApprovalRules.zip](https://github.com/SAP-samples/teched2021-DEV164/blob/main/exercises/Solution/SampleCapitalExpenditureApprovalRules.zip) rules project.
 
 1. From the *Workflow Management Launchpad*, click **Manage Rule Projects** tile.
 
