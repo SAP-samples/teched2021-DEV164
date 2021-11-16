@@ -50,7 +50,7 @@ Your business rules project is created with the needed configurations.
     | TotalCost | Total Cost | Total cost of investment  | Number | 
     | BusinessUnit | Business Unit | Business unit or the division that is proposing the investment  | String | 
    
-    ![](images/dataobject_5.png)
+    ![](images/dataobject_5a.png)
 1. Click **Activate**. 
 1. Click **Capital Expenditure Rules** to navigate back to the *Data Objects* page. 
     
