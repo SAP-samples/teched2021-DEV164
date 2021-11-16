@@ -79,8 +79,10 @@ While modeling a workflow, it is a common requirment to execute approval steps i
 19. Check **Propagate Principal** to enable principal propagation while creating the referenced workflow during runtime.
 20. Click **Select** and from the Dialogure window choose **StartEvent1**
 ![](images/SelectFlowElement.png)
+
 20. Select **Type** as Parallel.
-21. Update **Collection Context Path** as ${context.ApprovalSteps}
+21. Update **Collection Context Path** as ${context.ApprovalSteps}  
+
 ![](images/ParallelLooping.png)
 22. Select tab **MAPPING**.
 ![](images/Mapping.png)
@@ -103,8 +105,8 @@ Source Context Path | Target Context Path
    `${context.History}` |`${context.ApprovalHistory[loop.counter]}`
 
    26. Build your MTA Project.
-   ![](images/BuildMTA.png)
-   27. Deploy your MTA Archive.
+   ![](images/BuildMTA.png) 
+   27. Deploy your MTA Archive. 
     ![](images/deploymta.png)
 
    ## Execute Workflow<a name="execute"></a>
@@ -114,16 +116,18 @@ Source Context Path | Target Context Path
    30. Click **Start New Instance** action in the footer.
 
  ![](images/SelectWorkflowDefinition.png)
-   31. Click Start New Instance and Close.
+   31. Click **Start New Instance and Close**.
     ![](images/ParallelWorkflowStartPayload.png)
+
    32. Click **Show Instances** button to see the newly created Workflow Instance.
-     ![](images/ParallelShowInstances.png)
+
+   ![](images/ParallelShowInstances.png)
    33. Select **EXECUTION LOG** and you can see three Referenced Subflows are started. Each Subflow is of type Approval Step and has a Workflow Task to approve.
-     ![](images/ParallelWorkflowInstance.png)
+   ![](images/ParallelWorkflowInstance.png)
   34. Navigate to Home Page and Select **My Inbox**.    
   35. Click **My Inbox** tile.
   You can see there are three tasks in your My Inbox for approvals.
-    ![](images/MyInboxParallelApprovals.png)
+  ![](images/MyInboxParallelApprovals.png)
 
 36. You can see there are three tasks in parallel.
 - Local Manager Approval
