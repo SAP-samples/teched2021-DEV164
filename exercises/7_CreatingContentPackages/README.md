@@ -6,8 +6,7 @@
 - [Configure and Deploy Process Variant](#configureanddeploy)
   - [Create New Process Variant](#createvariant)
   - [Configure Process Variant](#configurevariant)
-  - [Configure Decision](#configuredecision)
-  - [Execute and Monitor Process Variant](#monitorvariant)
+- [Execute and Monitor Process Variant](#monitorvariant)
   - [Live Process Insights](#liveprocessinsights)
 - [Summary](#summary)
    
@@ -121,9 +120,8 @@ A process variant has default steps configured while creating the process templa
 Successful activation of the process variant will display a toast message. A new workflow definition is deployed into your subaccount. The Start and Step conditions are part of a generated Business Rules Project in your sub account.
 ![](images/ActivationMessage.png)
 
-### Execute and Monitor Process Variant <a name="monitorvariant"></a>
+## Execute and Monitor Process Variant <a name="monitorvariant"></a>
 In this section you will create an instance of the process variant you have activated. The process variant has now three approval steps and approvers are determined using the decision which you have modified in the previous section. 
-
 1. Click **Monitor Workflows - Workflow Definitions** tile to view the newly deployed workflow definition.
 ![](images/MonitorWorkflowsDefinitions.png)
 *You can see the newly activated Process Variant **capitalexpenditureapproval** deployed to your account. You can also see the approval steps you have developed and deployed to your account. One more wokflow with name **CapexApproval_Leading Workflow** got generated. This Workflow is managign the Start and Step conditions you have modled in the previous steps.
