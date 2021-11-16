@@ -40,7 +40,7 @@ The various workflow management artifacts need to be included in this package.
 1. Select **Add Processes**.
 ![](images/AddProcesses.png)
 The dialogue shows all deployed process templates. 
-1. Select **CapexApproval** and click **Select** button.
+1. Select **CapexApproval** and click **Select** button.    
 ![](images/selectProcess.png)
 1. Enter Revision as **2021**
 1. Enter Version as **1.0.0**  
@@ -50,7 +50,7 @@ Repeat the same for Business Rules and Process Visibility scenario.
 1. Select **Add Business Rules Project**.
 ![](images/AddBusinessRules.png)
 The dialogue shows all deployed Business Rules projects. 
-1. Select **Capital Expenditure Rules** and click **Select** button.   
+1. Select **Sample policies for capital expenditure approval** and click **Select** button.   
 ![](images/SelectBusinessRules.png)
 1. Click tab **Artifacts**.  
 1. Click the **+** button.  
@@ -73,7 +73,8 @@ The dialogue shows all deployed Business Rules projects.
 
 *The Process Flexibility Cockpit enables business process experts to configure process variants, manage decisions and visibility scenarios. A single page to manage their process variants and monitor the performance*.
 ### Create New Process Variant<a name="createvariant"></a>
-1. You can see the content package **capitalexpenditureapproval** which you have created in the Manage Packages application before. Click the tile **capitalexpenditureapproval**.
+*You can see the content package **capitalexpenditureapproval** which you have created in the Manage Packages application before.
+1. Click the tile **capitalexpenditureapproval**.
 ![](images/SelectContentPackage2.png)
 *You can see the **Process Flexibility Cockpit** with all the artifacts in the content package. Since there is no process variant created and activated, all the tiles show the packaged artifacts. We will now create a new process variant tailored to our needs, based on the default variant.
 1. Click the action **New Process Variant**.
@@ -81,8 +82,8 @@ The dialogue shows all deployed Business Rules projects.
 *A new dialogue window opens to provide the process variant name.
 1. Enter a **name** to the process variant for example: capitalexpenditureapproval.
 1. Select the process **CapexApproval**  from the dropdown, your process template.
-1. Click **Create** button.  
-![](images/NewProcessVariant.png)  
+1. Click **Create** button.   
+![](images/NewProcessVariant.png)   
 *The new process variant is available in the Process Variants tile with **Draft** state.
 ![](images/SelectProcessVariants.png)
 1. Click the header area of **Process Variants** tile.
