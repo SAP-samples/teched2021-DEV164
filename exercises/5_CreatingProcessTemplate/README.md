@@ -127,13 +127,11 @@ SAP Workflow Managment enable Process Experts to create process variants using a
 - ${context.Title}
 - ${context.Investment}
 - ${context.Requester}
-- ${context.History}
-- ${context.internal}
-![](images/22n_ProcessContextAttributes.png)
+![](images/22na_ProcessContextAttributes.png)
 
 ### Maintain process context for process attributes
 1. Now add further process context data for the process attributes (to be used later in a process visibility dashboard). Click `+` button.
-![](images/23n_AddContextForPAttributes.png)
+![](images/23na_AddContextForPAttributes.png)
 
 1. Maintain the following data:
 
@@ -151,7 +149,7 @@ SAP Workflow Managment enable Process Experts to create process variants using a
 |approvalStatus|approvalStatus|string|${context.internal.approvalStatus}|
 
 We have finalized all the entries for the process context for the new template.
-![](images/26n_FinalAllAttributes.png)
+![](images/26na_FinalAllAttributes.png)
 
 1. Save your work.  
 ![](images/27_SaveAll_1.png)
