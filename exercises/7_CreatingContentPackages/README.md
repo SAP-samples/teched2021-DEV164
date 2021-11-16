@@ -91,17 +91,17 @@ A process variant has default steps configured while creating the process templa
 1. Click the Process Variant **capitalexpenditureapproval** to navigate to process variant editor.
 ![](images/SelectProcessVariant.png)  
 *The Process Variant Editor is available now to configure a new variant. It shows the default variant and steps in the process template. You can add new approval steps and configure. The **Available Steps** palette shows the available steps to be consumed in a process variant. The default variant has two steps. The step details show possible configurations you can do while configuring a step.*
- - Select **Start Conditions** tab to configure a start condition.
- - Select **Investment.Total Cost** from the drop down.
- - Select >= as the operator.
- - Enter **10000** as the Total Cost value. 
+1. Select **Start Conditions** tab to configure a start condition.
+1. Select **Investment.Total Cost** from the drop down.
+1. Select >= as the operator.
+1. Enter **10000** as the Total Cost value. 
 *This configuration will enable you to execute this Process Variant if the Total Cost of Investment is greater than or equal to 10.000.*   
 ![](images/ProcessVariantStartCondition.png)
 1. Select **Group Head Approval** Step to configure step conditions.
- - Select **Step Conditions** tab.
- - Select **Investment.Total Cost** from the drop down.
- - Select >= as the operator.
- - Enter **30000** as the Total Cost value.   
+1. Select **Step Conditions** tab.
+1. Select **Investment.Total Cost** from the drop down.
+1. Select >= as the operator.
+1. Enter **30000** as the Total Cost value.   
 ![](images/GroupHeadStepCondition.png)
 1. Add a new step while moving **Approval Step** from the palette to the canvas between **Local Manager approval** and the **end event**. The default variant has two steps. The step details shows possible configurations you can do while configuring a step.   
 ![](images/DragAndDropProcessStep.png)
@@ -113,9 +113,9 @@ A process variant has default steps configured while creating the process templa
 *This is a step attribute you have configured while creating the process template. It is used while determining the approver using a business rule.*
 1. Select the **Step Conditions** tab.
 1. Select **Investment.Total Cost** from the drop down.
- - Select >= as the operator.
- - Enter **50000** as the Total Cost value.
- - Click **Activate** button.   
+1. Select >= as the operator.
+1. Enter **50000** as the Total Cost value.
+1. Click **Activate** button.   
 ![](images/CFOStepCondition.png)
 Successful activation of the process variant will display a toast message. A new workflow definition is deployed into your subaccount. The Start and Step conditions are part of a generated Business Rules Project in your sub account.
 ![](images/ActivationMessage.png)
