@@ -50,14 +50,14 @@ Repeat the same for Business Rules and Process Visibility scenario.
 1. Select **Add Business Rules Project**.
 ![](images/AddBusinessRules.png)
 The dialogue shows all deployed Business Rules projects. 
-1. Select **Capital Expenditure Rules** and click **Select** button.
+1. Select **Capital Expenditure Rules** and click **Select** button.   
 ![](images/SelectBusinessRules.png)
 1. Click tab **Artifacts**.  
 1. Click the **+** button.  
 1. Select **Add Process Visiblity Scenario**.  
 ![](images/AddVisibilityscenario.png)
-The dialogue shows all deployed Process Visibility projects. 
-1. Select **Capital Expenditure Approvals** and click **Select** button.
+*The dialogue shows all deployed Process Visibility projects. 
+1. Select **Capital Expenditure Approvals** and click **Select** button.   
 ![](images/SelectVisibilityScenario.png)
 1. Enter Revision as **2021**
 1. Enter Version as **1.0.0**
@@ -75,15 +75,15 @@ The dialogue shows all deployed Process Visibility projects.
 ### Create New Process Variant<a name="createvariant"></a>
 1. You can see the content package **capitalexpenditureapproval** which you have created in the Manage Packages application before. Click the tile **capitalexpenditureapproval**.
 ![](images/SelectContentPackage2.png)
-You can see the **Process Flexibility Cockpit** with all the artifacts in the content package. Since there is no process variant created and activated, all the tiles show the packaged artifacts. We will now create a new process variant tailored to our needs, based on the default variant.
+*You can see the **Process Flexibility Cockpit** with all the artifacts in the content package. Since there is no process variant created and activated, all the tiles show the packaged artifacts. We will now create a new process variant tailored to our needs, based on the default variant.
 1. Click the action **New Process Variant**.
 ![](images/CreateNewProcessVariant.png)
-A new dialogue window opens to provide the process variant name.
+*A new dialogue window opens to provide the process variant name.
 1. Enter a **name** to the process variant for example: capitalexpenditureapproval.
 1. Select the process **CapexApproval**  from the dropdown, your process template.
 1. Click **Create** button.  
 ![](images/NewProcessVariant.png)  
-The new process variant is available in the Process Variants tile with **Draft** state.
+*The new process variant is available in the Process Variants tile with **Draft** state.
 ![](images/SelectProcessVariants.png)
 1. Click the header area of **Process Variants** tile.
 
@@ -93,38 +93,33 @@ A process variant has default steps configured while creating the process templa
 ![](images/SelectProcessVariant.png)  
 *The Process Variant Editor is available now to configure a new variant. It shows the default variant and steps in the process template.*
 *You can add new approval steps and configure. The **Available Steps**  Palette shows the available steps to consume in a process variant. The default variant has two steps. The step details shows possilbe configurations you can do while configuring a step*.
-
-- Select **Start Conditions** tab to configure a start condition.
-- Select **Investment.Total Cost** from the drop down.
-- Select >= as the operator.
-- Enter **10000** as the Total Cost value. 
-
-*This configuration will enable you to execute this Process Variant if the Total Cost of investment is greater than or equal to 10000*.
+ - Select **Start Conditions** tab to configure a start condition.
+ - Select **Investment.Total Cost** from the drop down.
+ - Select >= as the operator.
+ - Enter **10000** as the Total Cost value. 
+*This configuration will enable you to execute this Process Variant if the Total Cost of Investment is greater than or equal to 10000*.
 ![](images/ProcessVariantStartCondition.png)
-Select **Group Head Approval** Step to configure step conditions.
-- Select **Step Conditions** tab.
-- Select **Investment.Total Cost** from the drop down.
-- Select >= as the operator.
-- Enter **30000** as the Total Cost value.
+1. Select **Group Head Approval** Step to configure step conditions.
+ - Select **Step Conditions** tab.
+ - Select **Investment.Total Cost** from the drop down.
+ - Select >= as the operator.
+ - Enter **30000** as the Total Cost value.
 ![](images/GroupHeadStepCondition.png)
 1. Add a new step while moving **Approval Step** from the palette to the canvas between **Local Manager approval** and the **end event**. The default variant has two steps. The step details shows possible configurations you can do while configuring a step.
 ![](images/DragAndDropProcessStep.png)
-*It is possible to execute multiple step parallelly. You need to drag and drop the process step on an exisiting step so that two steps execute parallely*.
+*It is possible to execute multiple step in parallel. You need to drag and drop the process step on an existing steps so that two steps execute in parallel*.
 1. Select the newly added step and change the step **Name** to **CFO**.
 ![](images/StepRenameCFO.png)
 1. Open the **Details** tab. In **approvalstep** maintain **CFO**.
 ![](images/StepPropertyCFO.png)
 *This is a step attribute you have configured while creating the process template. It is used while determining the approver using a business rule*.
-
- Select the **Step Conditions** tab.
+1- Select the **Step Conditions** tab.
  Select **Investment.Total Cost** from the drop down.
-- Select >= as the operator.
-- Enter **50000** as the Total Cost value.
-- Click **Activate** button.
+  - Select >= as the operator.
+ - Enter **50000** as the Total Cost value.
+ - Click **Activate** button.
 ![](images/CFOStepCondition.png)
-
-
-Successful activation of the process variant will display a toast message. A new workflow definition is deployed in to your subaccount. The Start and Step conditions are part of a generated Business Rules Project in your sub account.
+Successful activation of the process variant will display a toast message. A new workflow definition is deployed into your subaccount. The Start and Step conditions are part of a generated Business Rules Project in your sub account.
 
 ![](images/ActivationMessage.png)
 
@@ -133,12 +128,10 @@ In this section you will create an instance of the process variant you have acti
 
 1. Click **Monitor Workflows - Workflow Definitions** tile to view the newly deployed workflow definition.
 ![](images/MonitorWorkflowsDefinitions.png)
-
-You can see the newly activated Process Variant **capitalexpenditureapproval** deployed to your account. You can also see the approval steps you have developed and deployed to your account. One more wokflow with name **CapexApproval_Leading Workflow** got generated. This Workflow is managign the Start and Step conditions you have modled in the previous steps.
-
-Select the workflow definition **CapexApproval_Leading Workflow**   and click **Start New Instance**.
+*You can see the newly activated Process Variant **capitalexpenditureapproval** deployed to your account. You can also see the approval steps you have developed and deployed to your account. One more wokflow with name **CapexApproval_Leading Workflow** got generated. This Workflow is managign the Start and Step conditions you have modled in the previous steps.
+1. Select the workflow definition **CapexApproval_Leading Workflow**   and click **Start New Instance**.
 ![](images/LeadingWorkflow.png)
-Delete the sample JSON from the dialogue.
+1. Delete the sample JSON from the dialogue.
 1. **Copy  and Paste** the below JSON  content.
 ```json
 {
@@ -162,23 +155,19 @@ Delete the sample JSON from the dialogue.
     }
 }
 ```
-1. Change your **Name** and **UserId** under Requestor.
-UserId needs to be your BTP trial user id.
+1. Change your **Name** and **UserId** under Requestor. UserId needs to be your BTP trial user id.
 1. Click **Start New Instance and Close**.
 ![](images/startNewInstanceAndClose.png)
-A new workflow instance of your activated process variant has been created. The number of approval steps is determined based on the Total Cost. the above JSON example using 60000 and the newly created workflow instance will have three approval steps.
+*A new workflow instance of your activated process variant has been created. The number of approval steps is determined based on the Total Cost. The above JSON example using 60.000 and the newly created workflow instance will have three approval steps now.
 1. Click **Show Instances** button to see the newly created workflow instance.
 ![](images/ShowInstances.png)
-The Monitor Workflow Instances Application will show the root workflow instance. 
-Click **EXECUTION LOG** to see the detials of the activites executed so far.
-The activity Reference subflow **"Call Variant"** is started shows the instnace Id of the workflow approval step.
-
-Click on the link **Instance Id** to navigate to the Process Variant.
-
+*The Monitor Workflow Instances Application will show the root workflow instance. 
+1. Click **EXECUTION LOG** to see the detials of the activites executed so far.
+*The activity Reference subflow **"Call Variant"** is started shows the instnace Id of the workflow approval step.
+1. Click on the link **Instance Id** to navigate to the Process Variant.   
 ![](images/LeadingWorkflowInstance.png)
-The child workflow instance **"Two Step Approval"** is displayed now. This is the Process Variant you have configured and deployed.
-
-Click on the link **Instance Id** to navigate to the Approval Step.
+*The child workflow instance **"Two Step Approval"** is displayed now. This is the Process Variant you have configured and deployed.
+1. Click on the link **Instance Id** to navigate to the Approval Step.   
 ![](images/ProcessVariantInstance.png)
 1. Click **EXECUTION LOG**. It shows the Group Head approval task is ready and assigned to your BTP trial user id.
 ![](images/GroupHeadApprovalInstance.png)
@@ -199,7 +188,7 @@ Click on the link **Instance Id** to navigate to the Approval Step.
 SAP Workflow Management provides real time visibility into processes and deployed workflows. Process owners and process operators can get insights into their process variants. 
 1. Navigate to **Process Flexiblity Cockpit** and click on **Live Process Insights**.
 ![](images/LiveProcessInsightsTile.png)
-You will see status of your Workflow Instance including some key performance indicators you have modeled in the previous exercise. 
+*You will see status of your Workflow Instance including some key performance indicators you have modeled in the previous exercise. 
 > Remember: in the last exercise the default frequency for scheduling interval has been defined with 5 minutes for this process visibility scenario. So it might take some time until you see the running instances there.
 ![](images/processvisibilityworkspace.png)
 
