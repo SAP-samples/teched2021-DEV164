@@ -73,18 +73,18 @@ The dialogue shows all deployed Business Rules projects.
 
 *The Process Flexibility Cockpit enables business process experts to configure process variants, manage decisions and visibility scenarios. A single page to manage their process variants and monitor the performance*.
 ### Create New Process Variant<a name="createvariant"></a>
-*You can see the content package **capitalexpenditureapproval** which you have created in the Manage Packages application before.
+*You can see the content package **capitalexpenditureapproval** which you have created in the Manage Packages application before.*
 1. Click the tile **capitalexpenditureapproval**.
 ![](images/SelectContentPackage2.png)
-*You can see the **Process Flexibility Cockpit** with all the artifacts in the content package. Since there is no process variant created and activated, all the tiles show the packaged artifacts. We will now create a new process variant tailored to our needs, based on the default variant.
+*You can see the **Process Flexibility Cockpit** with all the artifacts in the content package. Since there is no process variant created and activated, all the tiles show the packaged artifacts. We will now create a new process variant tailored to our needs, based on the default variant.*
 1. Click the action **New Process Variant**.
 ![](images/CreateNewProcessVariant.png)
-*A new dialogue window opens to provide the process variant name.
+*A new dialogue window opens to provide the process variant name.*
 1. Enter a **name** to the process variant for example: capitalexpenditureapproval.
 1. Select the process **CapexApproval**  from the dropdown, your process template.
 1. Click **Create** button.   
 ![](images/NewProcessVariant.png)   
-*The new process variant is available in the Process Variants tile with **Draft** state.
+*The new process variant is available in the Process Variants tile with **Draft** state.*
 ![](images/SelectProcessVariants.png)
 1. Click the header area of **Process Variants** tile.
 
@@ -92,8 +92,7 @@ The dialogue shows all deployed Business Rules projects.
 A process variant has default steps configured while creating the process template and it is possible to modify or add new steps.  
 1. Click the Process Variant **capitalexpenditureapproval** to navigate to process variant editor.
 ![](images/SelectProcessVariant.png)  
-*The Process Variant Editor is available now to configure a new variant. It shows the default variant and steps in the process template.*
-*You can add new approval steps and configure. The **Available Steps**  Palette shows the available steps to consume in a process variant. The default variant has two steps. The step details shows possilbe configurations you can do while configuring a step*.
+*The Process Variant Editor is available now to configure a new variant. It shows the default variant and steps in the process template. You can add new approval steps and configure. The **Available Steps** palette shows the available steps to be consumed in a process variant. The default variant has two steps. The step details show possible configurations you can do while configuring a step.*
  - Select **Start Conditions** tab to configure a start condition.
  - Select **Investment.Total Cost** from the drop down.
  - Select >= as the operator.
@@ -108,12 +107,12 @@ A process variant has default steps configured while creating the process templa
 ![](images/GroupHeadStepCondition.png)
 1. Add a new step while moving **Approval Step** from the palette to the canvas between **Local Manager approval** and the **end event**. The default variant has two steps. The step details shows possible configurations you can do while configuring a step.
 ![](images/DragAndDropProcessStep.png)
-*It is possible to execute multiple step in parallel. You need to drag and drop the process step on an existing steps so that two steps execute in parallel*.
+*It is possible to execute multiple step in parallel. You need to drag and drop the process step on an existing steps so that two steps execute in parallel.*
 1. Select the newly added step and change the step **Name** to **CFO**.
 ![](images/StepRenameCFO.png)
 1. Open the **Details** tab. In **approvalstep** maintain **CFO**.
 ![](images/StepPropertyCFO.png)
-*This is a step attribute you have configured while creating the process template. It is used while determining the approver using a business rule*.
+*This is a step attribute you have configured while creating the process template. It is used while determining the approver using a business rule.*
 1- Select the **Step Conditions** tab.
  Select **Investment.Total Cost** from the drop down.
   - Select >= as the operator.
