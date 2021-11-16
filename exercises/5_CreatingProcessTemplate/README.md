@@ -14,7 +14,7 @@ You have created a workflow as explained in the exercise 2, which will be the ba
 - [7. Build and deploy](#section6)
 - [8. Summary](#section7)
 
-## Overview ##<a name="section0"></a>
+## Overview <a name="section0"></a>
 SAP Workflow Managment enable Process Experts to create process variants using a process template using low code / no code tooling. Developer build Process Template using process steps and related attributes and publish to line of business users. Business users can flexibily configure process templates and create new process variants , configure and deploy these variants. In this excercise you will learn how to configure a Process Template, configure Process Steps and Step conditions.
 ## 1. Open SAP Business Application Studio <a name="section1"></a>
 
@@ -127,11 +127,11 @@ SAP Workflow Managment enable Process Experts to create process variants using a
 - ${context.Title}
 - ${context.Investment}
 - ${context.Requester}
-![](images/22na_ProcessContextAttributes.png)
+![](images/22na_ProcessContext_001.png)
 
 ### Maintain process context for process attributes
 1. Now add further process context data for the process attributes (to be used later in a process visibility dashboard). Click `+` button.
-![](images/23na_AddContextForPAttributes.png)
+![](images/23na_AddProcessAttributes_001.png)
 
 1. Maintain the following data:
 
@@ -149,7 +149,7 @@ SAP Workflow Managment enable Process Experts to create process variants using a
 |approvalStatus|approvalStatus|string|${context.internal.approvalStatus}|
 
 We have finalized all the entries for the process context for the new template.
-![](images/26na_FinalAllAttributes.png)
+![](images/26na_FinalProcessContext_001.png)
 
 1. Save your work.  
 ![](images/27_SaveAll_1.png)
