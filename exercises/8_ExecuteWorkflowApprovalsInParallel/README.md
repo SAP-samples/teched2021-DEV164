@@ -17,7 +17,7 @@ While modeling a workflow, it is a common requirment to execute approval steps i
 3. Type Workflow and Choose **Create New Workflow**.
 ![](images/SelectWorkflow.png)
 
-3. Select Workflow Module Name **CAPEX**.
+3. Select Workflow Module Name **CAPEX**.    
 ![](images/SelectWorkflowModule.png)
 
 *you can ignore the optional property name space*
