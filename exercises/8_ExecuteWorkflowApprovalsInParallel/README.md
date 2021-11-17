@@ -15,16 +15,16 @@ While modeling a workflow, it is a common requirement to execute approval steps 
 1. Type **Workflow** and choose **Create New Workflow**.   
 ![](images/SelectWorkflow.png)
 1. Select Workflow Module Name **CAPEX**.       
-![](images/SelectWorkflowModule.png)
+![](images/SelectWorkflowModule.png)    
 *You can ignore the optional property name space*.    
 1. Enter the workflow name, for example: "CapitalExpenditureParallelApproval".   
-![](images/WorkflowName.png) 
+![](images/WorkflowName.png)    
 *The new workflow is now available with a start and end event.*   
 1. Update the **Subject** and **Business Key** with appropriate parameterized strings.   
 ![](images/WorkflowProperties.png)
 1. Select the **Start Event** and use the speed buttons to select **Referenced Subflow**.   
 ![](images/SelectReferenceSubflow.png)
-1. Select *Start Event* and in the Properties choose **Details**.   
+1. Select the **Start Event** and in the Properties choose **Details**.   
 1. Check **Configure Sample Context**.   
 1. Click link **Create File**.    
 ![](images/StartPayload.png)
@@ -75,12 +75,12 @@ While modeling a workflow, it is a common requirement to execute approval steps 
 1. Click **Select** and from the dialogue window choose **StartEvent1**.   
 ![](images/SelectFlowElement.png)
 1. Change **Type** to **Parallel**.  
-1. Update **Collection Context Path** with '${context.ApprovalSteps}'.     
+1. Update **Collection Context Path** with `${context.ApprovalSteps}`.     
 ![](images/ParallelLooping.png)
 1. Select tab **MAPPING**.   
 ![](images/Mapping.png)
 1. Within **Input Mapping** click **Add** button five times.
-1. Update the Source Context Path and Target Context Path as given below.
+1. Update the Source Context Path and Target Context Path as given below.    
 *Source Context Path is the Main workflow context and Target Context Path is the Referenced Subflow context path.**loop.counter** is a standard variable to access the index of the collection attached to the reference subflow*.
 Source Context Path | Target Context Path
    --- | ---
@@ -99,7 +99,7 @@ Source Context Path | Target Context Path
 ![](images/deploymta.png)
 
 ## Execute Workflow<a name="execute"></a>
-1.Click **Monitor Workflows - Workflow Definitions** tile to view the newly deployed workflow definition.   
+1. Click **Monitor Workflows - Workflow Definitions** tile to view the newly deployed workflow definition.   
 ![](images/MonitorWorkflowDefinition.png)
 1. Select the newly deployed Workflow Definition.   
 1. Click **Start New Instance** action in the footer.   
@@ -113,11 +113,11 @@ Source Context Path | Target Context Path
 1. Navigate to Home Page and Select **My Inbox**.    
 1. Click **My Inbox** tile.
 *You can see there are three tasks in your My Inbox for approvals.*   
-![](images/MyInboxParallelApprovals.png)
+![](images/MyInboxParallelApprovals.png)    
 *You can see there are three tasks in parallel.*
-- Local Manager Approval
-- Group Head Approval
-- CFO Approval
+ - Local Manager Approval
+ - Group Head Approval
+ - CFO Approval
 ![](images/ThreeTasksInParallel.png)
 1. Click **Approve** to complete all three tasks.
 1. Navigate to Home and Select **Monitor Workflow Workflow Instances** tile.
