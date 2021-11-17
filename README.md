@@ -8,6 +8,8 @@ This repository contains the material for the SAP TechEd 2021 session called [*D
 
 This session introduces attendees to create workflows and prepare process templates for fast and easy reuse without coding. Leverage business rules and process visibility in your workflows. Finally create content packages for common business scenarios for your organization, desired by your business units and your citizen developers.
 
+[Presentation slides](https://github.com/SAP-samples/teched2021-DEV164/blob/main/DEV164.pdf)
+
 ## Requirements
 
 The requirements to follow the exercises in this repository are a trial account (in data center US10 or AP21) in SAP Business Technology Platform and subscription to SAP Workflow Management, as described here in the [Setup Guide](https://github.com/SAP-samples/teched2021-DEV164/tree/main/exercises/1_SetupTrial).
