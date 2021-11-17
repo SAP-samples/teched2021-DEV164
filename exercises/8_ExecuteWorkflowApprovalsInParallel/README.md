@@ -115,13 +115,13 @@ Source Context Path | Target Context Path
 *You can see there are three tasks in your My Inbox for approvals.*   
 ![](images/MyInboxParallelApprovals.png)    
 *You can see there are three tasks in parallel.*
- - Local Manager Approval
- - Group Head Approval
- - CFO Approval
+   - Local Manager Approval
+   - Group Head Approval
+   - CFO Approval
 ![](images/ThreeTasksInParallel.png)
 1. Click **Approve** to complete all three tasks.
 1. Navigate to Home and Select **Monitor Workflow Workflow Instances** tile.
-1. Add Status Filter **"Completed"**.
+1. Add Status Filter **"Completed"**.   
 *You can see the newly workflow instance completed and the Workflow Context Shows the History of approvals. The Execution log shows the status of three Referenced Subflow instances.*   
 ![](images/CompletedInstance.png)
 
