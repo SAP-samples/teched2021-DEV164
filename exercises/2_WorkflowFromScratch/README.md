@@ -213,7 +213,7 @@ Take a look at the elements of BAS IDE and Workflow Editor
 1. Do not make any changes to the file at this time.
 1. Close the file by clicking on the ![X](images/Icon_OpenFiles_Close.png).  
 ![](images/Properties-PrepareApproval-3.png)
-   > The `ruleServiceId` refers to a provided rule already imported during setup of this tutorial. The `selfApproval` instructs this example workflow to sent approvals to the workflow initiator instead of the actual approver as specified by the rule. In a later exercise, a custom rule to determine the approver will be created and these two lines be changed.
+   > The `ruleServiceId` refers to a provided rule already imported during setup of this tutorial. The `selfApproval` instructs this example workflow to sent approvals to the workflow initiator instead of the actual approver as specified by the rule.
 1. Select the Service Task `Get Approvers`
 1. Select the properties tab `Details`
 1. As destination, enter `BUSINESS_RULES`. This destination has been automatically created for you by the booster.
