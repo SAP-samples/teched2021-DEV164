@@ -14,13 +14,21 @@ The requirements to follow the exercises in this repository are a trial account 
 
 ## Exercises
 
-- [Exercise 1 - Setup Guide](https://github.com/SAP-samples/teched2021-DEV164/tree/main/exercises/1_SetupTrial)
+Mandatory for everyone:
+- [Exercise 1 - Setup Guide](https://github.com/SAP-samples/teched2021-DEV164/tree/main/exercises/1_SetupTrial) [**IMPORTANT**]
 - [Exercise 2 - Creating a Workflow from Scratch](https://github.com/SAP-samples/teched2021-DEV164/tree/main/exercises/2_WorkflowFromScratch)
-- [Exercise 3 - Executing and monitoring your Workflows](https://github.com/SAP-samples/teched2021-DEV164/tree/main/exercises/3_RunMonitorWorkflows)
+- [Exercise 3 - Executing and monitoring your Workflows](https://github.com/SAP-samples/teched2021-DEV164/tree/main/exercises/3_RunMonitorWorkflows)   
+
+Either move on here (**Live Process Content - how to create and consume**)
 - [Exercise 4 - Model Business Rules Vocabulary](https://github.com/SAP-samples/teched2021-DEV164/tree/main/exercises/4_ModelVocabulary)
 - [Exercise 5 - Creating a Process Template](https://github.com/SAP-samples/teched2021-DEV164/tree/main/exercises/5_CreatingProcessTemplate)
 - [Exercise 6 - Building a Process Visibility Scenario End-to-End](https://github.com/SAP-samples/teched2021-DEV164/tree/main/exercises/6_BuildingVisibilityScenario)
-- [Exercise 7 - Creating and Consuming Process Content Packages](https://github.com/SAP-samples/teched2021-DEV164/tree/main/exercises/7_CreatingContentPackages)
+- [Exercise 7 - Creating and Consuming Process Content Packages](https://github.com/SAP-samples/teched2021-DEV164/tree/main/exercises/7_CreatingContentPackages) 
+  
+Or here (**Parallel execution of tasks**)
+- [Exercise 8 - Executing Workflow Tasks in Parallel](https://github.com/SAP-samples/teched2021-DEV164/tree/main/exercises/8_ExecuteWorkflowApprovalsInParallel)   
+
+![](DEV164_yourchoice.png)
 
 ## How to obtain support
 
@@ -31,7 +39,7 @@ Please find some further sources to get educated on SAP Workflow Management:
 - [Join the SAP Community around SAP Workflow Management](https://community.sap.com/topics/workflow-management)
 - [Join the openSAP course "Improve business processes with SAP Workflow Management](https://open.sap.com/courses/btp2)
 - [Run the missions in SAP Discovery Center](https://discovery-center.cloud.sap/missionssearch/?showFilters=true&appType=platform&category=extensionsuite-digitalprocessautomation)
-- [Register for course from SAP Education: CLD500 - Introduction to SAP Workflow Management powered by SAP BTP](https://training.sap.com/course/cld500-introduction-to-sap-workflow-management-powered-by-sap-btp-classroom-013-g-en/?)
+- [Register for course from SAP Education: CLD500 - Introduction to SAP Workflow Management powered by SAP BTP](https://training.sap.com/course/cld500-introduction-to-sap-workflow-management-powered-by-sap-btp-classroom-013-g-en/?)   
 
 ## License
 Copyright (c) 2021 SAP SE or an SAP affiliate company. All rights reserved. This project is licensed under the Apache Software License, version 2.0 except as noted otherwise in the [LICENSE](LICENSES/Apache-2.0.txt) file.
