@@ -1,3 +1,5 @@
+[![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/teched2021-DEV164)](https://api.reuse.software/info/github.com/SAP-samples/teched2021-DEV164)
+
 # DEV164 - Develop, Configure, and Provision Application Workflows and Content
 
 ## Description
